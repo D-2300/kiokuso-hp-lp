@@ -17,6 +17,9 @@ interface ComingSoonProps {
   photoBg1: string;
   photoBg2: string;
   photoCaption: string;
+  heroImg?: string;
+  photo1?: string;
+  photo2?: string;
 }
 
 export default function ComingSoon({
@@ -34,6 +37,9 @@ export default function ComingSoon({
   photoBg1,
   photoBg2,
   photoCaption,
+  heroImg,
+  photo1,
+  photo2,
 }: ComingSoonProps) {
   const taglineLines = tagline.split("\n");
 
@@ -54,34 +60,49 @@ export default function ComingSoon({
           overflow: "hidden",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundColor: heroBg,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <span
+        <div style={{ position: "absolute", inset: 0 }}>
+          {heroImg ? (
+            <img
+              src={heroImg}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "grayscale(100%)",
+              }}
+            />
+          ) : (
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                backgroundColor: heroBg,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <span
+                style={{
+                  fontSize: "12px",
+                  color: "rgba(0,0,0,0.25)",
+                  letterSpacing: "0.1em",
+                  fontWeight: 300,
+                }}
+              >
+                HERO PHOTO ── {subtitle}
+              </span>
+            </div>
+          )}
+          <div
             style={{
-              fontSize: "12px",
-              color: "rgba(0,0,0,0.25)",
-              letterSpacing: "0.1em",
-              fontWeight: 300,
+              position: "absolute",
+              inset: 0,
+              background: `linear-gradient(0deg, ${themeColor}cc 0%, ${themeColor}44 40%, transparent 70%)`,
             }}
-          >
-            HERO PHOTO ── {subtitle}
-          </span>
+          />
         </div>
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: `linear-gradient(0deg, ${themeColor}bb 0%, ${themeColor}33 40%, transparent 70%)`,
-          }}
-        />
         <div
           style={{
             position: "relative",
@@ -175,8 +196,34 @@ export default function ComingSoon({
                 margin: "0 auto",
               }}
             >
-              <div style={{ aspectRatio: "4/3", backgroundColor: photoBg1 }} />
-              <div style={{ aspectRatio: "4/3", backgroundColor: photoBg2 }} />
+              {photo1 ? (
+                <img
+                  src={photo1}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    aspectRatio: "4/3",
+                    objectFit: "cover",
+                    filter: "grayscale(100%)",
+                  }}
+                />
+              ) : (
+                <div style={{ aspectRatio: "4/3", backgroundColor: photoBg1 }} />
+              )}
+              {photo2 ? (
+                <img
+                  src={photo2}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    aspectRatio: "4/3",
+                    objectFit: "cover",
+                    filter: "grayscale(100%)",
+                  }}
+                />
+              ) : (
+                <div style={{ aspectRatio: "4/3", backgroundColor: photoBg2 }} />
+              )}
             </div>
             <p
               style={{

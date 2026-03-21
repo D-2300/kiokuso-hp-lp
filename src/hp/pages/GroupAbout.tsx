@@ -71,7 +71,11 @@ export default function GroupAbout() {
       {/* ブロック2：制約の中の美しさ */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 0" }}>
-          <img src="/images/crossover-after-01.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img
+            src="/images/studio-construction.webp"
+            alt=""
+            style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", filter: "grayscale(100%)" }}
+          />
           <div
             style={{
               maxWidth: "560px",
