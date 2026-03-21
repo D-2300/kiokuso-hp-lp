@@ -37,6 +37,7 @@ export default function HPApp() {
             photoCaption="忘れられた場所に、もう一度光を入れる。"
             heroImg="/images/koumuten-hero.webp"
             photo1="/images/koumuten-hands.webp"
+            photo2="/images/hp-hallway-light.webp"
           />
         }
       />
@@ -60,6 +61,7 @@ export default function HPApp() {
             photoCaption="思い出のある家を、これからも住み続ける家に。"
             heroImg="/images/reform-hero.webp"
             photo1="/images/reform-keys.webp"
+            photo2="/images/hp-wood-warm.webp"
           />
         }
       />
@@ -83,6 +85,7 @@ export default function HPApp() {
             photoCaption="場所と人を、つなぐ仕事。"
             heroImg="/images/fudousan-hero.webp"
             photo1="/images/fudousan-keys.webp"
+            photo2="/images/hp-hallway-garden.webp"
           />
         }
       />

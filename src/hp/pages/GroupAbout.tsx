@@ -45,7 +45,7 @@ export default function GroupAbout() {
       {/* ブロック1：記憶が宿る場所 */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 0" }}>
-          <img src="/images/about-exterior.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src="/images/hp-hallway-film.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
           <div
             style={{
               maxWidth: "560px",
@@ -77,9 +77,9 @@ export default function GroupAbout() {
       <ScrollFadeIn>
         <section style={{ padding: "80px 0" }}>
           <img
-            src="/images/studio-construction.webp"
+            src="/images/hp-wood-dark.webp"
             alt=""
-            style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", filter: "grayscale(100%)" }}
+            style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }}
           />
           <div
             style={{
@@ -121,7 +121,7 @@ export default function GroupAbout() {
               記憶荘は「制約を受け入れ、美しく仕上げる」行為を伴走する。
             </p>
           </div>
-          <img src="/images/about-conversation.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src="/images/hp-kintsugi-light.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
         </section>
       </ScrollFadeIn>
 
