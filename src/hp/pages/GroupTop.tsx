@@ -15,6 +15,7 @@ const businesses = [
     color: colors.urushicha.main,
     active: false,
     to: "/koumuten",
+    logoType: "group" as const,
   },
   {
     nameJa: "記憶荘 店舗内装スタジオ",
@@ -23,6 +24,7 @@ const businesses = [
     color: colors.fukamidori.main,
     active: true,
     to: "/studio",
+    logoType: "studio" as const,
   },
   {
     nameJa: "記憶荘 住宅リフォームLABO",
@@ -31,6 +33,7 @@ const businesses = [
     color: colors.seiji.main,
     active: false,
     to: "/reform",
+    logoType: "group" as const,
   },
   {
     nameJa: "記憶荘 不動産",
@@ -39,6 +42,7 @@ const businesses = [
     color: colors.tetsukon.main,
     active: false,
     to: "/fudousan",
+    logoType: "group" as const,
   },
 ];
 
@@ -177,7 +181,7 @@ export default function GroupTop() {
                   }}
                 >
                   <div style={{ marginBottom: "12px" }}>
-                    <Logo type="group" color="dark" layout="mark" size="sm" />
+                    <Logo type={b.logoType} color="dark" layout="mark" size="sm" />
                   </div>
                   <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
                     {b.nameJa}
@@ -204,7 +208,7 @@ export default function GroupTop() {
                   }}
                 >
                   <div style={{ marginBottom: "12px" }}>
-                    <Logo type="group" color="dark" layout="mark" size="sm" />
+                    <Logo type={b.logoType} color="dark" layout="mark" size="sm" />
                   </div>
                   <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
                     {b.nameJa}
