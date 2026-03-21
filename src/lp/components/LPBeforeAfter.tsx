@@ -1,8 +1,40 @@
 const cases = [
-  { type: "カフェ", cost: "120万円", before: "/images/crossover-before-01.webp", after: "/images/crossover-after-01.webp" },
-  { type: "居酒屋", cost: "180万円", before: "/images/crossover-before-02.webp", after: "/images/crossover-after-02.webp" },
-  { type: "美容室", cost: "150万円", before: "/images/salon-before-01.webp", after: "/images/salon-after-01.webp" },
-  { type: "テイクアウト", cost: "90万円", before: "/images/owl-before-01.webp", after: "/images/owl-after-01.webp" },
+  {
+    type: "カフェ",
+    cost: "120万円",
+    tsubo: "12坪",
+    period: "6週間",
+    desc: "居抜き活用。既存カウンターを活かし、壁と照明で印象を一新。",
+    before: "/images/crossover-before-01.webp",
+    after: "/images/crossover-after-01.webp",
+  },
+  {
+    type: "居酒屋",
+    cost: "180万円",
+    tsubo: "18坪",
+    period: "8週間",
+    desc: "スケルトンから施工。厨房レイアウトを一から設計。",
+    before: "/images/crossover-before-02.webp",
+    after: "/images/crossover-after-02.webp",
+  },
+  {
+    type: "美容室",
+    cost: "150万円",
+    tsubo: "15坪",
+    period: "7週間",
+    desc: "施主支給の鏡とチェアでコスト削減。清潔感を重視。",
+    before: "/images/salon-before-01.webp",
+    after: "/images/salon-after-01.webp",
+  },
+  {
+    type: "テイクアウト",
+    cost: "90万円",
+    tsubo: "8坪",
+    period: "4週間",
+    desc: "一人で回せる動線設計。小規模だからこそ、1cm単位で工夫。",
+    before: "/images/owl-before-01.webp",
+    after: "/images/owl-after-01.webp",
+  },
 ];
 
 export default function LPBeforeAfter() {
@@ -56,7 +88,7 @@ export default function LPBeforeAfter() {
                   </div>
                 ))}
               </div>
-              <div style={{ padding: "12px 14px" }}>
+              <div style={{ padding: "14px 16px" }}>
                 <p style={{ margin: 0, fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 500, color: "#555" }}>
                   {c.type}
                 </p>
@@ -69,6 +101,25 @@ export default function LPBeforeAfter() {
                   }}
                 >
                   {c.cost}
+                </p>
+                <p
+                  style={{
+                    margin: "4px 0 0",
+                    fontSize: "clamp(12px, 2vw, 13px)",
+                    color: "#999",
+                  }}
+                >
+                  {c.tsubo} ／ {c.period}
+                </p>
+                <p
+                  style={{
+                    margin: "6px 0 0",
+                    fontSize: "clamp(12px, 2vw, 13px)",
+                    color: "#777",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {c.desc}
                 </p>
               </div>
             </div>

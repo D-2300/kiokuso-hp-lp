@@ -1,9 +1,39 @@
 const steps = [
-  { step: "Step 0", name: "LINE相談", cost: "無料", costColor: "#06C755" },
-  { step: "Step 1", name: "現地調査・ヒアリング", cost: "無料〜1万円", costColor: "#555" },
-  { step: "Step 2", name: "詳細見積もり", cost: "3〜6万円", costColor: "#555" },
-  { step: "Step 3", name: "施工", cost: "見積もり金額", costColor: "#555" },
-  { step: "Step 4", name: "引渡し", cost: "", costColor: "#555" },
+  {
+    step: "Step 0",
+    name: "LINE相談",
+    cost: "無料",
+    costColor: "#06C755",
+    desc: "物件の写真や図面をLINEで送るだけ。翌営業日までに概算をお伝えします。物件が決まっていなくてもOKです。",
+  },
+  {
+    step: "Step 1",
+    name: "現地調査・ヒアリング",
+    cost: "無料〜1万円",
+    costColor: "#555",
+    desc: "実際に物件を見て、設備の状態・インフラ・活かせるものを確認します。ご要望や予算感もここでじっくり伺います。",
+  },
+  {
+    step: "Step 2",
+    name: "詳細見積もり",
+    cost: "3〜6万円",
+    costColor: "#555",
+    desc: "全項目を一行ずつ記載した見積もりを作成。融資用の書類としてもそのまま使えます。納得いかなければここで終了できます。",
+  },
+  {
+    step: "Step 3",
+    name: "施工",
+    cost: "見積もり金額",
+    costColor: "#555",
+    desc: "工事開始。工程ごとに写真で進捗を共有します。DIY参加の日程もここで調整します。",
+  },
+  {
+    step: "Step 4",
+    name: "引渡し",
+    cost: "",
+    costColor: "#555",
+    desc: "最終確認後にお引渡し。施工後の不具合はLINEで連絡いただければ対応します。",
+  },
 ];
 
 export default function LPFlow() {
@@ -45,39 +75,55 @@ export default function LPFlow() {
                 style={{
                   flex: 1,
                   padding: "16px 0 16px 16px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
                   borderBottom: i < steps.length - 1 ? "1px solid #f5f5f5" : "none",
                 }}
               >
-                <div>
-                  <p style={{ margin: 0, fontSize: "11px", color: "#aaa", letterSpacing: "0.06em" }}>{s.step}</p>
-                  <p
-                    style={{
-                      margin: "3px 0 0",
-                      fontSize: "clamp(16px, 3vw, 20px)",
-                      fontWeight: 700,
-                      color: "#222",
-                    }}
-                  >
-                    {s.name}
-                  </p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "space-between",
+                    gap: "12px",
+                  }}
+                >
+                  <div style={{ flex: 1 }}>
+                    <p style={{ margin: 0, fontSize: "11px", color: "#aaa", letterSpacing: "0.06em" }}>{s.step}</p>
+                    <p
+                      style={{
+                        margin: "3px 0 0",
+                        fontSize: "clamp(16px, 3vw, 20px)",
+                        fontWeight: 700,
+                        color: "#222",
+                      }}
+                    >
+                      {s.name}
+                    </p>
+                    <p
+                      style={{
+                        margin: "6px 0 0",
+                        fontSize: "clamp(12px, 2vw, 14px)",
+                        color: "#888",
+                        lineHeight: 1.75,
+                      }}
+                    >
+                      {s.desc}
+                    </p>
+                  </div>
+                  {s.cost && (
+                    <p
+                      style={{
+                        margin: "18px 0 0",
+                        fontSize: "clamp(14px, 2.5vw, 17px)",
+                        fontWeight: 700,
+                        color: s.costColor,
+                        flexShrink: 0,
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {s.cost}
+                    </p>
+                  )}
                 </div>
-                {s.cost && (
-                  <p
-                    style={{
-                      margin: 0,
-                      fontSize: "clamp(16px, 3vw, 20px)",
-                      fontWeight: 700,
-                      color: s.costColor,
-                      flexShrink: 0,
-                      paddingLeft: "12px",
-                    }}
-                  >
-                    {s.cost}
-                  </p>
-                )}
               </div>
             </div>
           ))}

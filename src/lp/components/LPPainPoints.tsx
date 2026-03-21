@@ -1,8 +1,24 @@
 const pains = [
-  { icon: "¥", text: "費用がわかりにくい。見積もりが適正かも判断できない。" },
-  { icon: "?", text: "物件の坪数で何席取れるのか、インフラ費用も見えない。" },
-  { icon: "⏱", text: "オープンに間に合うか不安。工期がどれくらいか不明瞭。" },
-  { icon: "…", text: "そもそも進め方がわからない。まだ物件が確定していない。" },
+  {
+    icon: "¥",
+    text: "費用がわかりにくい。見積もりが適正かも判断できない。",
+    sub: "「一式」でまとめられると、何にいくら使っているのかわからない。",
+  },
+  {
+    icon: "?",
+    text: "物件の坪数で何席取れるのか、インフラ費用も見えない。",
+    sub: "水道・ガス・空調の工事が別途かかると後から言われることも。",
+  },
+  {
+    icon: "⏱",
+    text: "オープンに間に合うか不安。工期がどれくらいか不明瞭。",
+    sub: "着工してから「あと1ヶ月かかります」と言われるケースも。",
+  },
+  {
+    icon: "…",
+    text: "そもそも進め方がわからない。まだ物件が確定していない。",
+    sub: "何から手をつければいいのか、相談する相手もいない。",
+  },
 ];
 
 export default function LPPainPoints() {
@@ -50,17 +66,28 @@ export default function LPPainPoints() {
               >
                 {p.icon}
               </span>
-              <p
-                style={{
-                  margin: 0,
-                  fontSize: "clamp(14px, 2.5vw, 16px)",
-                  color: "#333",
-                  lineHeight: 1.8,
-                  paddingTop: "10px",
-                }}
-              >
-                {p.text}
-              </p>
+              <div style={{ flex: 1, paddingTop: "8px" }}>
+                <p
+                  style={{
+                    margin: 0,
+                    fontSize: "clamp(14px, 2.5vw, 16px)",
+                    color: "#333",
+                    lineHeight: 1.8,
+                  }}
+                >
+                  {p.text}
+                </p>
+                <p
+                  style={{
+                    margin: "6px 0 0",
+                    fontSize: "clamp(12px, 2vw, 13px)",
+                    color: "#999",
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {p.sub}
+                </p>
+              </div>
             </div>
           ))}
         </div>

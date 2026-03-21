@@ -33,7 +33,7 @@ export default function LPProfile() {
           >
             DAI
           </p>
-          <p style={{ margin: "0 0 16px", fontSize: "13px", color: "#999" }}>記憶荘 CSO</p>
+          <p style={{ margin: "0 0 20px", fontSize: "13px", color: "#999" }}>記憶荘 CSO</p>
           <p
             style={{
               margin: 0,
@@ -42,7 +42,27 @@ export default function LPProfile() {
               lineHeight: 1.9,
             }}
           >
-            仙台で店舗内装の設計・施工を手がけています。初めての店づくりで不安を感じているなら、まず相場を知ることから始めましょう。LINEで物件の写真を送っていただくだけで、概算をお伝えします。
+            仙台で店舗内装の設計・施工を手がけています。
+          </p>
+          <p
+            style={{
+              marginTop: "1em",
+              fontSize: "clamp(14px, 2.5vw, 16px)",
+              color: "#555",
+              lineHeight: 1.9,
+            }}
+          >
+            前職では年間30件以上の店舗内装に携わり、飲食店・美容室・物販など幅広い業態を経験しました。設計から現場管理、仕上げまで一人で完結できるのは、その現場経験があるからです。
+          </p>
+          <p
+            style={{
+              marginTop: "1em",
+              fontSize: "clamp(14px, 2.5vw, 16px)",
+              color: "#555",
+              lineHeight: 1.9,
+            }}
+          >
+            初めての店づくりは、わからないことだらけで当然です。まず相場を知ることから始めましょう。LINEで物件の写真を送っていただくだけで、概算をお伝えします。
           </p>
         </div>
       </div>

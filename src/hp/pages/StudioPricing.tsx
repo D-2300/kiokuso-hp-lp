@@ -13,6 +13,29 @@ const priceRows = [
   { type: "テイクアウト店", range: "50万〜120万円" },
 ];
 
+const costExamples = [
+  {
+    label: "居抜き活用",
+    example: "既存のカウンターと厨房設備をそのまま使用",
+    saving: "約80万円の解体・新設費用を削減",
+  },
+  {
+    label: "施主支給",
+    example: "照明器具・家具をオーナーが直接購入",
+    saving: "仕入れマージン分（15〜30%）を削減",
+  },
+  {
+    label: "DIY参加",
+    example: "壁の塗装をオーナーと一緒に実施",
+    saving: "塗装の人件費（約10〜20万円）を削減",
+  },
+  {
+    label: "一人一貫対応",
+    example: "設計・現場管理・施工を一人で実施",
+    saving: "中間マージン（通常20〜30%）がゼロ",
+  },
+];
+
 export default function StudioPricing() {
   return (
     <div style={{ backgroundColor: colors.beige, minHeight: "100vh", paddingTop: "64px" }}>
@@ -78,6 +101,34 @@ export default function StudioPricing() {
           >
             それが「わけあって、この値段です。」の正体です。
           </p>
+        </section>
+      </ScrollFadeIn>
+
+      {/* コスト削減の具体例 */}
+      <ScrollFadeIn>
+        <section style={{ padding: "48px 24px", maxWidth: "540px", margin: "0 auto" }}>
+          <SectionHeading en="Example" ja="コスト削減の例" />
+          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+            {costExamples.map((item) => (
+              <div
+                key={item.label}
+                style={{
+                  borderLeft: `2px solid ${colors.fukamidori.light}`,
+                  paddingLeft: "16px",
+                }}
+              >
+                <p style={{ fontSize: "14px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
+                  {item.label}
+                </p>
+                <p style={{ fontSize: "13px", color: colors.sub, lineHeight: 1.8, marginBottom: "2px" }}>
+                  {item.example}
+                </p>
+                <p style={{ fontSize: "13px", color: colors.fukamidori.main, fontWeight: 500 }}>
+                  → {item.saving}
+                </p>
+              </div>
+            ))}
+          </div>
         </section>
       </ScrollFadeIn>
 

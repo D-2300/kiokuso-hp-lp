@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import StudioNav from "../components/StudioNav";
 import StudioCTA from "../components/StudioCTA";
 import StudioFooter from "../components/StudioFooter";
-import PhotoPlaceholder from "../../shared/PhotoPlaceholder";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import { colors } from "../../shared/design-tokens";
 
@@ -107,6 +106,10 @@ export default function StudioTop() {
                 それが、記憶荘のやり方です。
               </p>
             </div>
+            <p style={{ marginTop: "1.6em", fontSize: "13px", color: colors.mute, lineHeight: 2.0 }}>
+              仙台・宮城県で、飲食店・美容室・テイクアウト店など、<br />
+              これまで多くの店舗の内装をお手伝いしてきました。
+            </p>
           </div>
         </section>
       </ScrollFadeIn>

@@ -4,7 +4,6 @@ import GroupFooter from "../components/GroupFooter";
 import GoldDivider from "../../shared/GoldDivider";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import SectionHeading from "../../shared/SectionHeading";
-import PhotoPlaceholder from "../../shared/PhotoPlaceholder";
 import Logo from "../../shared/Logo";
 import { colors } from "../../shared/design-tokens";
 
@@ -12,7 +11,7 @@ const businesses = [
   {
     nameJa: "記憶荘 工務店",
     nameEn: "KIOKUSO KOUMUTEN",
-    desc: "大規模リノベーション・再生",
+    desc: "廃墟や古い建物に新しい命を吹き込む、大規模リノベーション",
     color: colors.urushicha.main,
     active: false,
     to: "/koumuten",
@@ -20,7 +19,7 @@ const businesses = [
   {
     nameJa: "記憶荘 店舗内装スタジオ",
     nameEn: "KIOKUSO STUDIO",
-    desc: "店舗の設計・施工",
+    desc: "初めての店づくりを、設計から施工まで一人が一貫対応",
     color: colors.fukamidori.main,
     active: true,
     to: "/studio",
@@ -28,7 +27,7 @@ const businesses = [
   {
     nameJa: "記憶荘 住宅リフォームLABO",
     nameEn: "KIOKUSO REFORM LABO",
-    desc: "住宅の部分リフォーム",
+    desc: "キッチン・洗面・壁紙など、住まいの「ここだけ」を手軽に",
     color: colors.seiji.main,
     active: false,
     to: "/reform",
@@ -36,7 +35,7 @@ const businesses = [
   {
     nameJa: "記憶荘 不動産",
     nameEn: "KIOKUSO FUDOUSAN",
-    desc: "不動産仲介",
+    desc: "想いを受け継ぐ場所を探し、つなぐ",
     color: colors.tetsukon.main,
     active: false,
     to: "/fudousan",
@@ -49,7 +48,7 @@ export default function GroupTop() {
       <style>{`
         @keyframes scrollBounce {
           0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(4px); }
+          52% { transform: translateY(4px); }
         }
         .scroll-arrow {
           animation: scrollBounce 2s ease-in-out infinite;

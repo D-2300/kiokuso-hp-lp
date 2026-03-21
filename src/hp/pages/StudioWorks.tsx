@@ -8,7 +8,9 @@ const works = [
   {
     title: "カウンター越しの厨房",
     type: "カフェ",
-    area: "仙台市青葉区",
+    cost: "120万円",
+    tsubo: "12坪",
+    period: "6週間",
     story: "前のお店が使っていたカウンターの木目が気に入って、\nそのまま活かすことにした。厨房側の動線を30cm広げて、\nオーナーが一人でも回せるレイアウトに。",
     main: "/images/crossover-after-01.webp",
     subs: ["/images/crossover-after-02.webp", "/images/crossover-after-03.webp", "/images/crossover-after-04.webp"],
@@ -16,7 +18,9 @@ const works = [
   {
     title: "光が入る美容室",
     type: "美容室",
-    area: "仙台市宮城野区",
+    cost: "150万円",
+    tsubo: "15坪",
+    period: "7週間",
     story: "窓際の席を一番いい場所に配置して、\n鏡の角度を変えることで自然光が全席に届くようにした。\n天井は前のお店のまま。",
     main: "/images/salon-after-01.webp",
     subs: ["/images/salon-before-01.webp", "/images/bpoint-after-01.webp", "/images/bpoint-before-01.webp"],
@@ -24,7 +28,9 @@ const works = [
   {
     title: "テイクアウト専門の小さな窓",
     type: "テイクアウト",
-    area: "仙台市青葉区",
+    cost: "90万円",
+    tsubo: "8坪",
+    period: "4週間",
     story: "4坪のスペースに必要な機能を全て収めた。\nカウンターは施主支給のアンティーク天板を使い、\n壁はオーナーが自分で塗った。",
     main: "/images/owl-after-01.webp",
     subs: ["/images/owl-before-01.webp", "/images/crossover-before-01.webp", "/images/crossover-before-02.webp"],
@@ -32,7 +38,9 @@ const works = [
   {
     title: "居酒屋の再出発",
     type: "居酒屋",
-    area: "仙台市太白区",
+    cost: "180万円",
+    tsubo: "18坪",
+    period: "8週間",
     story: "居抜きで入った物件の良い部分はそのまま活かし、\n照明だけを全て入れ替えた。\n同じ空間が、まったく違う表情になった。",
     main: "/images/crossover-process-01.webp",
     subs: ["/images/crossover-process-02.webp", "/images/crossover-process-03.webp", "/images/crossover-process-04.webp"],
@@ -81,7 +89,7 @@ export default function StudioWorks() {
               <div style={{ maxWidth: "560px", margin: "0 auto", padding: "32px 24px 0" }}>
                 <p style={{ fontSize: "18px", fontWeight: 500, color: colors.text }}>{work.title}</p>
                 <p style={{ fontSize: "12px", color: colors.mute, marginTop: "6px", marginBottom: "16px" }}>
-                  {work.type} ｜ エリア: {work.area}
+                  {work.type} ｜ {work.tsubo} ｜ {work.cost} ｜ {work.period}
                 </p>
                 <p style={{ fontSize: "14px", color: colors.sub, lineHeight: 2.0, whiteSpace: "pre-line" }}>
                   {work.story}

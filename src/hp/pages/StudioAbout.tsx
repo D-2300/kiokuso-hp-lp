@@ -9,17 +9,17 @@ const points = [
   {
     img: "/images/crossover-process-01.webp",
     heading: "一人一貫対応",
-    body: "設計・見積もり・施工・仕上げまで、一人が一貫して担当します。\n間に入る人がいないから、伝言ゲームにならない。",
+    body: "設計・見積もり・施工・仕上げまで、一人が一貫して担当します。\n間に入る人がいないから、伝言ゲームにならない。\n「言った・言わない」のトラブルが起きない仕組みです。\n打ち合わせで話したことが、そのまま現場に反映されます。",
   },
   {
     img: "/images/crossover-process-02.webp",
     heading: "居抜きを活かす",
-    body: "前のお店の設備や内装を活かすことで、\n大幅にコストを抑えながら、あなたの店に仕上げます。",
+    body: "前のお店の設備や内装を活かすことで、\n大幅にコストを抑えながら、あなたの店に仕上げます。\nカウンター、棚、厨房設備など、使えるものは使う。\n解体しないだけでも数十万円の差が出ることがあります。",
   },
   {
     img: "/images/crossover-process-03.webp",
     heading: "DIY・施主支給OK",
-    body: "自分で塗りたい壁がある。ネットで見つけた照明を使いたい。\nそういう思いを、一緒に形にします。",
+    body: "自分で塗りたい壁がある。ネットで見つけた照明を使いたい。\nそういう思いを、一緒に形にします。\n道具の使い方からお教えしますので、経験がなくても大丈夫です。\n「自分の手で作った」という体験が、お店への愛着になります。",
   },
 ];
 
@@ -77,6 +77,21 @@ export default function StudioAbout() {
             <br />
             店舗内装を設計から施工まで一貫して行っています。
           </p>
+          <p
+            style={{
+              maxWidth: "480px",
+              margin: "20px auto 0",
+              fontSize: "14px",
+              color: colors.sub,
+              lineHeight: 2.0,
+            }}
+          >
+            居抜き物件の活用、施主支給、DIYの併用で、
+            <br />
+            品質を落とさずにコストを抑えるのが記憶荘のやり方です。
+            <br />
+            物件が決まっていない段階からご相談いただけます。
+          </p>
         </section>
       </ScrollFadeIn>
 
@@ -107,7 +122,7 @@ export default function StudioAbout() {
               <p style={{ fontSize: "16px", fontWeight: 500, color: colors.text, marginBottom: "2px" }}>DAI</p>
               <p style={{ fontSize: "11px", color: colors.mute, marginBottom: "10px" }}>記憶荘 CSO</p>
               <p style={{ fontSize: "13px", color: colors.sub, lineHeight: 1.8 }}>
-                仙台を拠点に、店舗の設計から施工まで一人で担当しています。
+                仙台を拠点に、店舗の設計から施工まで一人で担当しています。前職では年間30件以上の店舗内装を手がけてきました。初めての店づくりで不安なことがあれば、LINEで気軽にご相談ください。
               </p>
             </div>
           </div>

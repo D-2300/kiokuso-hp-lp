@@ -16,7 +16,7 @@ export default function LPFooter() {
           記憶荘 Studio
         </span>
       </div>
-      <p style={{ margin: "0 0 8px", fontSize: "12px", color: "#999" }}>仙台・宮城県の店舗内装</p>
+      <p style={{ margin: "0 0 8px", fontSize: "12px", color: "#999" }}>仙台・宮城の店舗内装</p>
       <p style={{ margin: 0, fontSize: "11px", color: "#ccc" }}>© 2026 記憶荘 Studio</p>
     </footer>
   );

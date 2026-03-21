@@ -131,6 +131,12 @@ export default function GroupAbout() {
               <p style={{ fontSize: "14px", color: colors.sub, lineHeight: 1.8 }}>
                 仙台を拠点に、店舗の設計から施工までを一人で担当しています。
               </p>
+              <p style={{ fontSize: "14px", color: colors.sub, lineHeight: 1.8, marginTop: "0.8em" }}>
+                前職では大手内装会社で年間30件以上の店舗を手がけ、飲食店・美容室・物販・ジムなど幅広い業態を経験しました。
+              </p>
+              <p style={{ fontSize: "14px", color: colors.sub, lineHeight: 1.8, marginTop: "0.8em" }}>
+                「誰かの想いに手を動かすこと」が自分にとって最も自然な仕事の形だと気づき、記憶荘を始めました。
+              </p>
             </div>
           </div>
         </div>

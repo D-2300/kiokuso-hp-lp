@@ -12,7 +12,7 @@ export default function LPSolutionPoints() {
             設計から施工まで、一気通貫で対応
           </p>
           <p style={{ margin: "0 0 20px", fontSize: "clamp(14px, 2.5vw, 16px)", color: "#555", lineHeight: 1.85 }}>
-            担当が一人なので、伝言ゲームが起きません。ヒアリングした内容が設計に、設計が施工にそのまま反映されます。
+            担当が一人なので、伝言ゲームが起きません。ヒアリングした内容が設計に、設計が施工にそのまま反映されます。「言った・言わない」のトラブルが起きない仕組みです。
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
             <div style={{ border: "1px solid #e0e0e0", borderRadius: "8px", padding: "18px" }}>
@@ -41,7 +41,7 @@ export default function LPSolutionPoints() {
             見積もりは全項目を公開
           </p>
           <p style={{ margin: "0 0 20px", fontSize: "clamp(14px, 2.5vw, 16px)", color: "#555", lineHeight: 1.85 }}>
-            何にいくらかかるか、一行ずつすべて開示します。「一式」でまとめる項目はありません。
+            何にいくらかかるか、一行ずつすべて開示します。「一式」でまとめる項目はありません。相見積もりの際も比較しやすい形式でお出しします。
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
             <div style={{ border: "1px solid #e0e0e0", borderRadius: "8px", padding: "18px", backgroundColor: "#fafafa" }}>
@@ -72,13 +72,22 @@ export default function LPSolutionPoints() {
             居抜き活用・施主支給・DIYで、効率的な予算に
           </p>
           <p style={{ margin: "0 0 20px", fontSize: "clamp(14px, 2.5vw, 16px)", color: "#555", lineHeight: 1.85 }}>
-            使えるものは活かす。買えるものはご自身で。できる作業は一緒に。それが予算を最大化する方法です。
+            使えるものは活かす。買えるものはご自身で。できる作業は一緒に。この3つを組み合わせることで、品質を落とさずに予算を最大化します。
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "12px" }}>
             {[
-              { title: "居抜き活用", desc: "既存の設備・造作を活かしてコストを削減" },
-              { title: "施主支給", desc: "家具・照明・資材をご自身で購入" },
-              { title: "DIY参加", desc: "塗装などの工程に一緒に参加" },
+              {
+                title: "居抜き活用",
+                desc: "前のお店の設備・造作で使えるものは活かします。解体しないだけでも数十万円の差が出ます。",
+              },
+              {
+                title: "施主支給",
+                desc: "家具・照明・資材をご自身で購入いただけます。ネットで見つけた照明や、思い入れのある椅子も歓迎します。",
+              },
+              {
+                title: "DIY参加",
+                desc: "壁の塗装や簡単な仕上げなど、一緒にやれる工程があります。道具の使い方からお教えします。経験は不要です。",
+              },
             ].map((card) => (
               <div
                 key={card.title}
@@ -92,7 +101,7 @@ export default function LPSolutionPoints() {
                 <p style={{ margin: "0 0 8px", fontSize: "clamp(15px, 2.5vw, 18px)", fontWeight: 700, color: "#4A6741" }}>
                   {card.title}
                 </p>
-                <p style={{ margin: 0, fontSize: "clamp(12px, 2vw, 14px)", color: "#777", lineHeight: 1.75 }}>{card.desc}</p>
+                <p style={{ margin: 0, fontSize: "clamp(12px, 2vw, 13px)", color: "#777", lineHeight: 1.75 }}>{card.desc}</p>
               </div>
             ))}
           </div>
