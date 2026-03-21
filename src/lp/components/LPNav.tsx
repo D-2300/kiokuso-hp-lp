@@ -23,7 +23,9 @@ export default function LPNav() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-          <Logo type="studio" color="dark" layout="mark" size="sm" />
+          <div style={{ flexShrink: 0 }}>
+            <Logo type="studio" color="dark" layout="mark" size="sm" />
+          </div>
           <span style={{ fontSize: "13px", fontWeight: 400, letterSpacing: "0.1em", color: "#333" }}>
             記憶荘 STUDIO
           </span>

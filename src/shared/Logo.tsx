@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type LogoType = "group" | "studio";
 type LogoColor = "gold" | "dark";
 type LogoLayout = "mark" | "horizontal";
@@ -24,6 +26,13 @@ function getLogoSrc(type: LogoType, color: LogoColor, layout: LogoLayout): strin
   return `/images/logo-${type}-${color}.webp`;
 }
 
+function getFallbackSrc(type: LogoType, color: LogoColor, layout: LogoLayout): string | null {
+  if (type === "group") {
+    return getLogoSrc("studio", color, layout);
+  }
+  return null;
+}
+
 export default function Logo({
   type = "studio",
   color = "dark",
@@ -32,16 +41,24 @@ export default function Logo({
 }: LogoProps) {
   const h = heightMap[size];
   const src = getLogoSrc(type, color, layout);
+  const fallback = getFallbackSrc(type, color, layout);
+  const [errored, setErrored] = useState(false);
+
+  const finalSrc = errored && fallback ? fallback : src;
 
   return (
     <img
-      src={src}
+      src={finalSrc}
       alt={type === "group" ? "記憶荘" : "記憶荘 STUDIO"}
+      onError={() => {
+        if (!errored && fallback) setErrored(true);
+      }}
       style={{
         height: `${h}px`,
         width: "auto",
         display: "block",
         objectFit: "contain",
+        margin: "0 auto",
       }}
     />
   );

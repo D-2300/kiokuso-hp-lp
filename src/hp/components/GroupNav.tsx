@@ -29,7 +29,9 @@ export default function GroupNav() {
       }}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-        <Logo type="group" color="gold" layout="mark" size="sm" />
+        <div style={{ flexShrink: 0 }}>
+          <Logo type="group" color="gold" layout="mark" size="sm" />
+        </div>
         <span
           style={{
             color: "#F5EAEA",

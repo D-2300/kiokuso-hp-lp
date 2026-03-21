@@ -63,11 +63,16 @@ export default function GroupTop() {
       {/* Hero */}
       <section style={{ position: "relative", height: "calc(100vh - 64px)", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundColor: "#E5E0DB" }}>
+          <img
+            src="/images/about-exterior.webp"
+            alt=""
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(to bottom, rgba(139,58,58,0.55) 0%, rgba(92,38,38,0.7) 100%)",
+              background: "linear-gradient(to bottom, rgba(139,58,58,0.6) 0%, rgba(92,38,38,0.75) 100%)",
             }}
           />
         </div>

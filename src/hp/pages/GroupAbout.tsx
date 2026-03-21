@@ -12,11 +12,16 @@ export default function GroupAbout() {
       {/* SmallHero */}
       <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#D8D3CE" }}>
+          <img
+            src="/images/about-conversation.webp"
+            alt=""
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(180deg, rgba(139,58,58,0.75) 0%, rgba(139,58,58,0.5) 100%)",
+              background: "linear-gradient(180deg, rgba(139,58,58,0.75) 0%, rgba(139,58,58,0.55) 100%)",
             }}
           />
         </div>

@@ -55,11 +55,16 @@ export default function StudioWorks() {
       {/* SmallHero */}
       <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#CFC7BD" }}>
+          <img
+            src="/images/crossover-after-03.webp"
+            alt=""
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
           <div
             style={{
               position: "absolute",
               inset: 0,
-              background: "linear-gradient(180deg, rgba(74,103,65,0.75) 0%, rgba(74,103,65,0.5) 100%)",
+              background: "linear-gradient(180deg, rgba(74,103,65,0.78) 0%, rgba(74,103,65,0.55) 100%)",
             }}
           />
         </div>
