@@ -56,7 +56,7 @@ export default function LPTrustBanner() {
         </div>
       </section>
 
-      <section style={{ backgroundColor: "#4A6741", padding: "28px 20px" }}>
+      <section style={{ backgroundColor: "#4A6741", padding: "28px 20px 24px" }}>
         <div
           style={{
             maxWidth: "960px",

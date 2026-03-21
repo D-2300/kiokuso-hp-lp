@@ -3,9 +3,11 @@ import LPHero from "./components/LPHero";
 import LPBeforeAfter from "./components/LPBeforeAfter";
 import LPMidCTA from "./components/LPMidCTA";
 import LPTrustBanner from "./components/LPTrustBanner";
+import LPVoiceMini from "./components/LPVoiceMini";
 import LPPainPoints from "./components/LPPainPoints";
 import LPCommonIssues from "./components/LPCommonIssues";
 import LPSolutionPoints from "./components/LPSolutionPoints";
+import LPVoiceDetail from "./components/LPVoiceDetail";
 import LPWorksIntro from "./components/LPWorksIntro";
 import LPCaseDetail from "./components/LPCaseDetail";
 import LPPriceGuide from "./components/LPPriceGuide";
@@ -25,9 +27,11 @@ export default function LPPage() {
       <LPBeforeAfter />
       <LPMidCTA />
       <LPTrustBanner />
+      <LPVoiceMini />
       <LPPainPoints />
       <LPCommonIssues />
       <LPSolutionPoints />
+      <LPVoiceDetail />
       <LPWorksIntro />
       <LPCaseDetail />
       <LPPriceGuide />
