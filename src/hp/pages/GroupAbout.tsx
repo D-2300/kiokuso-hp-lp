@@ -11,6 +11,7 @@ const ourWork = [
     nameJa: "記憶荘 店舗内装スタジオ",
     nameEn: "KIOKUSO STUDIO",
     color: "#4A6741",
+    logo: "/assets/logos/logo-studio-dark.webp",
     active: true,
     to: "/studio",
     body: "初めて店を持つ人のための内装工事。設計から施工まで、一人の担当者が一貫して対応します。居抜き活用・施主支給・DIY参加で、品質を落とさずに予算を最大化。仙台・宮城県が対象エリアです。",
@@ -20,6 +21,7 @@ const ourWork = [
     nameJa: "記憶荘工務店",
     nameEn: "KIOKUSO BUILD",
     color: "#8B4513",
+    logo: "/assets/logos/logo-koumuten-dark.webp",
     active: false,
     to: null,
     body: "古い建物に新しい役割を与える、大規模リノベーション。廃墟や空き家を再生し、次の使い手につなぎます。",
@@ -29,6 +31,7 @@ const ourWork = [
     nameJa: "記憶荘リフォーム",
     nameEn: "KIOKUSO REFORM",
     color: "#7BA0A0",
+    logo: "/assets/logos/logo-reform-dark.webp",
     active: false,
     to: null,
     body: "キッチン・洗面・壁紙など、住まいの「ここだけ変えたい」に手を入れる部分改修。",
@@ -38,6 +41,7 @@ const ourWork = [
     nameJa: "記憶荘不動産",
     nameEn: "KIOKUSO ESTATE",
     color: "#2B3A52",
+    logo: "/assets/logos/logo-fudousan-dark.webp",
     active: false,
     to: null,
     body: "場所と人をつなぐ不動産仲介。継ぐべき場所を、見つけ出す。",
@@ -194,8 +198,6 @@ export default function GroupAbout() {
         </section>
       </ScrollFadeIn>
 
-      <TextureBand src="/assets/textures/kintsugi-collection.webp" height={220} />
-
       <GoldDivider />
 
       {/* STEP I：OUR WORK 事業体紹介 */}
@@ -214,7 +216,8 @@ export default function GroupAbout() {
                   padding: "28px 0",
                 }}
               >
-                <div style={{ width: "3px", backgroundColor: item.color, flexShrink: 0, borderRadius: "2px", marginRight: "20px" }} />
+                <div style={{ width: "6px", backgroundColor: item.color, flexShrink: 0, borderRadius: "3px", marginRight: "20px" }} />
+                <img src={item.logo} alt={item.nameJa} style={{ width: "48px", height: "48px", objectFit: "contain", flexShrink: 0, marginRight: "20px", alignSelf: "flex-start", marginTop: "2px" }} />
                 <div style={{ flex: 1 }}>
                   <div style={{ marginBottom: "6px" }}>
                     <span style={{ fontSize: "15px", fontWeight: 600, color: "#333", marginRight: "10px" }}>{item.nameJa}</span>
@@ -236,7 +239,6 @@ export default function GroupAbout() {
       </ScrollFadeIn>
 
       <GoldDivider />
-
       {/* STEP J：DAIプロフィール（グループ視点） */}
       <ScrollFadeIn>
         <div style={{ padding: "40px 24px 64px", maxWidth: "500px", margin: "0 auto" }}>
