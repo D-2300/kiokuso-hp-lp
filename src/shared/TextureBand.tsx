@@ -5,13 +5,15 @@ interface TextureBandProps {
 
 export default function TextureBand({ src, height = 180 }: TextureBandProps) {
   return (
-    <div
-      style={{
-        height: `${height}px`,
-        backgroundImage: `url('${src}')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    />
+    <div style={{ padding: "32px 0" }}>
+      <div
+        style={{
+          height: `${height}px`,
+          backgroundImage: `url('${src}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+    </div>
   );
 }

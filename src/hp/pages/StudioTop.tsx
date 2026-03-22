@@ -124,7 +124,7 @@ export default function StudioTop() {
       {/* Works Preview */}
       <ScrollFadeIn>
         <div>
-          <img src="/images/crossover-after-02.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src="/images/crossover-after-02.webp" alt="" style={{ maxWidth: "520px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }} />
           <div style={{ maxWidth: "520px", margin: "0 auto", padding: "32px 24px 64px" }}>
             <p style={{ fontSize: "14px", color: colors.text, lineHeight: 2.0 }}>
               既存のカウンターを活かしながら、
@@ -137,7 +137,7 @@ export default function StudioTop() {
 
       <ScrollFadeIn>
         <div>
-          <img src="/images/crossover-after-03.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src="/images/crossover-after-03.webp" alt="" style={{ maxWidth: "520px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }} />
           <div style={{ maxWidth: "520px", margin: "0 auto", padding: "32px 24px 64px" }}>
             <p style={{ fontSize: "14px", color: colors.text, lineHeight: 2.0 }}>
               前のお店が残していった造作を、

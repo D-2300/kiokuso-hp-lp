@@ -57,7 +57,7 @@ export default function StudioWorks() {
       <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#CFC7BD" }}>
           <img
-            src="/images/crossover-after-03.webp"
+            src="/assets/textures/oak-hardwood-floor.webp"
             alt=""
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -97,7 +97,7 @@ export default function StudioWorks() {
           <div key={work.title}>
             <ScrollFadeIn>
               <div style={{ paddingBottom: "64px" }}>
-                <img src={work.main} alt={work.title} style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+                <img src={work.main} alt={work.title} style={{ maxWidth: "560px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }} />
                 <div style={{ maxWidth: "560px", margin: "0 auto", padding: "32px 24px 0" }}>
                   <p style={{ fontSize: "18px", fontWeight: 500, color: colors.text }}>{work.title}</p>
                   <p style={{ fontSize: "12px", color: colors.mute, marginTop: "6px", marginBottom: "16px" }}>
@@ -112,6 +112,8 @@ export default function StudioWorks() {
                       gridTemplateColumns: "repeat(3, 1fr)",
                       gap: "8px",
                       marginTop: "20px",
+                      maxWidth: "480px",
+                      margin: "20px auto 0",
                     }}
                   >
                     {work.subs.map((src, j) => (

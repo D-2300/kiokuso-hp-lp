@@ -33,7 +33,7 @@ export default function StudioAbout() {
       <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#D8D3CE" }}>
           <img
-            src="/images/crossover-after-01.webp"
+            src="/assets/textures/shikkui-plaster-wide.webp"
             alt=""
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -105,7 +105,7 @@ export default function StudioAbout() {
       <TextureBand src="/assets/textures/shikkui-plaster-wide.webp" height={220} />
       <ScrollFadeIn key={points[0].heading}>
         <div>
-          <img src={points[0].img} alt={points[0].heading} style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src={points[0].img} alt={points[0].heading} style={{ maxWidth: "480px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }} />
           <div style={{ maxWidth: "520px", margin: "0 auto", padding: "32px 24px 56px" }}>
             <p style={{ fontSize: "16px", fontWeight: 500, color: colors.text, marginBottom: "12px" }}>
               {points[0].heading}
@@ -120,7 +120,7 @@ export default function StudioAbout() {
       <TextureBand src="/assets/textures/ceramic-tile-blue-glaze.webp" height={180} />
       <ScrollFadeIn key={points[1].heading}>
         <div>
-          <img src={points[1].img} alt={points[1].heading} style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src={points[1].img} alt={points[1].heading} style={{ maxWidth: "480px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }} />
           <div style={{ maxWidth: "520px", margin: "0 auto", padding: "32px 24px 56px" }}>
             <p style={{ fontSize: "16px", fontWeight: 500, color: colors.text, marginBottom: "12px" }}>
               {points[1].heading}
@@ -135,7 +135,7 @@ export default function StudioAbout() {
       <TextureBand src="/assets/textures/brass-patina.webp" height={180} />
       <ScrollFadeIn key={points[2].heading}>
         <div>
-          <img src={points[2].img} alt={points[2].heading} style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
+          <img src={points[2].img} alt={points[2].heading} style={{ maxWidth: "480px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }} />
           <div style={{ maxWidth: "520px", margin: "0 auto", padding: "32px 24px 56px" }}>
             <p style={{ fontSize: "16px", fontWeight: 500, color: colors.text, marginBottom: "12px" }}>
               {points[2].heading}
