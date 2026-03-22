@@ -28,6 +28,11 @@ export default function HPApp() {
             tagline="場所の記憶を引き継ぎ、新しい物語として再生する。"
             taglineSub="使われなくなった建物を、もう一度人が集まる場所に。準備中です。"
             concept={`使われなくなった建物には、誰かがそこで過ごした時間が残っています。\n壊して更地にするのではなく、その記憶ごと引き受けて、\n新しい役割を与える。それが記憶荘工務店の仕事です。\n\n廃墟や空き家の大規模リノベーション。\n構造から見直し、もう一度人が集まる場所に仕立て直す。`}
+            vision={{
+              text: `使われなくなった建物には、まだ物語の続きがある。\n\n廃墟や空き家をただ壊すのではなく、\n構造を活かし、記憶を残しながら、\n新しい役割を与える大規模リノベーション。\n\n前の持ち主が大切にしていた時間を引き継ぎ、\n次の使い手に届ける。\nそれが記憶荘工務店の仕事です。`,
+              image: "/assets/textures/old-new-timber-junction.webp",
+              caption: "古い建物の記憶を、次の物語へ。",
+            }}
             themeColor={colors.urushicha.main}
             themeLight={colors.urushicha.light}
             themeMid={colors.urushicha.mid}
@@ -62,6 +67,11 @@ export default function HPApp() {
             tagline="暮らしの中の「ここだけ変えたい」に、ちょうどいい手を入れる。"
             taglineSub="住まいの「ここだけ変えたい」に応える、小さなリフォーム。準備中です。"
             concept={`大規模なリフォームではなく、\nキッチン、洗面台、壁紙、床。\n暮らしの中で気になっている「ここだけ」に手を入れる。\n\n毎日使う場所だからこそ、小さな変化が大きな違いになる。\n記憶荘リフォームLABOは、住まいの部分改修を手がけます。`}
+            vision={{
+              text: `家全体を変える必要はない。\n\nキッチンだけ。洗面台だけ。壁紙だけ。\n暮らしの中の「ここだけ気になる」に、\nちょうどいい手を入れる。\n\n大きな工事ではないからこそ、\n丁寧に、オーナーの暮らしに寄り添いながら。`,
+              image: "/assets/textures/shikkui-plaster-wide.webp",
+              caption: "暮らしに、ちょうどいい手を。",
+            }}
             themeColor={colors.seiji.main}
             themeLight={colors.seiji.light}
             themeMid={colors.seiji.mid}
@@ -96,6 +106,11 @@ export default function HPApp() {
             tagline="継ぐべき場所を、見つけ出す。"
             taglineSub="場所と人をつなぐ、不動産の仲介。準備中です。"
             concept={`場所には、それぞれの物語があります。\nその物語を次の人につなぐのが、記憶荘不動産の役割です。\n\n物件を「スペック」ではなく「可能性」として見る。\n工務店やスタジオと連携し、\n「この場所で何ができるか」まで一緒に考える不動産仲介。`}
+            vision={{
+              text: `いい場所は、待っているだけでは見つからない。\n\n記憶荘が内装工事を通じて出会ってきた\n空き物件、居抜き物件、使われなくなった建物。\nその中から、次の使い手にふさわしい場所を見つけ出す。\n\n不動産仲介という形で、\n場所と人をつなぐ。`,
+              image: "/assets/textures/brass-patina.webp",
+              caption: "場所と人を、つなぐ。",
+            }}
             themeColor={colors.tetsukon.main}
             themeLight={colors.tetsukon.light}
             themeMid={colors.tetsukon.mid}

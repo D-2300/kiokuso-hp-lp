@@ -4,6 +4,12 @@ import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import TextureBand from "../../shared/TextureBand";
 import Logo from "../../shared/Logo";
 
+interface VisionBlock {
+  text: string;
+  image: string;
+  caption: string;
+}
+
 interface ComingSoonProps {
   name: string;
   nameLine2?: string;
@@ -12,6 +18,7 @@ interface ComingSoonProps {
   tagline: string;
   taglineSub: string;
   concept: string;
+  vision: VisionBlock;
   themeColor: string;
   themeLight: string;
   themeMid: string;
@@ -34,6 +41,7 @@ export default function ComingSoon({
   tagline,
   taglineSub,
   concept,
+  vision,
   themeColor,
   themeLight,
   themeMid,
@@ -48,6 +56,7 @@ export default function ComingSoon({
   logoTo,
 }: ComingSoonProps) {
   const conceptLines = concept.split("\n");
+  const visionLines = vision.text.split("\n");
 
   return (
     <div style={{ backgroundColor: "#F8F5F0", minHeight: "100vh" }}>
@@ -208,20 +217,70 @@ export default function ComingSoon({
           <p style={{ fontSize: "13px", color: "#888", marginBottom: "32px", letterSpacing: "0.05em" }}>
             {taglineSub}
           </p>
+        </section>
+      </ScrollFadeIn>
 
-          <span
-            style={{
-              display: "inline-block",
-              border: `1px solid ${themeLight}`,
-              borderRadius: "6px",
-              padding: "10px 28px",
-              fontSize: "13px",
-              color: themeColor,
-              letterSpacing: "0.05em",
-            }}
-          >
-            準備中
-          </span>
+      {/* ビジョンブロック */}
+      <ScrollFadeIn>
+        <section style={{ backgroundColor: "#F8F5F0", padding: "80px 24px" }}>
+          <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
+            <p
+              style={{
+                fontFamily: "'Anton', sans-serif",
+                fontSize: "14px",
+                letterSpacing: "4px",
+                color: "#999",
+                marginBottom: "40px",
+                textTransform: "uppercase",
+              }}
+            >
+              VISION
+            </p>
+            <div style={{ marginBottom: "48px" }}>
+              {visionLines.map((line, i) => (
+                line === "" ? (
+                  <div key={i} style={{ height: "1.2em" }} />
+                ) : (
+                  <p
+                    key={i}
+                    style={{
+                      fontFamily: "'Noto Sans JP', sans-serif",
+                      fontSize: "16px",
+                      fontWeight: 400,
+                      color: "#333",
+                      lineHeight: 2.2,
+                      letterSpacing: "0.04em",
+                      margin: 0,
+                    }}
+                  >
+                    {line}
+                  </p>
+                )
+              ))}
+            </div>
+            <img
+              src={vision.image}
+              alt=""
+              style={{
+                width: "100%",
+                maxWidth: "700px",
+                display: "block",
+                margin: "0 auto 16px",
+                borderRadius: "4px",
+                objectFit: "cover",
+                aspectRatio: "16/9",
+              }}
+            />
+            <p
+              style={{
+                fontSize: "14px",
+                color: "#999",
+                letterSpacing: "0.06em",
+              }}
+            >
+              {vision.caption}
+            </p>
+          </div>
         </section>
       </ScrollFadeIn>
 
@@ -270,6 +329,21 @@ export default function ComingSoon({
           </p>
         </section>
       </ScrollFadeIn>
+
+      {/* 準備中テキスト */}
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "15px",
+          color: "#BBB",
+          marginTop: "48px",
+          marginBottom: "64px",
+          padding: "0 24px",
+          letterSpacing: "0.04em",
+        }}
+      >
+        現在準備中です。開始時期が決まり次第、こちらでお知らせします。
+      </p>
 
       <EntityFooter
         themeColor={themeColor}
