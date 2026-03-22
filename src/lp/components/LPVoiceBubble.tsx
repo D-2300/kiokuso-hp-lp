@@ -4,6 +4,7 @@ interface LPVoiceBubbleProps {
   text: string;
   author: string;
   detail: string;
+  img?: string;
   variant?: 'light' | 'green';
 }
 
@@ -11,6 +12,7 @@ const LPVoiceBubble: React.FC<LPVoiceBubbleProps> = ({
   text,
   author,
   detail,
+  img,
   variant = 'light',
 }) => {
   const isGreen = variant === 'green';
@@ -35,10 +37,14 @@ const LPVoiceBubble: React.FC<LPVoiceBubbleProps> = ({
         justifyContent: 'center',
         overflow: 'hidden',
       }}>
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="8" r="4" fill={isGreen ? 'rgba(255,255,255,0.5)' : '#A8BFA2'} />
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill={isGreen ? 'rgba(255,255,255,0.5)' : '#A8BFA2'} />
-        </svg>
+        {img ? (
+          <img src={img} alt={author} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        ) : (
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="4" fill={isGreen ? 'rgba(255,255,255,0.5)' : '#A8BFA2'} />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill={isGreen ? 'rgba(255,255,255,0.5)' : '#A8BFA2'} />
+          </svg>
+        )}
       </div>
 
       <div style={{ flex: 1 }}>

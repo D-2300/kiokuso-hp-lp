@@ -6,6 +6,7 @@ interface VoiceItem {
   context: string;
   author: string;
   detail: string;
+  img: string;
 }
 
 const voices: VoiceItem[] = [
@@ -14,12 +15,14 @@ const voices: VoiceItem[] = [
     text: '3社比較した中で、見積もりの内訳が一番細かかったです。融資の書類にもそのまま使えて助かりました。',
     author: 'カフェオーナー',
     detail: '仙台市青葉区・12坪',
+    img: '/images/voice-cafe-owner.webp',
   },
   {
     context: '',
     text: '物件が決まる前から相談できて、居抜きの活かし方まで提案してくれました。断っても大丈夫と言ってくれたのが安心でした。',
     author: '居酒屋オーナー',
     detail: '仙台市宮城野区・18坪',
+    img: '/images/voice-izakaya-owner.webp',
   },
 ];
 
@@ -70,6 +73,7 @@ const LPVoiceBlock2: React.FC = () => {
               text={v.text}
               author={v.author}
               detail={v.detail}
+              img={v.img}
             />
           </div>
         ))}

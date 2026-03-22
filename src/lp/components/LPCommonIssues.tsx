@@ -96,6 +96,7 @@ export default function LPCommonIssues() {
             text="まさに全部当てはまっていました。追加料金が怖くて動けなかったけど、記憶荘は最初の見積もりから変わらなかった。"
             author="バーオーナー"
             detail="仙台市青葉区・8坪"
+            img="/images/voice-bar-owner.webp"
           />
         </div>
       </section>

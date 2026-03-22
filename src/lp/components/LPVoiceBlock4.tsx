@@ -11,6 +11,7 @@ const LPVoiceBlock4: React.FC = () => {
         text="Step 0で概算を出してもらった時点で、予算的に厳しいとわかったんです。でも「今は見送りましょう」と正直に言ってくれて、無理に進めなかった。半年後に改めて相談して、今の店ができました。"
         author="焼鳥店オーナー"
         detail="仙台市泉区・14坪"
+        img="/images/voice-cafe-dog.webp"
       />
     </section>
   );
