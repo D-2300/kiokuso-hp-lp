@@ -19,6 +19,7 @@ interface EntityFooterProps {
   logoEntity?: LogoEntity;
   links?: FooterLink[];
   showTopButton?: boolean;
+  disabledCTA?: boolean;
 }
 
 export default function EntityFooter({
@@ -30,6 +31,7 @@ export default function EntityFooter({
   logoEntity = "group",
   links = [],
   showTopButton = false,
+  disabledCTA = false,
 }: EntityFooterProps) {
   return (
     <footer
@@ -56,7 +58,7 @@ export default function EntityFooter({
       </p>
 
       <div style={{ marginBottom: "40px" }}>
-        <LineCTAButton size="normal" />
+        <LineCTAButton size="normal" disabled={disabledCTA} />
       </div>
 
       {tagline && (
