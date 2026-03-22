@@ -128,6 +128,15 @@ export default function LPHero() {
               </div>
             ))}
           </div>
+          <p style={{
+            margin: "8px 0 0",
+            fontSize: "11px",
+            color: "rgba(255,255,255,0.5)",
+            textAlign: "center",
+            lineHeight: 1.6,
+          }}>
+            ※ カフェ15坪想定。業態・坪数・設備状況により変動します
+          </p>
 
           <div style={{ padding: "14px 0", textAlign: "center" }}>
             <a
