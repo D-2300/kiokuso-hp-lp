@@ -28,20 +28,8 @@ export default function GroupNav() {
         padding: "0 32px",
       }}
     >
-      <Link to="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-        <div style={{ flexShrink: 0 }}>
-          <Logo type="group" color="gold" layout="mark" size="sm" />
-        </div>
-        <span
-          style={{
-            color: "#F5EAEA",
-            fontSize: "14px",
-            fontWeight: 300,
-            letterSpacing: "0.25em",
-          }}
-        >
-          KIOKUSO
-        </span>
+      <Link to="/" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+        <Logo entity="group" color="gold" layout="horizontal" height={36} centered={false} />
       </Link>
 
       <div

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Logo from "../../shared/Logo";
 
+type LogoEntity = "group" | "studio" | "koumuten" | "reform" | "fudousan";
+
 interface NavLink {
   to: string;
   label: string;
@@ -11,6 +13,7 @@ interface EntityNavProps {
   themeLight: string;
   themeBg: string;
   title: string;
+  logoEntity?: LogoEntity;
   links?: NavLink[];
 }
 
@@ -19,6 +22,7 @@ export default function EntityNav({
   themeLight,
   themeBg,
   title,
+  logoEntity = "group",
   links = [],
 }: EntityNavProps) {
   return (
@@ -36,20 +40,8 @@ export default function EntityNav({
         padding: "0 32px",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-        <div style={{ flexShrink: 0 }}>
-          <Logo type="group" color="gold" layout="mark" size="sm" />
-        </div>
-        <span
-          style={{
-            color: themeBg,
-            fontSize: "14px",
-            fontWeight: 300,
-            letterSpacing: "0.25em",
-          }}
-        >
-          {title}
-        </span>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Logo entity={logoEntity} color="dark" layout="horizontal" height={36} centered={false} />
       </div>
 
       <div

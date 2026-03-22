@@ -40,6 +40,7 @@ export default function HPApp() {
             photo2="/images/hp-hallway-light.webp"
             textureBand1="/assets/textures/rusted-steel-cracked.webp"
             textureBand2="/assets/textures/peeling-paint-layers.webp"
+            logoEntity="koumuten"
           />
         }
       />
@@ -66,6 +67,7 @@ export default function HPApp() {
             photo2="/images/hp-wood-warm.webp"
             textureBand1="/assets/textures/shoji-light-shadow.webp"
             textureBand2="/assets/textures/tatami-weave-side.webp"
+            logoEntity="reform"
           />
         }
       />
@@ -92,6 +94,7 @@ export default function HPApp() {
             photo2="/images/hp-hallway-garden.webp"
             textureBand1="/assets/textures/mortar-wall-cracks.webp"
             textureBand2="/assets/textures/tile-water-droplets-golden.webp"
+            logoEntity="fudousan"
           />
         }
       />

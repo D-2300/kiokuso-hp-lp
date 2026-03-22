@@ -12,7 +12,7 @@ export default function GroupFooter() {
       }}
     >
       <div style={{ marginBottom: "32px" }}>
-        <Logo type="group" color="gold" layout="mark" size="md" />
+        <Logo entity="group" color="gold" layout="horizontal" height={40} />
       </div>
 
       <p

@@ -7,6 +7,8 @@ interface FooterLink {
   label: string;
 }
 
+type LogoEntity = "group" | "studio" | "koumuten" | "reform" | "fudousan";
+
 interface EntityFooterProps {
   themeColor: string;
   themeLight: string;
@@ -14,6 +16,7 @@ interface EntityFooterProps {
   themeDark: string;
   name: string;
   tagline?: string;
+  logoEntity?: LogoEntity;
   links?: FooterLink[];
 }
 
@@ -23,6 +26,7 @@ export default function EntityFooter({
   themeMid,
   name,
   tagline,
+  logoEntity = "group",
   links = [],
 }: EntityFooterProps) {
   return (
@@ -34,7 +38,7 @@ export default function EntityFooter({
       }}
     >
       <div style={{ marginBottom: "32px" }}>
-        <Logo type="group" color="gold" layout="mark" size="md" />
+        <Logo entity={logoEntity} color="gold" layout="horizontal" height={40} />
       </div>
 
       <p

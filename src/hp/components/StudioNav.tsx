@@ -26,20 +26,8 @@ export default function StudioNav() {
         padding: "0 32px",
       }}
     >
-      <Link to="/studio" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}>
-        <div style={{ flexShrink: 0 }}>
-          <Logo type="studio" color="gold" layout="mark" size="sm" />
-        </div>
-        <span
-          style={{
-            color: "#EAF0E8",
-            fontSize: "14px",
-            fontWeight: 300,
-            letterSpacing: "0.25em",
-          }}
-        >
-          STUDIO
-        </span>
+      <Link to="/studio" style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+        <Logo entity="studio" color="gold" layout="horizontal" height={36} centered={false} />
       </Link>
 
       <div

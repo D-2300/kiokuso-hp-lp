@@ -12,7 +12,7 @@ export default function StudioFooter() {
       }}
     >
       <div style={{ marginBottom: "32px" }}>
-        <Logo type="studio" color="gold" layout="mark" size="md" />
+        <Logo entity="studio" color="gold" layout="horizontal" height={40} />
       </div>
 
       <p

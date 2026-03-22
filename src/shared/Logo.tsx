@@ -1,64 +1,49 @@
-import { useState } from "react";
-
-type LogoType = "group" | "studio";
+type LogoEntity = "group" | "studio" | "koumuten" | "reform" | "fudousan";
 type LogoColor = "gold" | "dark";
 type LogoLayout = "mark" | "horizontal";
-type LogoSize = "sm" | "md" | "lg" | "xl";
 
 interface LogoProps {
-  type?: LogoType;
+  entity?: LogoEntity;
   color?: LogoColor;
   layout?: LogoLayout;
-  size?: LogoSize;
+  height?: number;
+  centered?: boolean;
 }
 
-const heightMap: Record<LogoSize, number> = {
-  sm: 28,
-  md: 40,
-  lg: 56,
-  xl: 80,
+const altMap: Record<LogoEntity, string> = {
+  group: "記憶荘",
+  studio: "記憶荘 STUDIO",
+  koumuten: "記憶荘 工務店",
+  reform: "記憶荘 住宅リフォームLABO",
+  fudousan: "記憶荘 不動産",
 };
 
-function getLogoSrc(type: LogoType, color: LogoColor, layout: LogoLayout): string {
+function getLogoSrc(entity: LogoEntity, color: LogoColor, layout: LogoLayout): string {
   if (layout === "horizontal") {
-    return `/images/logo-${type}-h-${color}.webp`;
+    return `/assets/logos/logo-${entity}-h-${color}.webp`;
   }
-  return `/images/logo-${type}-${color}.webp`;
-}
-
-function getFallbackSrc(type: LogoType, color: LogoColor, layout: LogoLayout): string | null {
-  if (type === "group") {
-    return getLogoSrc("studio", color, layout);
-  }
-  return null;
+  return `/assets/logos/logo-${entity}-${color}.webp`;
 }
 
 export default function Logo({
-  type = "studio",
+  entity = "studio",
   color = "dark",
   layout = "mark",
-  size = "md",
+  height = 40,
+  centered = true,
 }: LogoProps) {
-  const h = heightMap[size];
-  const src = getLogoSrc(type, color, layout);
-  const fallback = getFallbackSrc(type, color, layout);
-  const [errored, setErrored] = useState(false);
-
-  const finalSrc = errored && fallback ? fallback : src;
+  const src = getLogoSrc(entity, color, layout);
 
   return (
     <img
-      src={finalSrc}
-      alt={type === "group" ? "記憶荘" : "記憶荘 STUDIO"}
-      onError={() => {
-        if (!errored && fallback) setErrored(true);
-      }}
+      src={src}
+      alt={altMap[entity]}
       style={{
-        height: `${h}px`,
+        height: `${height}px`,
         width: "auto",
         display: "block",
         objectFit: "contain",
-        margin: "0 auto",
+        margin: centered ? "0 auto" : undefined,
       }}
     />
   );

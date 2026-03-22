@@ -16,7 +16,7 @@ const businesses = [
     color: colors.urushicha.main,
     active: false,
     to: "/koumuten",
-    logoType: "group" as const,
+    logoEntity: "koumuten" as const,
   },
   {
     nameJa: "記憶荘 店舗内装スタジオ",
@@ -25,7 +25,7 @@ const businesses = [
     color: colors.fukamidori.main,
     active: true,
     to: "/studio",
-    logoType: "studio" as const,
+    logoEntity: "studio" as const,
   },
   {
     nameJa: "記憶荘 住宅リフォームLABO",
@@ -34,7 +34,7 @@ const businesses = [
     color: colors.seiji.main,
     active: false,
     to: "/reform",
-    logoType: "group" as const,
+    logoEntity: "reform" as const,
   },
   {
     nameJa: "記憶荘 不動産",
@@ -43,7 +43,7 @@ const businesses = [
     color: colors.tetsukon.main,
     active: false,
     to: "/fudousan",
-    logoType: "group" as const,
+    logoEntity: "fudousan" as const,
   },
 ];
 
@@ -94,6 +94,9 @@ export default function GroupTop() {
             gap: "12px",
           }}
         >
+          <div style={{ marginBottom: "8px" }}>
+            <Logo entity="group" color="gold" layout="mark" height={72} />
+          </div>
           <p style={{ color: "#fff", fontSize: "36px", fontWeight: 300, letterSpacing: "0.35em" }}>
             KIOKUSO
           </p>
@@ -184,7 +187,7 @@ export default function GroupTop() {
                   }}
                 >
                   <div style={{ marginBottom: "12px" }}>
-                    <Logo type={b.logoType} color="dark" layout="mark" size="sm" />
+                    <Logo entity={b.logoEntity} color="dark" layout="mark" height={32} centered={false} />
                   </div>
                   <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
                     {b.nameJa}
@@ -211,7 +214,7 @@ export default function GroupTop() {
                   }}
                 >
                   <div style={{ marginBottom: "12px" }}>
-                    <Logo type={b.logoType} color="dark" layout="mark" size="sm" />
+                    <Logo entity={b.logoEntity} color="dark" layout="mark" height={32} centered={false} />
                   </div>
                   <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
                     {b.nameJa}

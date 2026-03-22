@@ -4,6 +4,7 @@ import StudioCTA from "../components/StudioCTA";
 import StudioFooter from "../components/StudioFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import TextureBand from "../../shared/TextureBand";
+import Logo from "../../shared/Logo";
 import { colors } from "../../shared/design-tokens";
 
 export default function StudioTop() {
@@ -47,6 +48,9 @@ export default function StudioTop() {
             gap: "12px",
           }}
         >
+          <div style={{ marginBottom: "8px" }}>
+            <Logo entity="studio" color="gold" layout="mark" height={64} />
+          </div>
           <p style={{ color: "#fff", fontSize: "28px", fontWeight: 300, letterSpacing: "0.3em" }}>
             KIOKUSO STUDIO
           </p>

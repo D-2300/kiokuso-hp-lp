@@ -2,6 +2,7 @@ import EntityNav from "../components/EntityNav";
 import EntityFooter from "../components/EntityFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import TextureBand from "../../shared/TextureBand";
+import Logo from "../../shared/Logo";
 
 interface ComingSoonProps {
   name: string;
@@ -23,6 +24,7 @@ interface ComingSoonProps {
   photo2?: string;
   textureBand1?: string;
   textureBand2?: string;
+  logoEntity?: "group" | "studio" | "koumuten" | "reform" | "fudousan";
 }
 
 export default function ComingSoon({
@@ -45,6 +47,7 @@ export default function ComingSoon({
   photo2,
   textureBand1,
   textureBand2,
+  logoEntity = "group",
 }: ComingSoonProps) {
   const taglineLines = tagline.split("\n");
 
@@ -55,6 +58,7 @@ export default function ComingSoon({
         themeLight={themeLight}
         themeBg={themeBg}
         title={name}
+        logoEntity={logoEntity}
       />
 
       {/* Hero */}
@@ -120,19 +124,8 @@ export default function ComingSoon({
             gap: "16px",
           }}
         >
-          <div
-            style={{
-              width: "64px",
-              height: "64px",
-              border: "2px solid #C9A84C",
-              borderRadius: "8px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "8px",
-            }}
-          >
-            <span style={{ fontSize: "24px", color: "#C9A84C" }}>⬡</span>
+          <div style={{ marginBottom: "8px" }}>
+            <Logo entity={logoEntity} color="gold" layout="mark" height={72} />
           </div>
           <p style={{ color: "#fff", fontSize: "24px", fontWeight: 300, letterSpacing: "0.3em" }}>
             {name}
@@ -256,6 +249,7 @@ export default function ComingSoon({
         themeDark={themeDark}
         name={nameJa}
         tagline="想いが残る場所を、つくる。"
+        logoEntity={logoEntity}
         links={[{ to: "/", label: "← Group Top" }]}
       />
     </div>
