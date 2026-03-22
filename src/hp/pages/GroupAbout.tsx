@@ -2,6 +2,7 @@ import GroupNav from "../components/GroupNav";
 import GroupFooter from "../components/GroupFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import GoldDivider from "../../shared/GoldDivider";
+import TextureBand from "../../shared/TextureBand";
 import { colors } from "../../shared/design-tokens";
 
 export default function GroupAbout() {
@@ -71,15 +72,18 @@ export default function GroupAbout() {
         </section>
       </ScrollFadeIn>
 
+      <TextureBand src="/assets/textures/kintsugi-bowl-side.webp" height={240} />
+
       <GoldDivider />
 
       {/* ブロック2：制約の中の美しさ */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 0" }}>
+          <TextureBand src="/assets/textures/kintsugi-bowl-inside.webp" height={220} />
           <img
             src="/images/hp-wood-dark.webp"
             alt=""
-            style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }}
+            style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", marginTop: "48px" }}
           />
           <div
             style={{
@@ -106,12 +110,14 @@ export default function GroupAbout() {
       {/* ブロック3：金継ぎとの接続 */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 0" }}>
+          <TextureBand src="/assets/textures/old-new-timber-junction.webp" height={220} />
           <div
             style={{
               maxWidth: "560px",
               margin: "0 auto",
               padding: "0 24px",
               textAlign: "center",
+              marginTop: "48px",
               marginBottom: "48px",
             }}
           >
@@ -124,6 +130,8 @@ export default function GroupAbout() {
           <img src="/images/hp-kintsugi-light.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover" }} />
         </section>
       </ScrollFadeIn>
+
+      <TextureBand src="/assets/textures/kintsugi-collection.webp" height={220} />
 
       <GoldDivider />
 
@@ -150,6 +158,8 @@ export default function GroupAbout() {
           </div>
         </div>
       </ScrollFadeIn>
+
+      <TextureBand src="/assets/textures/reclaimed-wood-section.webp" height={180} />
 
       <GroupFooter />
     </div>
