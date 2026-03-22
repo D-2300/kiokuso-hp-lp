@@ -52,8 +52,11 @@ export default function StudioFooter() {
             to={link.to}
             style={{
               color: "#A8BFA2",
-              fontSize: "12px",
-              letterSpacing: "0.08em",
+              fontFamily: "'Anton', sans-serif",
+              fontSize: "14px",
+              fontWeight: 400,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
               textDecoration: "none",
               transition: "color 0.2s",
             }}
