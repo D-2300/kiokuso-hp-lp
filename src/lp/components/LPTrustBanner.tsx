@@ -7,9 +7,9 @@ const checkItems = [
 ];
 
 const badges = [
-  { num: "100%", label: "公開" },
-  { num: "相談", label: "OK" },
-  { num: "一貫", label: "対応" },
+  { num: "見積もり", label: "全項目公開" },
+  { num: "物件未定", label: "でもOK" },
+  { num: "最初から最後まで", label: "同じ担当" },
 ];
 
 export default function LPTrustBanner() {
@@ -71,7 +71,7 @@ export default function LPTrustBanner() {
               <p
                 style={{
                   margin: 0,
-                  fontSize: "clamp(28px, 5vw, 40px)",
+                  fontSize: "clamp(18px, 3.5vw, 28px)",
                   fontWeight: 700,
                   color: "#C9A84C",
                   lineHeight: 1.2,

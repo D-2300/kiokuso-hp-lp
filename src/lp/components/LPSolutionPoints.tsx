@@ -12,7 +12,7 @@ export default function LPSolutionPoints() {
             設計から施工まで、一気通貫で対応
           </p>
           <p style={{ margin: "0 0 20px", fontSize: "clamp(14px, 2.5vw, 16px)", color: "#555", lineHeight: 1.85 }}>
-            担当が一人なので、伝言ゲームが起きません。ヒアリングした内容が設計に、設計が施工にそのまま反映されます。「言った・言わない」のトラブルが起きない仕組みです。
+            最初にお話を聞いた担当が、そのまま設計し、現場に立ちます。伝言ゲームが起きないので、「言った・言わない」のトラブルがありません。工事中の変更や相談も、一本の連絡で済みます。
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
             <div style={{ border: "1px solid #e0e0e0", borderRadius: "8px", padding: "18px" }}>
@@ -26,7 +26,7 @@ export default function LPSolutionPoints() {
               <p style={{ margin: "0 0 10px", fontSize: "12px", fontWeight: 700, color: "#C9A84C" }}>記憶荘</p>
               <p style={{ margin: 0, fontSize: "14px", color: "#333", lineHeight: 1.85 }}>
                 相談→設計→施工→引渡し<br />
-                すべてDAIが直接対応
+                最初から最後まで、担当が変わりません
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function LPSolutionPoints() {
             Point 3
           </p>
           <p style={{ margin: "0 0 14px", fontSize: "clamp(18px, 3.5vw, 24px)", fontWeight: 700, color: "#222" }}>
-            居抜き活用・施主支給・DIYで、効率的な予算に
+            居抜き活用・施主支給・DIYで、コストを抑える
           </p>
           <p style={{ margin: "0 0 20px", fontSize: "clamp(14px, 2.5vw, 16px)", color: "#555", lineHeight: 1.85 }}>
             使えるものは活かす。買えるものはご自身で。できる作業は一緒に。この3つを組み合わせることで、品質を落とさずに予算を最大化します。

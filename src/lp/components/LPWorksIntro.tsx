@@ -7,7 +7,7 @@ export default function LPWorksIntro() {
             仙台・宮城県で、一つひとつのお店に向き合ってきました。
           </p>
           <p style={{ margin: "0 0 28px", fontSize: "13px", color: "rgba(255,255,255,0.7)", lineHeight: 1.8 }}>
-            相見積もりをしていただければ、選んでいただける自信があります。
+            他社との比較もぜひしてみてください。違いが伝わると思います。
           </p>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "14px" }}>
             <div style={{ width: "3px", height: "28px", backgroundColor: "#C9A84C" }} />

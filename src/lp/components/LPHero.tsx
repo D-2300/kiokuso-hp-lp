@@ -73,7 +73,7 @@ export default function LPHero() {
               lineHeight: 1.7,
             }}
           >
-            写真1枚で概算をお伝えします。断りはLINE1本でOK。
+            写真1枚で概算をお伝えします。物件が決まっていなくてもOK。
           </p>
         </div>
 

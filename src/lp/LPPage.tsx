@@ -14,7 +14,6 @@ import LPPriceGuide from "./components/LPPriceGuide";
 import LPVoiceBlock3 from "./components/LPVoiceBlock3";
 import LPFlowIntro from "./components/LPFlowIntro";
 import LPFlow from "./components/LPFlow";
-import LPVoiceBlock4 from "./components/LPVoiceBlock4";
 import LPLastPush from "./components/LPLastPush";
 import LPFinalCTA from "./components/LPFinalCTA";
 import LPFAQ from "./components/LPFAQ";
@@ -40,7 +39,6 @@ export default function LPPage() {
       <LPVoiceBlock3 />
       <LPFlowIntro />
       <LPFlow />
-      <LPVoiceBlock4 />
       <LPLastPush />
       <LPFinalCTA />
       <LPFAQ />
