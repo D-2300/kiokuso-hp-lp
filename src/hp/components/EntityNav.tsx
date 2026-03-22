@@ -61,13 +61,11 @@ export default function EntityNav({
   const navBg = scrolled || menuOpen ? solidBg : "transparent";
   const isScrolledOrMenu = scrolled || menuOpen;
 
-  const linkColor = isScrolledOrMenu ? "#333333" : themeLight;
-  const groupColor = isScrolledOrMenu ? "#666666" : "rgba(255,255,255,0.6)";
-  const hamColor = isScrolledOrMenu ? "#333333" : "#fff";
+  const linkColor = isScrolledOrMenu ? "rgba(255,255,255,0.85)" : themeLight;
+  const groupColor = isScrolledOrMenu ? "rgba(255,255,255,0.6)" : "rgba(255,255,255,0.6)";
+  const hamColor = "#fff";
 
-  const logoSrc = isScrolledOrMenu
-    ? `/assets/logos/logo-${logoEntity}-h-dark.webp`
-    : `/assets/logos/logo-${logoEntity}-h-gold.webp`;
+  const logoSrc = `/assets/logos/logo-${logoEntity}-h-gold.webp`;
 
   const mobileLinks: NavLink[] = [{ to: "/", label: "← Group Top" }];
 
@@ -116,7 +114,7 @@ export default function EntityNav({
               key={link.to}
               to={link.to}
               style={{ ...antonStyle, color: linkColor }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = isScrolledOrMenu ? "#111111" : "#ffffff")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
               onMouseLeave={(e) => (e.currentTarget.style.color = linkColor)}
             >
               {link.label}
@@ -130,7 +128,7 @@ export default function EntityNav({
               fontSize: "12px",
               paddingLeft: links.length > 0 ? "8px" : "0",
               borderLeft: links.length > 0
-                ? isScrolledOrMenu ? "1px solid rgba(0,0,0,0.15)" : "1px solid rgba(255,255,255,0.2)"
+                ? "1px solid rgba(255,255,255,0.2)"
                 : "none",
             }}
           >

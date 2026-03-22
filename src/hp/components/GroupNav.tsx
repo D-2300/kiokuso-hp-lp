@@ -47,13 +47,13 @@ export default function GroupNav() {
 
   const linkColor = (active: boolean) =>
     isScrolledOrMenu
-      ? active ? "#111111" : "#333333"
+      ? active ? "#FFFFFF" : "rgba(255,255,255,0.7)"
       : active ? "#F5EAEA" : "#D4A0A0";
 
-  const hamColor = isScrolledOrMenu ? "#333333" : "#F5EAEA";
+  const hamColor = isScrolledOrMenu ? "#FFFFFF" : "#F5EAEA";
 
   const logoSrc = isScrolledOrMenu
-    ? "/assets/logos/logo-group-h-dark.webp"
+    ? "/assets/logos/logo-group-h-gold.webp"
     : "/assets/logos/logo-group-h-gold.webp";
 
   return (
@@ -91,7 +91,7 @@ export default function GroupNav() {
               key={link.to}
               to={link.to}
               style={{ ...antonStyle, color: linkColor(location.pathname === link.to) }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = isScrolledOrMenu ? "#111111" : "#F5EAEA")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = isScrolledOrMenu ? "#FFFFFF" : "#F5EAEA")}
               onMouseLeave={(e) => (e.currentTarget.style.color = linkColor(location.pathname === link.to))}
             >
               {link.label}
