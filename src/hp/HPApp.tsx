@@ -21,8 +21,8 @@ export default function HPApp() {
         path="/koumuten"
         element={
           <ComingSoon
-            name="KOUMUTEN"
-            nameJa="記憶荘 工務店"
+            name="KIOKUSO BUILD"
+            nameJa="記憶荘工務店"
             subtitle="大規模リノベーション・再生"
             tagline="場所の記憶を引き継ぎ、新しい物語として再生する。"
             taglineSub="使われなくなった建物を、もう一度人が集まる場所に。準備中です。"
@@ -53,8 +53,8 @@ export default function HPApp() {
         path="/reform"
         element={
           <ComingSoon
-            name="REFORM LABO"
-            nameJa="記憶荘 住宅リフォームLABO"
+            name="KIOKUSO REFORM"
+            nameJa="記憶荘リフォーム"
             subtitle="住宅の部分リフォーム"
             tagline="暮らしの中の「ここだけ変えたい」に、ちょうどいい手を入れる。"
             taglineSub="住まいの「ここだけ変えたい」に応える、小さなリフォーム。準備中です。"
@@ -85,8 +85,8 @@ export default function HPApp() {
         path="/fudousan"
         element={
           <ComingSoon
-            name="FUDOUSAN"
-            nameJa="記憶荘 不動産"
+            name="KIOKUSO ESTATE"
+            nameJa="記憶荘不動産"
             subtitle="不動産仲介"
             tagline="継ぐべき場所を、見つけ出す。"
             taglineSub="場所と人をつなぐ、不動産の仲介。準備中です。"

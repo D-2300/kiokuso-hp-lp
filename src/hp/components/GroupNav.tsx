@@ -5,9 +5,9 @@ const navLinks = [
   { to: "/", label: "Top" },
   { to: "/about", label: "About" },
   { to: "/studio", label: "Studio" },
-  { to: "/koumuten", label: "Koumuten" },
+  { to: "/koumuten", label: "Build" },
   { to: "/reform", label: "Reform" },
-  { to: "/fudousan", label: "Fudousan" },
+  { to: "/fudousan", label: "Estate" },
 ];
 
 export default function GroupNav() {

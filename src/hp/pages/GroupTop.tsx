@@ -10,8 +10,8 @@ import { colors } from "../../shared/design-tokens";
 
 const businesses = [
   {
-    nameJa: "記憶荘 工務店",
-    nameEn: "KIOKUSO KOUMUTEN",
+    nameJa: "記憶荘工務店",
+    nameEn: "KIOKUSO BUILD",
     desc: "古い建物に新しい役割を与える、大規模リノベーション",
     color: colors.urushicha.main,
     active: false,
@@ -32,8 +32,8 @@ const businesses = [
     logoSrc: "/assets/logos/logo-studio-gold.webp",
   },
   {
-    nameJa: "記憶荘 住宅リフォームLABO",
-    nameEn: "KIOKUSO REFORM LABO",
+    nameJa: "記憶荘リフォーム",
+    nameEn: "KIOKUSO REFORM",
     desc: "キッチン・洗面・壁紙など、住まいの「ここだけ」を手軽に",
     color: colors.seiji.main,
     active: false,
@@ -43,8 +43,8 @@ const businesses = [
     logoSrc: "/assets/logos/logo-reform-gold.webp",
   },
   {
-    nameJa: "記憶荘 不動産",
-    nameEn: "KIOKUSO FUDOUSAN",
+    nameJa: "記憶荘不動産",
+    nameEn: "KIOKUSO ESTATE",
     desc: "場所と人をつなぐ、不動産の仲介",
     color: colors.tetsukon.main,
     active: false,
