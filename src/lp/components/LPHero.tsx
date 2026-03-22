@@ -5,7 +5,7 @@ export default function LPHero() {
     <section
       style={{
         position: "relative",
-        minHeight: "80vh",
+        minHeight: "100vh",
         overflow: "hidden",
         backgroundColor: "#e8e4de",
       }}
@@ -26,13 +26,13 @@ export default function LPHero() {
         style={{
           position: "relative",
           zIndex: 1,
-          minHeight: "80vh",
+          minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "28px 20px 0",
           paddingTop: "80px",
-          maxWidth: "960px",
+          maxWidth: "1200px",
           margin: "0 auto",
           boxSizing: "border-box",
         }}
@@ -85,7 +85,7 @@ export default function LPHero() {
               gridTemplateColumns: "1fr 1fr",
               gap: "10px",
               marginBottom: "0",
-              maxWidth: "400px",
+              maxWidth: "480px",
               margin: "0 auto",
             }}
           >
@@ -101,7 +101,7 @@ export default function LPHero() {
                   overflow: "hidden",
                 }}
               >
-                <div style={{ height: "120px", overflow: "hidden" }}>
+                <div style={{ height: "clamp(90px, 12vw, 120px)", overflow: "hidden" }}>
                   <img
                     src={item.img}
                     alt={item.label}
@@ -115,7 +115,7 @@ export default function LPHero() {
                   <p
                     style={{
                       margin: "4px 0 0",
-                      fontSize: "clamp(14px, 2.8vw, 18px)",
+                      fontSize: "clamp(15px, 2.5vw, 18px)",
                       fontWeight: 700,
                       color: "#222",
                     }}
@@ -127,7 +127,7 @@ export default function LPHero() {
             ))}
           </div>
 
-          <div style={{ padding: "20px 0" }}>
+          <div style={{ padding: "14px 0" }}>
             <a
               href={LINE_URL}
               target="_blank"
@@ -138,8 +138,8 @@ export default function LPHero() {
                 backgroundColor: "#06C755",
                 color: "#fff",
                 borderRadius: "999px",
-                padding: "16px 24px",
-                fontSize: "clamp(15px, 2.5vw, 18px)",
+                padding: "12px 20px",
+                fontSize: "clamp(13px, 2vw, 15px)",
                 fontWeight: 700,
                 textDecoration: "none",
                 textAlign: "center",
