@@ -127,14 +127,14 @@ export default function LPHero() {
             ))}
           </div>
 
-          <div style={{ padding: "14px 0" }}>
+          <div style={{ padding: "14px 0", textAlign: "center" }}>
             <a
               href={LINE_URL}
               target="_blank"
               rel="noopener noreferrer"
               data-gtm="line_cta_click"
               style={{
-                display: "block",
+                display: "inline-block",
                 backgroundColor: "#06C755",
                 color: "#fff",
                 borderRadius: "999px",
