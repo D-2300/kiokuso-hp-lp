@@ -26,14 +26,6 @@ export default function LPShowcase() {
         }}>
           こんなお店を、つくれます。
         </p>
-        <p style={{
-          fontSize: "13px",
-          color: "#999",
-          textAlign: "center",
-          margin: "0 0 28px",
-        }}>
-          ※完成イメージです
-        </p>
       </div>
 
       <div style={{

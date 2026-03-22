@@ -58,7 +58,7 @@ export default function LPBeforeAfter() {
         .ba-track { scrollbar-width: none; }
       `}</style>
 
-      <div style={{ position: "relative", maxWidth: "960px", margin: "0 auto", padding: "0 48px" }}>
+      <div style={{ position: "relative", maxWidth: "960px", margin: "0 auto", padding: "0 40px" }}>
         <button
           onClick={() => scroll("prev")}
           aria-label="前へ"
@@ -101,7 +101,7 @@ export default function LPBeforeAfter() {
               key={c.type}
               style={{
                 flexShrink: 0,
-                width: "clamp(260px, 75%, 560px)",
+                width: "clamp(280px, 90%, 720px)",
                 scrollSnapAlign: "start",
                 backgroundColor: "#fff",
                 border: "1px solid #eee",
