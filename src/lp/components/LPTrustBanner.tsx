@@ -29,7 +29,7 @@ export default function LPTrustBanner() {
             仙台・宮城の店舗内装なら{" "}
             <span style={{ color: "#C9A84C" }}>記憶荘</span>
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center" }}>
             {checkItems.map((item) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <span

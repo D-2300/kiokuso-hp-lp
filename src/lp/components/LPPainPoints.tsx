@@ -36,7 +36,7 @@ export default function LPPainPoints() {
         >
           内装工事を考えているけど、わからないことが多すぎる
         </p>
-        <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "14px", maxWidth: "720px", margin: "0 auto" }}>
           {pains.map((p) => (
             <div
               key={p.icon}

@@ -39,7 +39,7 @@ export default function LPCommonIssues() {
           >
             それ、結構「あるある」です。
           </p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px", maxWidth: "720px", margin: "0 auto" }}>
             {issues.map((item) => (
               <div
                 key={item.bold}
@@ -91,11 +91,13 @@ export default function LPCommonIssues() {
           <span style={{ color: "#C9A84C" }}>記憶荘</span>{" "}
           で解決できます。
         </p>
-        <LPVoiceBubble
-          text="まさに全部当てはまっていました。追加料金が怖くて動けなかったけど、記憶荘は最初の見積もりから変わらなかった。"
-          author="バーオーナー"
-          detail="仙台市青葉区・8坪"
-        />
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <LPVoiceBubble
+            text="まさに全部当てはまっていました。追加料金が怖くて動けなかったけど、記憶荘は最初の見積もりから変わらなかった。"
+            author="バーオーナー"
+            detail="仙台市青葉区・8坪"
+          />
+        </div>
       </section>
     </>
   );
