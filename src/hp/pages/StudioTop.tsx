@@ -9,7 +9,7 @@ import { colors } from "../../shared/design-tokens";
 
 export default function StudioTop() {
   return (
-    <div style={{ backgroundColor: colors.beige, minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ backgroundColor: colors.beige, minHeight: "100vh" }}>
       <style>{`
         @keyframes scrollBounce {
           0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -23,7 +23,7 @@ export default function StudioTop() {
       <StudioNav />
 
       {/* Hero */}
-      <section style={{ position: "relative", height: "calc(100vh - 64px)", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%" }}>
           <img src="/images/hero-bg-v2.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }} />
           <div

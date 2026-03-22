@@ -57,7 +57,7 @@ const businesses = [
 
 export default function GroupTop() {
   return (
-    <div style={{ backgroundColor: colors.beige, minHeight: "100vh" }}>
+    <div style={{ backgroundColor: colors.beige, minHeight: "100vh", paddingTop: 0 }}>
       <style>{`
         @keyframes scrollBounce {
           0%, 100% { transform: translateY(0); }
@@ -74,7 +74,7 @@ export default function GroupTop() {
       <GroupNav />
 
       {/* Hero */}
-      <section style={{ position: "relative", height: "calc(100vh - 64px)", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundColor: "#E5E0DB" }}>
           <img
             src="/images/about-exterior.webp"

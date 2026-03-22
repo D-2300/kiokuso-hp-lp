@@ -46,7 +46,7 @@ export default function ComingSoon({
   const conceptLines = concept.split("\n");
 
   return (
-    <div style={{ backgroundColor: "#F8F5F0", minHeight: "100vh", paddingTop: "64px" }}>
+    <div style={{ backgroundColor: "#F8F5F0", minHeight: "100vh" }}>
       <EntityNav
         themeColor={themeColor}
         themeLight={themeLight}
@@ -59,7 +59,7 @@ export default function ComingSoon({
       <section
         style={{
           position: "relative",
-          height: "calc(100vh - 64px)",
+          height: "100vh",
           overflow: "hidden",
         }}
       >
