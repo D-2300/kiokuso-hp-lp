@@ -17,6 +17,8 @@ const businesses = [
     active: false,
     to: "/koumuten",
     logoEntity: "koumuten" as const,
+    gradient: "linear-gradient(135deg, #5C3A21 0%, #7A5234 100%)",
+    logoSrc: "/assets/logos/logo-koumuten-gold.webp",
   },
   {
     nameJa: "記憶荘 店舗内装スタジオ",
@@ -26,6 +28,8 @@ const businesses = [
     active: true,
     to: "/studio",
     logoEntity: "studio" as const,
+    gradient: "linear-gradient(135deg, #4A6741 0%, #5E7D55 100%)",
+    logoSrc: "/assets/logos/logo-studio-gold.webp",
   },
   {
     nameJa: "記憶荘 住宅リフォームLABO",
@@ -35,6 +39,8 @@ const businesses = [
     active: false,
     to: "/reform",
     logoEntity: "reform" as const,
+    gradient: "linear-gradient(135deg, #4A7080 0%, #5E8A9A 100%)",
+    logoSrc: "/assets/logos/logo-reform-gold.webp",
   },
   {
     nameJa: "記憶荘 不動産",
@@ -44,6 +50,8 @@ const businesses = [
     active: false,
     to: "/fudousan",
     logoEntity: "fudousan" as const,
+    gradient: "linear-gradient(135deg, #2E3545 0%, #3E4758 100%)",
+    logoSrc: "/assets/logos/logo-fudousan-gold.webp",
   },
 ];
 
@@ -159,90 +167,102 @@ export default function GroupTop() {
       <ScrollFadeIn>
         <section style={{ backgroundColor: colors.beige, padding: "80px 32px" }}>
           <SectionHeading en="Group" ja="事業内容" align="center" />
-          <div style={{ textAlign: "center", marginBottom: "40px" }}>
-            <img
-              src="/assets/logos/logo-group-dark.webp"
-              alt="記憶荘"
-              style={{ height: "48px", margin: "0 auto 12px", display: "block" }}
-            />
-            <p style={{ fontSize: "14px", color: "#666", letterSpacing: "0.1em" }}>記憶荘グループ</p>
-          </div>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              gap: "16px",
-              maxWidth: "600px",
+              maxWidth: "640px",
               margin: "0 auto",
+              border: "1px solid rgba(201,168,76,0.3)",
+              borderRadius: "12px",
+              padding: "40px 20px 20px",
+              position: "relative",
+              backgroundColor: "rgba(201,168,76,0.03)",
             }}
           >
-            {businesses.map((b) =>
-              b.active ? (
-                <Link
-                  key={b.to}
-                  to={b.to}
-                  className="business-card-active"
-                  style={{
-                    display: "block",
-                    backgroundColor: colors.white,
-                    borderRadius: "8px",
-                    padding: "28px 20px",
-                    borderLeft: `4px solid ${b.color}`,
-                    borderTop: `3px solid ${b.color}`,
-                    transition: "box-shadow 0.2s",
-                    textDecoration: "none",
-                    color: "inherit",
-                    opacity: 1,
-                  }}
-                >
-                  <div style={{ marginBottom: "4px" }}>
-                    <Logo entity={b.logoEntity} color="dark" layout="mark" height={32} centered={false} />
+            <div
+              style={{
+                position: "absolute",
+                top: "-28px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                backgroundColor: "#F8F5F0",
+                padding: "0 20px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "4px",
+              }}
+            >
+              <img src="/assets/logos/logo-group-dark.webp" alt="" style={{ height: "36px" }} />
+              <span style={{ fontSize: "11px", color: "#999", letterSpacing: "0.1em" }}>記憶荘グループ</span>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                gap: "16px",
+              }}
+            >
+              {businesses.map((b) =>
+                b.active ? (
+                  <Link
+                    key={b.to}
+                    to={b.to}
+                    className="business-card-active"
+                    style={{
+                      display: "block",
+                      background: b.gradient,
+                      borderRadius: "8px",
+                      padding: "28px 20px",
+                      transition: "box-shadow 0.2s",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <div style={{ marginBottom: "12px" }}>
+                      <img src={b.logoSrc} alt="" style={{ height: "32px" }} />
+                    </div>
+                    <p style={{ fontSize: "13px", fontWeight: 500, color: "#fff", marginBottom: "4px" }}>
+                      {b.nameJa}
+                    </p>
+                    <p style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.12em", color: "rgba(255,255,255,0.7)", marginBottom: "8px" }}>
+                      {b.nameEn}
+                    </p>
+                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.8)", marginBottom: "16px" }}>
+                      {b.desc}
+                    </p>
+                    <p style={{ fontSize: "12px", color: "#C9A84C", fontWeight: 500 }}>
+                      詳しく見る →
+                    </p>
+                  </Link>
+                ) : (
+                  <div
+                    key={b.to}
+                    style={{
+                      background: b.gradient,
+                      borderRadius: "8px",
+                      padding: "28px 20px",
+                    }}
+                  >
+                    <div style={{ marginBottom: "12px" }}>
+                      <img src={b.logoSrc} alt="" style={{ height: "32px" }} />
+                    </div>
+                    <p style={{ fontSize: "13px", fontWeight: 500, color: "#fff", marginBottom: "4px" }}>
+                      {b.nameJa}
+                    </p>
+                    <p style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.12em", color: "rgba(255,255,255,0.7)", marginBottom: "8px" }}>
+                      {b.nameEn}
+                    </p>
+                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.8)", marginBottom: "16px" }}>
+                      {b.desc}
+                    </p>
+                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.5)" }}>
+                      準備中
+                    </p>
                   </div>
-                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: b.color, margin: "8px 0 12px" }} />
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
-                    {b.nameJa}
-                  </p>
-                  <p style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.12em", color: colors.mute, marginBottom: "8px" }}>
-                    {b.nameEn}
-                  </p>
-                  <p style={{ fontSize: "12px", color: colors.sub, marginBottom: "16px" }}>
-                    {b.desc}
-                  </p>
-                  <p style={{ fontSize: "12px", color: b.color, fontWeight: 500 }}>
-                    詳しく見る →
-                  </p>
-                </Link>
-              ) : (
-                <div
-                  key={b.to}
-                  style={{
-                    backgroundColor: colors.white,
-                    borderRadius: "8px",
-                    padding: "28px 20px",
-                    borderLeft: `4px solid ${b.color}`,
-                    borderTop: `3px solid ${b.color}`,
-                    opacity: 0.6,
-                  }}
-                >
-                  <div style={{ marginBottom: "4px" }}>
-                    <Logo entity={b.logoEntity} color="dark" layout="mark" height={32} centered={false} />
-                  </div>
-                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: b.color, margin: "8px 0 12px" }} />
-                  <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
-                    {b.nameJa}
-                  </p>
-                  <p style={{ fontSize: "11px", fontWeight: 300, letterSpacing: "0.12em", color: colors.mute, marginBottom: "8px" }}>
-                    {b.nameEn}
-                  </p>
-                  <p style={{ fontSize: "12px", color: colors.sub, marginBottom: "16px" }}>
-                    {b.desc}
-                  </p>
-                  <p style={{ fontSize: "12px", color: colors.mute }}>
-                    準備中
-                  </p>
-                </div>
-              )
-            )}
+                )
+              )}
+            </div>
           </div>
         </section>
       </ScrollFadeIn>
