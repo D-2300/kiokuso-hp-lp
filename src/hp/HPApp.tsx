@@ -35,8 +35,8 @@ export default function HPApp() {
             photoBg1="#D5CEC6"
             photoBg2="#CFC7BD"
             photoCaption="忘れられた場所に、もう一度光を入れる。"
-            heroImg="/images/koumuten-hero.webp"
-            photo1="/images/koumuten-hands.webp"
+            heroImg="/assets/textures/koumuten-hero.webp"
+            photo1="/assets/textures/koumuten-hands.webp"
             photo2="/images/hp-hallway-light.webp"
           />
         }
@@ -59,8 +59,8 @@ export default function HPApp() {
             photoBg1="#C5CED2"
             photoBg2="#BDC7CC"
             photoCaption="思い出のある家を、これからも住み続ける家に。"
-            heroImg="/images/reform-hero.webp"
-            photo1="/images/reform-keys.webp"
+            heroImg="/assets/textures/reform-hero.webp"
+            photo1="/assets/textures/reform-keys.webp"
             photo2="/images/hp-wood-warm.webp"
           />
         }
@@ -83,8 +83,8 @@ export default function HPApp() {
             photoBg1="#C0C3CA"
             photoBg2="#B8BBC2"
             photoCaption="場所と人を、つなぐ仕事。"
-            heroImg="/images/fudousan-hero.webp"
-            photo1="/images/fudousan-keys.webp"
+            heroImg="/assets/textures/fudousan-hero.webp"
+            photo1="/assets/textures/fudousan-keys.webp"
             photo2="/images/hp-hallway-garden.webp"
           />
         }
