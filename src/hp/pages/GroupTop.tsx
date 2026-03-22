@@ -159,6 +159,14 @@ export default function GroupTop() {
       <ScrollFadeIn>
         <section style={{ backgroundColor: colors.beige, padding: "80px 32px" }}>
           <SectionHeading en="Group" ja="事業内容" align="center" />
+          <div style={{ textAlign: "center", marginBottom: "40px" }}>
+            <img
+              src="/assets/logos/logo-group-dark.webp"
+              alt="記憶荘"
+              style={{ height: "48px", margin: "0 auto 12px", display: "block" }}
+            />
+            <p style={{ fontSize: "14px", color: "#666", letterSpacing: "0.1em" }}>記憶荘グループ</p>
+          </div>
           <div
             style={{
               display: "grid",
@@ -179,16 +187,18 @@ export default function GroupTop() {
                     backgroundColor: colors.white,
                     borderRadius: "8px",
                     padding: "28px 20px",
-                    borderLeft: `3px solid ${b.color}`,
+                    borderLeft: `4px solid ${b.color}`,
+                    borderTop: `3px solid ${b.color}`,
                     transition: "box-shadow 0.2s",
                     textDecoration: "none",
                     color: "inherit",
                     opacity: 1,
                   }}
                 >
-                  <div style={{ marginBottom: "12px" }}>
+                  <div style={{ marginBottom: "4px" }}>
                     <Logo entity={b.logoEntity} color="dark" layout="mark" height={32} centered={false} />
                   </div>
+                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: b.color, margin: "8px 0 12px" }} />
                   <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
                     {b.nameJa}
                   </p>
@@ -209,13 +219,15 @@ export default function GroupTop() {
                     backgroundColor: colors.white,
                     borderRadius: "8px",
                     padding: "28px 20px",
-                    borderLeft: `3px solid ${b.color}`,
+                    borderLeft: `4px solid ${b.color}`,
+                    borderTop: `3px solid ${b.color}`,
                     opacity: 0.6,
                   }}
                 >
-                  <div style={{ marginBottom: "12px" }}>
+                  <div style={{ marginBottom: "4px" }}>
                     <Logo entity={b.logoEntity} color="dark" layout="mark" height={32} centered={false} />
                   </div>
+                  <div style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: b.color, margin: "8px 0 12px" }} />
                   <p style={{ fontSize: "13px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>
                     {b.nameJa}
                   </p>
