@@ -1,95 +1,113 @@
-const cards = [
-  {
-    title: "工期は2〜4ヶ月",
-    desc: "着工から引渡しまで、最短2ヶ月・平均3ヶ月かかります。さらにその前に設計・見積もりの期間が1〜2ヶ月。オープン日から逆算すると、半年前には動き始める必要があります。",
-  },
-  {
-    title: "工期の逆算、していますか？",
-    desc: "設計・見積もりに1〜2ヶ月、施工に2〜3ヶ月。オープン日から逆算すると、半年前には動き始める方がほとんどです。まだ先でも、まず相談だけしておく方が多いです。費用はかかりません。",
-  },
-];
+import { LINE_URL } from "../../shared/design-tokens";
 
 export default function LPLastPush() {
   return (
     <section style={{ backgroundColor: "#EAF0E8", padding: "48px 20px" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-        <p
-          style={{
-            margin: "0 0 24px",
-            fontSize: "clamp(17px, 3vw, 22px)",
-            fontWeight: 700,
-            color: "#333",
-            textAlign: "center",
-          }}
-        >
+      <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+
+        {/* 見出し */}
+        <p style={{
+          margin: "0 0 10px",
+          fontSize: "clamp(17px, 3vw, 22px)",
+          fontWeight: 700,
+          color: "#333",
+          textAlign: "center",
+        }}>
           まだ先の話だから、と思っていませんか。
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "14px", marginBottom: "28px" }}>
-          {cards.map((c) => (
-            <div
-              key={c.title}
-              style={{
-                backgroundColor: "#fff",
-                borderRadius: "10px",
-                padding: "22px",
-                border: "1px solid #d8e4d5",
-              }}
-            >
-              <p
-                style={{
-                  margin: "0 0 10px",
-                  fontSize: "clamp(15px, 2.5vw, 18px)",
-                  fontWeight: 700,
-                  color: "#4A6741",
-                }}
-              >
-                {c.title}
-              </p>
-              <p style={{ margin: 0, fontSize: "clamp(13px, 2vw, 14px)", color: "#555", lineHeight: 1.85 }}>
-                {c.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div style={{ backgroundColor: "#4A6741", borderRadius: "12px", padding: "24px 20px" }}>
-          <p
-            style={{
-              margin: "0 0 20px",
-              fontSize: "clamp(14px, 2.5vw, 16px)",
-              fontWeight: 700,
-              color: "#fff",
-              textAlign: "center",
-              lineHeight: 1.8,
-            }}
-          >
+        <p style={{
+          margin: "0 0 28px",
+          fontSize: "clamp(13px, 2vw, 14px)",
+          color: "#777",
+          textAlign: "center",
+          lineHeight: 1.8,
+        }}>
+          設計・見積もりに1〜2ヶ月、施工に2〜3ヶ月。<br />
+          オープン日から逆算すると、半年前には動き始める方がほとんどです。
+        </p>
+
+        {/* 特典エリア */}
+        <div style={{
+          backgroundColor: "#4A6741",
+          borderRadius: "12px",
+          padding: "28px 20px",
+        }}>
+          <p style={{
+            margin: "0 0 20px",
+            fontSize: "clamp(14px, 2.5vw, 16px)",
+            fontWeight: 700,
+            color: "#fff",
+            textAlign: "center",
+            lineHeight: 1.8,
+          }}>
             LINE登録で、2つの
             <span style={{ color: "#C9A84C" }}>無料特典</span>
             をお渡ししています。
           </p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "12px" }}>
-            {[
-              { num: "特典1", title: "内装見積もりの虎の巻（PDF）", desc: "相場感と見積もりの読み方をまとめたPDF" },
-              { num: "特典2", title: "AIパースを無料で作成", desc: "LINEで間取りを送ると完成イメージをお届け" },
-            ].map((item) => (
-              <div
-                key={item.num}
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.1)",
-                  borderRadius: "8px",
-                  padding: "16px",
-                }}
-              >
-                <p style={{ margin: "0 0 5px", fontSize: "11px", color: "#C9A84C", fontWeight: 700 }}>{item.num}</p>
-                <p style={{ margin: "0 0 8px", fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 700, color: "#fff" }}>
-                  {item.title}
+
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {/* 特典1 */}
+            <div style={{
+              backgroundColor: "rgba(255,255,255,0.1)",
+              borderRadius: "10px",
+              overflow: "hidden",
+              display: "flex",
+              alignItems: "stretch",
+            }}>
+              <div style={{
+                flex: "0 0 100px",
+                minHeight: "100px",
+                overflow: "hidden",
+              }}>
+                <img
+                  src="/images/why-estimate-detail.webp"
+                  alt="見積もりの虎の巻"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
+              <div style={{ padding: "14px 16px", flex: 1 }}>
+                <p style={{ margin: "0 0 4px", fontSize: "11px", color: "#C9A84C", fontWeight: 700 }}>特典1</p>
+                <p style={{ margin: "0 0 6px", fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 700, color: "#fff" }}>
+                  内装見積もりの虎の巻（PDF）
                 </p>
-                <p style={{ margin: 0, fontSize: "12px", color: "rgba(255,255,255,0.72)", lineHeight: 1.7 }}>
-                  {item.desc}
+                <p style={{ margin: 0, fontSize: "12px", color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
+                  相場感と見積もりの読み方をまとめたPDF
                 </p>
               </div>
-            ))}
+            </div>
+
+            {/* 特典2 */}
+            <div style={{
+              backgroundColor: "rgba(255,255,255,0.1)",
+              borderRadius: "10px",
+              overflow: "hidden",
+              display: "flex",
+              alignItems: "stretch",
+            }}>
+              <div style={{
+                flex: "0 0 100px",
+                minHeight: "100px",
+                overflow: "hidden",
+              }}>
+                <img
+                  src="/images/solution-ai-pers.webp"
+                  alt="AIパース"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                />
+              </div>
+              <div style={{ padding: "14px 16px", flex: 1 }}>
+                <p style={{ margin: "0 0 4px", fontSize: "11px", color: "#C9A84C", fontWeight: 700 }}>特典2</p>
+                <p style={{ margin: "0 0 6px", fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 700, color: "#fff" }}>
+                  AIパースを無料で作成
+                </p>
+                <p style={{ margin: 0, fontSize: "12px", color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
+                  LINEで間取りを送ると完成イメージをお届け
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );
