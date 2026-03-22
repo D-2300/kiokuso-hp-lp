@@ -127,7 +127,7 @@ export default function ComingSoon({
           <div style={{ marginBottom: "8px" }}>
             <Logo entity={logoEntity} color="gold" layout="mark" height={72} />
           </div>
-          <p style={{ color: "#fff", fontSize: "24px", fontWeight: 300, letterSpacing: "0.3em" }}>
+          <p style={{ color: "#fff", fontSize: "48px", fontWeight: 900, letterSpacing: "0.15em", textTransform: "uppercase" as const }}>
             {name}
           </p>
           <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "16px" }}>{nameJa}</p>

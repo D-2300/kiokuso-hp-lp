@@ -41,7 +41,7 @@ export default function EntityNav({
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Logo entity={logoEntity} color="dark" layout="horizontal" height={36} centered={false} />
+        <Logo entity={logoEntity} color="gold" layout="horizontal" height={36} centered={false} />
       </div>
 
       <div
