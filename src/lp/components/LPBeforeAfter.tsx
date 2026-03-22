@@ -52,39 +52,23 @@ export default function LPBeforeAfter() {
   };
 
   return (
-    <section style={{ padding: "48px 0", backgroundColor: "#fff" }}>
+    <section style={{ padding: "48px 0", backgroundColor: "#fff", overflow: "hidden" }}>
       <style>{`
         .ba-track::-webkit-scrollbar { display: none; }
         .ba-track { scrollbar-width: none; }
+        @media (max-width: 767px) {
+          .ba-card { min-width: 85vw !important; }
+        }
       `}</style>
 
-      <div style={{ position: "relative", maxWidth: "960px", margin: "0 auto", padding: "0 40px" }}>
-        <button
-          onClick={() => scroll("prev")}
-          aria-label="前へ"
-          style={{
-            position: "absolute",
-            left: "0",
-            top: "50%",
-            transform: "translateY(-60%)",
-            zIndex: 2,
-            width: "40px",
-            height: "40px",
-            borderRadius: "50%",
-            border: "1px solid #ddd",
-            backgroundColor: "#fff",
-            cursor: "pointer",
-            fontSize: "18px",
-            color: "#555",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.10)",
-          }}
-        >
-          ‹
-        </button>
-
+      {/* Full-bleed carousel breakout */}
+      <div
+        style={{
+          position: "relative",
+          width: "100vw",
+          marginLeft: "calc(-50vw + 50%)",
+        }}
+      >
         <div
           ref={trackRef}
           className="ba-track"
@@ -94,14 +78,16 @@ export default function LPBeforeAfter() {
             overflowX: "auto",
             scrollSnapType: "x mandatory",
             WebkitOverflowScrolling: "touch",
+            padding: "0 5vw",
           }}
         >
           {cases.map((c) => (
             <div
               key={c.type}
+              className="ba-card"
               style={{
                 flexShrink: 0,
-                width: "clamp(280px, 90%, 720px)",
+                minWidth: "70vw",
                 scrollSnapAlign: "start",
                 backgroundColor: "#fff",
                 border: "1px solid #eee",
@@ -113,7 +99,7 @@ export default function LPBeforeAfter() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
                 {(["Before", "After"] as const).map((label) => (
                   <div key={label} style={{ position: "relative" }}>
-                    <div style={{ height: "clamp(144px, 18vw, 200px)", overflow: "hidden" }}>
+                    <div style={{ height: "clamp(144px, 20vw, 240px)", overflow: "hidden" }}>
                       <img
                         src={label === "Before" ? c.before : c.after}
                         alt={`${c.type} ${label}`}
@@ -156,16 +142,41 @@ export default function LPBeforeAfter() {
             </div>
           ))}
         </div>
+      </div>
 
+      {/* Arrow buttons — centred within normal flow */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "16px",
+          marginTop: "20px",
+        }}
+      >
+        <button
+          onClick={() => scroll("prev")}
+          aria-label="前へ"
+          style={{
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            border: "1px solid #ddd",
+            backgroundColor: "#fff",
+            cursor: "pointer",
+            fontSize: "18px",
+            color: "#555",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.10)",
+          }}
+        >
+          ‹
+        </button>
         <button
           onClick={() => scroll("next")}
           aria-label="次へ"
           style={{
-            position: "absolute",
-            right: "0",
-            top: "50%",
-            transform: "translateY(-60%)",
-            zIndex: 2,
             width: "40px",
             height: "40px",
             borderRadius: "50%",
@@ -184,7 +195,7 @@ export default function LPBeforeAfter() {
         </button>
       </div>
 
-      <p style={{ textAlign: "center", fontSize: "14px", color: "#999", marginTop: "16px" }}>
+      <p style={{ textAlign: "center", fontSize: "14px", color: "#999", marginTop: "12px" }}>
         ← スワイプで見る →
       </p>
     </section>
