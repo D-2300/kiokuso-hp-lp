@@ -70,9 +70,10 @@ export default function StudioTop() {
           <div style={{ marginBottom: "8px" }}>
             <Logo entity="studio" color="gold" layout="mark" height={64} />
           </div>
-          <p className="hero-anton">
-            KIOKUSO STUDIO
-          </p>
+          <div style={{ textAlign: "center" }}>
+            <p className="hero-anton" style={{ lineHeight: 1.1, margin: 0 }}>KIOKUSO</p>
+            <p className="hero-anton" style={{ lineHeight: 1.1, margin: 0 }}>STUDIO</p>
+          </div>
           <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "15px", fontWeight: 400, letterSpacing: "0.1em" }}>
             記憶荘 店舗内装スタジオ
           </p>

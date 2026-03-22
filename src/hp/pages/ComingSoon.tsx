@@ -6,6 +6,7 @@ import Logo from "../../shared/Logo";
 
 interface ComingSoonProps {
   name: string;
+  nameLine2?: string;
   nameJa: string;
   subtitle: string;
   tagline: string;
@@ -27,6 +28,7 @@ interface ComingSoonProps {
 
 export default function ComingSoon({
   name,
+  nameLine2,
   nameJa,
   subtitle,
   tagline,
@@ -128,9 +130,14 @@ export default function ComingSoon({
           <div style={{ marginBottom: "8px" }}>
             <Logo entity={logoEntity} color="gold" layout="mark" height={72} />
           </div>
-          <p className="hero-anton">
-            {name}
-          </p>
+          {nameLine2 ? (
+            <div style={{ textAlign: "center" }}>
+              <p className="hero-anton" style={{ lineHeight: 1.1, margin: 0 }}>{name}</p>
+              <p className="hero-anton" style={{ lineHeight: 1.1, margin: 0 }}>{nameLine2}</p>
+            </div>
+          ) : (
+            <p className="hero-anton">{name}</p>
+          )}
           <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "16px" }}>{nameJa}</p>
           <p
             style={{
