@@ -96,9 +96,9 @@ export default function GroupTop() {
       <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundColor: "#E5E0DB" }}>
           <img
-            src="/images/about-exterior.webp"
+            src="/images/group-hero-sakura.webp"
             alt=""
-            style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
           <div
             style={{
