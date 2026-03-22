@@ -97,7 +97,7 @@ export default function GroupTop() {
           <div style={{ marginBottom: "8px" }}>
             <Logo entity="group" color="gold" layout="mark" height={72} />
           </div>
-          <p style={{ color: "#fff", fontSize: "36px", fontWeight: 300, letterSpacing: "0.35em" }}>
+          <p style={{ color: "#fff", fontSize: "72px", fontWeight: 400, letterSpacing: "0.05em", fontFamily: "'Anton', sans-serif", textTransform: "uppercase" }}>
             KIOKUSO
           </p>
           <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "18px", fontWeight: 400, letterSpacing: "0.15em" }}>
