@@ -14,7 +14,7 @@ export default function GroupAbout() {
       <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#D8D3CE" }}>
           <img
-            src="/images/about-conversation.webp"
+            src="/assets/textures/yakisugi-charred-wood.webp"
             alt=""
             style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
           />
@@ -46,7 +46,7 @@ export default function GroupAbout() {
       {/* ブロック1：記憶が宿る場所 */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 0" }}>
-          <img src="/images/hp-hallway-film.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", filter: "grayscale(100%)" }} />
+          <img src="/assets/textures/reclaimed-wood-section.webp" alt="" style={{ width: "100%", aspectRatio: "16/9", objectFit: "cover", filter: "grayscale(100%)" }} />
           <div
             style={{
               maxWidth: "560px",
