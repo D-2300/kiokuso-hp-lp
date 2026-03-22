@@ -10,20 +10,17 @@ interface ComingSoonProps {
   subtitle: string;
   tagline: string;
   taglineSub: string;
+  concept: string;
   themeColor: string;
   themeLight: string;
   themeMid: string;
   themeBg: string;
   themeDark: string;
   heroBg: string;
-  photoBg1: string;
-  photoBg2: string;
-  photoCaption: string;
   heroImg?: string;
-  photo1?: string;
-  photo2?: string;
   textureBand1?: string;
-  textureBand2?: string;
+  carouselImages: string[];
+  carouselCaption: string;
   logoEntity?: "group" | "studio" | "koumuten" | "reform" | "fudousan";
 }
 
@@ -33,23 +30,20 @@ export default function ComingSoon({
   subtitle,
   tagline,
   taglineSub,
+  concept,
   themeColor,
   themeLight,
   themeMid,
   themeBg,
   themeDark,
   heroBg,
-  photoBg1,
-  photoBg2,
-  photoCaption,
   heroImg,
-  photo1,
-  photo2,
   textureBand1,
-  textureBand2,
+  carouselImages,
+  carouselCaption,
   logoEntity = "group",
 }: ComingSoonProps) {
-  const taglineLines = tagline.split("\n");
+  const conceptLines = concept.split("\n");
 
   return (
     <div style={{ backgroundColor: "#F8F5F0", minHeight: "100vh", paddingTop: "64px" }}>
@@ -87,22 +81,8 @@ export default function ComingSoon({
                 width: "100%",
                 height: "100%",
                 backgroundColor: heroBg,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
               }}
-            >
-              <span
-                style={{
-                  fontSize: "12px",
-                  color: "rgba(0,0,0,0.25)",
-                  letterSpacing: "0.1em",
-                  fontWeight: 300,
-                }}
-              >
-                HERO PHOTO ── {subtitle}
-              </span>
-            </div>
+            />
           )}
           <div
             style={{
@@ -145,28 +125,62 @@ export default function ComingSoon({
 
       {textureBand1 && <TextureBand src={textureBand1} height={180} />}
 
-      {/* 一言コピー + 準備中バッジ */}
+      {/* コンセプトセクション */}
       <ScrollFadeIn>
-        <section style={{ padding: "80px 24px", textAlign: "center" }}>
+        <section style={{ padding: "80px 24px", textAlign: "center", maxWidth: "640px", margin: "0 auto" }}>
           <div
             style={{
               width: "48px",
               height: "1px",
               backgroundColor: themeLight,
-              margin: "0 auto 32px",
+              margin: "0 auto 40px",
             }}
           />
-          <p style={{ fontSize: "15px", color: "#333", lineHeight: 2.2 }}>
-            {taglineLines.map((line, i) => (
-              <span key={i}>
-                {line}
-                {i < taglineLines.length - 1 && <br />}
-              </span>
-            ))}
+
+          <p
+            style={{
+              fontSize: "18px",
+              fontWeight: 400,
+              color: "#1a1a1a",
+              lineHeight: 1.9,
+              letterSpacing: "0.04em",
+              marginBottom: "32px",
+            }}
+          >
+            {tagline}
           </p>
-          <p style={{ fontSize: "13px", color: "#999", marginTop: "12px", marginBottom: "40px" }}>
+
+          <div
+            style={{
+              textAlign: "left",
+              borderLeft: `3px solid ${themeLight}`,
+              paddingLeft: "20px",
+              marginBottom: "40px",
+            }}
+          >
+            {conceptLines.map((line, i) => (
+              line === "" ? (
+                <div key={i} style={{ height: "1em" }} />
+              ) : (
+                <p
+                  key={i}
+                  style={{
+                    fontSize: "14px",
+                    color: "#555",
+                    lineHeight: 2.0,
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  {line}
+                </p>
+              )
+            ))}
+          </div>
+
+          <p style={{ fontSize: "13px", color: "#888", marginBottom: "32px", letterSpacing: "0.05em" }}>
             {taglineSub}
           </p>
+
           <span
             style={{
               display: "inline-block",
@@ -183,64 +197,50 @@ export default function ComingSoon({
         </section>
       </ScrollFadeIn>
 
-      {/* コンセプト写真2枚 */}
+      {/* テクスチャカルーセル */}
       <ScrollFadeIn>
-        <section style={{ padding: "0 0 64px" }}>
-          <div style={{ backgroundColor: themeBg, padding: "48px 24px" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "12px",
-                maxWidth: "440px",
-                margin: "0 auto",
-              }}
-            >
-              {photo1 ? (
-                <img
-                  src={photo1}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    aspectRatio: "4/3",
-                    objectFit: "cover",
-                    filter: "grayscale(100%)",
-                  }}
-                />
-              ) : (
-                <div style={{ aspectRatio: "4/3", backgroundColor: photoBg1 }} />
-              )}
-              {photo2 ? (
-                <img
-                  src={photo2}
-                  alt=""
-                  style={{
-                    width: "100%",
-                    aspectRatio: "4/3",
-                    objectFit: "cover",
-                    filter: "grayscale(100%)",
-                  }}
-                />
-              ) : (
-                <div style={{ aspectRatio: "4/3", backgroundColor: photoBg2 }} />
-              )}
-            </div>
-            <p
-              style={{
-                textAlign: "center",
-                fontSize: "12px",
-                color: "#999",
-                letterSpacing: "0.08em",
-                marginTop: "20px",
-              }}
-            >
-              {photoCaption}
-            </p>
+        <section style={{ padding: "0 0 64px", backgroundColor: themeBg }}>
+          <div
+            style={{
+              overflowX: "auto",
+              display: "flex",
+              gap: "12px",
+              padding: "48px 24px 32px",
+              scrollSnapType: "x mandatory",
+              WebkitOverflowScrolling: "touch",
+              scrollbarWidth: "none",
+            }}
+          >
+            {carouselImages.map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt=""
+                style={{
+                  width: "70vw",
+                  maxWidth: "480px",
+                  aspectRatio: "16/9",
+                  objectFit: "cover",
+                  borderRadius: "4px",
+                  flexShrink: 0,
+                  scrollSnapAlign: "center",
+                }}
+              />
+            ))}
           </div>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "12px",
+              color: "#999",
+              letterSpacing: "0.1em",
+              paddingBottom: "48px",
+            }}
+          >
+            {carouselCaption}
+          </p>
         </section>
       </ScrollFadeIn>
-
-      {textureBand2 && <TextureBand src={textureBand2} height={180} />}
 
       <EntityFooter
         themeColor={themeColor}

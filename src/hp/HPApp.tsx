@@ -24,22 +24,27 @@ export default function HPApp() {
             name="KOUMUTEN"
             nameJa="記憶荘 工務店"
             subtitle="大規模リノベーション・再生"
-            tagline={"場所の記憶を引き継ぎ、\n新しい物語として再生する。"}
+            tagline="場所の記憶を引き継ぎ、新しい物語として再生する。"
             taglineSub="使われなくなった建物を、もう一度人が集まる場所に。準備中です。"
+            concept={`使われなくなった建物には、誰かがそこで過ごした時間が残っています。\n壊して更地にするのではなく、その記憶ごと引き受けて、\n新しい役割を与える。それが記憶荘工務店の仕事です。\n\n廃墟や空き家の大規模リノベーション。\n構造から見直し、もう一度人が集まる場所に仕立て直す。`}
             themeColor={colors.urushicha.main}
             themeLight={colors.urushicha.light}
             themeMid={colors.urushicha.mid}
             themeBg={colors.urushicha.bg}
             themeDark={colors.urushicha.dark}
             heroBg="#D5CEC6"
-            photoBg1="#D5CEC6"
-            photoBg2="#CFC7BD"
-            photoCaption="忘れられた場所に、もう一度光を入れる。"
             heroImg="/assets/textures/koumuten-hero.webp"
-            photo1="/assets/textures/koumuten-hands.webp"
-            photo2="/images/hp-hallway-light.webp"
             textureBand1="/assets/textures/rusted-steel-cracked.webp"
-            textureBand2="/assets/textures/peeling-paint-layers.webp"
+            carouselImages={[
+              "/assets/textures/rusted-steel-cracked.webp",
+              "/assets/textures/mortar-wall-cracks.webp",
+              "/assets/textures/peeling-paint-layers.webp",
+              "/assets/textures/reclaimed-wood-section.webp",
+              "/assets/textures/rusted-steel-plates.webp",
+              "/assets/textures/yakisugi-charred-wood.webp",
+              "/assets/textures/earthen-wall-layers.webp",
+            ]}
+            carouselCaption="素材の記憶を、読み解く。"
             logoEntity="koumuten"
           />
         }
@@ -51,22 +56,27 @@ export default function HPApp() {
             name="REFORM LABO"
             nameJa="記憶荘 住宅リフォームLABO"
             subtitle="住宅の部分リフォーム"
-            tagline={"暮らしの中の「ここだけ変えたい」に、\nちょうどいい手を入れる。"}
+            tagline="暮らしの中の「ここだけ変えたい」に、ちょうどいい手を入れる。"
             taglineSub="住まいの「ここだけ変えたい」に応える、小さなリフォーム。準備中です。"
+            concept={`大規模なリフォームではなく、\nキッチン、洗面台、壁紙、床。\n暮らしの中で気になっている「ここだけ」に手を入れる。\n\n毎日使う場所だからこそ、小さな変化が大きな違いになる。\n記憶荘リフォームLABOは、住まいの部分改修を手がけます。`}
             themeColor={colors.seiji.main}
             themeLight={colors.seiji.light}
             themeMid={colors.seiji.mid}
             themeBg={colors.seiji.bg}
             themeDark={colors.seiji.dark}
             heroBg="#CDD6DA"
-            photoBg1="#C5CED2"
-            photoBg2="#BDC7CC"
-            photoCaption="思い出のある家を、これからも住み続ける家に。"
             heroImg="/assets/textures/reform-hero.webp"
-            photo1="/assets/textures/reform-keys.webp"
-            photo2="/images/hp-wood-warm.webp"
             textureBand1="/assets/textures/shoji-light-shadow.webp"
-            textureBand2="/assets/textures/tatami-weave-side.webp"
+            carouselImages={[
+              "/assets/textures/shoji-light-shadow.webp",
+              "/assets/textures/tatami-weave-side.webp",
+              "/assets/textures/shikkui-plaster-wide.webp",
+              "/assets/textures/oak-hardwood-floor.webp",
+              "/assets/textures/shikkui-plaster-closeup.webp",
+              "/assets/textures/tatami-weave-front.webp",
+              "/assets/textures/tile-water-droplets-warm.webp",
+            ]}
+            carouselCaption="毎日触れる素材を、丁寧に選ぶ。"
             logoEntity="reform"
           />
         }
@@ -78,22 +88,26 @@ export default function HPApp() {
             name="FUDOUSAN"
             nameJa="記憶荘 不動産"
             subtitle="不動産仲介"
-            tagline={"想いを受け継ぐ場所を、\nつなぐ。"}
-            taglineSub="場所と人をつなぐ、不動産仲介。準備中です。"
+            tagline="継ぐべき場所を、見つけ出す。"
+            taglineSub="場所と人をつなぐ、不動産の仲介。準備中です。"
+            concept={`場所には、それぞれの物語があります。\nその物語を次の人につなぐのが、記憶荘不動産の役割です。\n\n物件を「スペック」ではなく「可能性」として見る。\n工務店やスタジオと連携し、\n「この場所で何ができるか」まで一緒に考える不動産仲介。`}
             themeColor={colors.tetsukon.main}
             themeLight={colors.tetsukon.light}
             themeMid={colors.tetsukon.mid}
             themeBg={colors.tetsukon.bg}
             themeDark={colors.tetsukon.dark}
             heroBg="#C8CAD0"
-            photoBg1="#C0C3CA"
-            photoBg2="#B8BBC2"
-            photoCaption="場所と人を、つなぐ仕事。"
             heroImg="/assets/textures/fudousan-hero.webp"
-            photo1="/assets/textures/fudousan-keys.webp"
-            photo2="/images/hp-hallway-garden.webp"
             textureBand1="/assets/textures/mortar-wall-cracks.webp"
-            textureBand2="/assets/textures/tile-water-droplets-golden.webp"
+            carouselImages={[
+              "/assets/textures/brass-patina.webp",
+              "/assets/textures/ceramic-tile-blue-glaze.webp",
+              "/assets/textures/ceramic-tile-pair.webp",
+              "/assets/textures/tile-water-droplets-golden.webp",
+              "/assets/textures/old-new-timber-junction.webp",
+              "/assets/textures/mortar-wall-cracks.webp",
+            ]}
+            carouselCaption="場所の可能性を、見つけ出す。"
             logoEntity="fudousan"
           />
         }
