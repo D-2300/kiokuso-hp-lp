@@ -59,7 +59,7 @@ export default function StudioWorks() {
           <img
             src="/assets/textures/oak-hardwood-floor.webp"
             alt=""
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
           />
           <div
             style={{
@@ -81,7 +81,7 @@ export default function StudioWorks() {
             gap: "10px",
           }}
         >
-          <p style={{ color: "#fff", fontSize: "28px", fontWeight: 300, letterSpacing: "0.25em" }}>Works</p>
+          <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em" }}>Works</p>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>施工事例</p>
         </div>
       </section>

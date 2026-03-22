@@ -47,7 +47,7 @@ export default function StudioPricing() {
       {/* SmallHero */}
       <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%" }}>
-          <img src="/assets/textures/earthen-wall-layers.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          <img src="/assets/textures/earthen-wall-layers.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }} />
           <div
             style={{
               position: "absolute",
@@ -68,7 +68,7 @@ export default function StudioPricing() {
             gap: "10px",
           }}
         >
-          <p style={{ color: "#fff", fontSize: "28px", fontWeight: 300, letterSpacing: "0.25em" }}>Pricing</p>
+          <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em" }}>Pricing</p>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>料金の考え方</p>
         </div>
       </section>
