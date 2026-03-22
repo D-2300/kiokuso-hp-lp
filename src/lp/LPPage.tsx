@@ -1,6 +1,7 @@
 import LPNav from "./components/LPNav";
 import LPHero from "./components/LPHero";
 import LPBeforeAfter from "./components/LPBeforeAfter";
+import LPShowcase from "./components/LPShowcase";
 import LPMidCTA from "./components/LPMidCTA";
 import LPTrustBanner from "./components/LPTrustBanner";
 import LPVoiceBlock1 from "./components/LPVoiceBlock1";
@@ -26,6 +27,7 @@ export default function LPPage() {
       <LPNav />
       <LPHero />
       <LPBeforeAfter />
+      <LPShowcase />
       <LPMidCTA />
       <LPTrustBanner />
       <LPVoiceBlock1 />

@@ -1,0 +1,97 @@
+export default function LPShowcase() {
+  const items = [
+    { src: "/images/showcase-cafe.webp", label: "カフェ" },
+    { src: "/images/showcase-izakaya.webp", label: "居酒屋・バー" },
+    { src: "/images/showcase-salon.webp", label: "美容室" },
+    { src: "/images/showcase-gym.webp", label: "ジム" },
+    { src: "/images/showcase-takeout.webp", label: "テイクアウト" },
+    { src: "/images/showcase-shop.webp", label: "物販" },
+    { src: "/images/showcase-nail.webp", label: "ネイルサロン" },
+    { src: "/images/showcase-ramen.webp", label: "ラーメン店" },
+    { src: "/images/showcase-clinic.webp", label: "整体・治療院" },
+    { src: "/images/showcase-office.webp", label: "事務所" },
+    { src: "/images/showcase-bakery.webp", label: "ベーカリー" },
+    { src: "/images/showcase-flower.webp", label: "花屋" },
+  ];
+
+  return (
+    <section style={{ backgroundColor: "#fff", padding: "48px 0 40px" }}>
+      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 20px" }}>
+        <p style={{
+          fontSize: "clamp(18px, 3.5vw, 24px)",
+          fontWeight: 700,
+          color: "#222",
+          textAlign: "center",
+          margin: "0 0 6px",
+        }}>
+          こんなお店を、つくれます。
+        </p>
+        <p style={{
+          fontSize: "13px",
+          color: "#999",
+          textAlign: "center",
+          margin: "0 0 28px",
+        }}>
+          ※完成イメージです
+        </p>
+      </div>
+
+      <div style={{
+        display: "flex",
+        gap: "12px",
+        overflowX: "auto",
+        scrollSnapType: "x mandatory",
+        WebkitOverflowScrolling: "touch",
+        padding: "0 20px 16px",
+      }}>
+        {items.map((item) => (
+          <div key={item.label} style={{
+            flex: "0 0 auto",
+            width: "220px",
+            scrollSnapAlign: "start",
+          }}>
+            <div style={{
+              width: "220px",
+              height: "148px",
+              borderRadius: "8px",
+              overflow: "hidden",
+              backgroundColor: "#e8e4de",
+            }}>
+              <img
+                src={item.src}
+                alt={item.label}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
+            </div>
+            <p style={{
+              margin: "8px 0 0",
+              fontSize: "13px",
+              fontWeight: 600,
+              color: "#444",
+              textAlign: "center",
+            }}>
+              {item.label}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <p style={{
+        fontSize: "11px",
+        color: "#bbb",
+        textAlign: "center",
+        margin: "4px 0 0",
+      }}>
+        ← スワイプで見る →
+      </p>
+    </section>
+  );
+}
