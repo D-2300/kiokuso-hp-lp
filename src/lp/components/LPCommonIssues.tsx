@@ -1,3 +1,5 @@
+import LPVoiceBubble from './LPVoiceBubble';
+
 const issues = [
   {
     bold: "追加料金",
@@ -74,10 +76,10 @@ export default function LPCommonIssues() {
         </div>
       </section>
 
-      <section style={{ backgroundColor: "#EAF0E8", padding: "28px 20px" }}>
+      <section style={{ backgroundColor: "#EAF0E8", padding: "28px 20px 36px" }}>
         <p
           style={{
-            margin: 0,
+            margin: '0 0 24px',
             fontSize: "clamp(15px, 2.5vw, 18px)",
             fontWeight: 700,
             color: "#333",
@@ -89,6 +91,11 @@ export default function LPCommonIssues() {
           <span style={{ color: "#C9A84C" }}>記憶荘</span>{" "}
           で解決できます。
         </p>
+        <LPVoiceBubble
+          text="まさに全部当てはまっていました。追加料金が怖くて動けなかったけど、記憶荘は最初の見積もりから変わらなかった。"
+          author="バーオーナー"
+          detail="仙台市青葉区・8坪"
+        />
       </section>
     </>
   );

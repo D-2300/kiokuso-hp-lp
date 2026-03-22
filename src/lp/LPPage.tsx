@@ -3,16 +3,18 @@ import LPHero from "./components/LPHero";
 import LPBeforeAfter from "./components/LPBeforeAfter";
 import LPMidCTA from "./components/LPMidCTA";
 import LPTrustBanner from "./components/LPTrustBanner";
-import LPVoiceMini from "./components/LPVoiceMini";
+import LPVoiceBlock1 from "./components/LPVoiceBlock1";
 import LPPainPoints from "./components/LPPainPoints";
 import LPCommonIssues from "./components/LPCommonIssues";
 import LPSolutionPoints from "./components/LPSolutionPoints";
-import LPVoiceDetail from "./components/LPVoiceDetail";
+import LPVoiceBlock2 from "./components/LPVoiceBlock2";
 import LPWorksIntro from "./components/LPWorksIntro";
 import LPCaseDetail from "./components/LPCaseDetail";
 import LPPriceGuide from "./components/LPPriceGuide";
+import LPVoiceBlock3 from "./components/LPVoiceBlock3";
 import LPFlowIntro from "./components/LPFlowIntro";
 import LPFlow from "./components/LPFlow";
+import LPVoiceBlock4 from "./components/LPVoiceBlock4";
 import LPLastPush from "./components/LPLastPush";
 import LPFinalCTA from "./components/LPFinalCTA";
 import LPFAQ from "./components/LPFAQ";
@@ -27,16 +29,18 @@ export default function LPPage() {
       <LPBeforeAfter />
       <LPMidCTA />
       <LPTrustBanner />
-      <LPVoiceMini />
+      <LPVoiceBlock1 />
       <LPPainPoints />
       <LPCommonIssues />
       <LPSolutionPoints />
-      <LPVoiceDetail />
+      <LPVoiceBlock2 />
       <LPWorksIntro />
       <LPCaseDetail />
       <LPPriceGuide />
+      <LPVoiceBlock3 />
       <LPFlowIntro />
       <LPFlow />
+      <LPVoiceBlock4 />
       <LPLastPush />
       <LPFinalCTA />
       <LPFAQ />
