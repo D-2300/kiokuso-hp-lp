@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Logo from "../../shared/Logo";
-import LineCTAButton from "../../shared/LineCTAButton";
 
 interface FooterLink {
   to: string;
@@ -19,7 +18,6 @@ interface EntityFooterProps {
   logoEntity?: LogoEntity;
   links?: FooterLink[];
   showTopButton?: boolean;
-  disabledCTA?: boolean;
 }
 
 export default function EntityFooter({
@@ -31,7 +29,6 @@ export default function EntityFooter({
   logoEntity = "group",
   links = [],
   showTopButton = false,
-  disabledCTA = false,
 }: EntityFooterProps) {
   return (
     <footer
@@ -56,10 +53,6 @@ export default function EntityFooter({
       >
         {name}
       </p>
-
-      <div style={{ marginBottom: "40px" }}>
-        <LineCTAButton size="normal" disabled={disabledCTA} />
-      </div>
 
       {tagline && (
         <p

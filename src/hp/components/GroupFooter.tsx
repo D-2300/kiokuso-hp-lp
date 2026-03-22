@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Logo from "../../shared/Logo";
-import LineCTAButton from "../../shared/LineCTAButton";
 
 export default function GroupFooter() {
   return (
@@ -26,10 +25,6 @@ export default function GroupFooter() {
       >
         想いが残る場所を、つくる。
       </p>
-
-      <div style={{ marginBottom: "40px" }}>
-        <LineCTAButton size="normal" />
-      </div>
 
       <nav
         style={{

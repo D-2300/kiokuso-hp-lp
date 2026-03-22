@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 const cases = [
   {
     type: "カフェ",
@@ -38,20 +40,69 @@ const cases = [
 ];
 
 export default function LPBeforeAfter() {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "prev" | "next") => {
+    const el = trackRef.current;
+    if (!el) return;
+    const cardWidth = el.firstElementChild
+      ? (el.firstElementChild as HTMLElement).offsetWidth + 16
+      : 300;
+    el.scrollBy({ left: dir === "next" ? cardWidth : -cardWidth, behavior: "smooth" });
+  };
+
   return (
-    <section style={{ padding: "48px 20px", backgroundColor: "#fff" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-        <div
+    <section style={{ padding: "48px 0", backgroundColor: "#fff" }}>
+      <style>{`
+        .ba-track::-webkit-scrollbar { display: none; }
+        .ba-track { scrollbar-width: none; }
+      `}</style>
+
+      <div style={{ position: "relative", maxWidth: "960px", margin: "0 auto", padding: "0 48px" }}>
+        <button
+          onClick={() => scroll("prev")}
+          aria-label="前へ"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+            position: "absolute",
+            left: "0",
+            top: "50%",
+            transform: "translateY(-60%)",
+            zIndex: 2,
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            border: "1px solid #ddd",
+            backgroundColor: "#fff",
+            cursor: "pointer",
+            fontSize: "18px",
+            color: "#555",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.10)",
+          }}
+        >
+          ‹
+        </button>
+
+        <div
+          ref={trackRef}
+          className="ba-track"
+          style={{
+            display: "flex",
             gap: "16px",
+            overflowX: "auto",
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
           }}
         >
           {cases.map((c) => (
             <div
               key={c.type}
               style={{
+                flexShrink: 0,
+                width: "clamp(260px, 75%, 560px)",
+                scrollSnapAlign: "start",
                 backgroundColor: "#fff",
                 border: "1px solid #eee",
                 borderRadius: "10px",
@@ -62,7 +113,7 @@ export default function LPBeforeAfter() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
                 {(["Before", "After"] as const).map((label) => (
                   <div key={label} style={{ position: "relative" }}>
-                    <div style={{ height: "clamp(144px, 18vw, 176px)", overflow: "hidden" }}>
+                    <div style={{ height: "clamp(144px, 18vw, 200px)", overflow: "hidden" }}>
                       <img
                         src={label === "Before" ? c.before : c.after}
                         alt={`${c.type} ${label}`}
@@ -92,40 +143,50 @@ export default function LPBeforeAfter() {
                 <p style={{ margin: 0, fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 500, color: "#555" }}>
                   {c.type}
                 </p>
-                <p
-                  style={{
-                    margin: "4px 0 0",
-                    fontSize: "clamp(17px, 3vw, 20px)",
-                    fontWeight: 700,
-                    color: "#222",
-                  }}
-                >
+                <p style={{ margin: "4px 0 0", fontSize: "clamp(17px, 3vw, 20px)", fontWeight: 700, color: "#222" }}>
                   {c.cost}
                 </p>
-                <p
-                  style={{
-                    margin: "4px 0 0",
-                    fontSize: "clamp(12px, 2vw, 13px)",
-                    color: "#999",
-                  }}
-                >
+                <p style={{ margin: "4px 0 0", fontSize: "clamp(12px, 2vw, 13px)", color: "#999" }}>
                   {c.tsubo} ／ {c.period}
                 </p>
-                <p
-                  style={{
-                    margin: "6px 0 0",
-                    fontSize: "clamp(12px, 2vw, 13px)",
-                    color: "#777",
-                    lineHeight: 1.7,
-                  }}
-                >
+                <p style={{ margin: "6px 0 0", fontSize: "clamp(12px, 2vw, 13px)", color: "#777", lineHeight: 1.7 }}>
                   {c.desc}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
+        <button
+          onClick={() => scroll("next")}
+          aria-label="次へ"
+          style={{
+            position: "absolute",
+            right: "0",
+            top: "50%",
+            transform: "translateY(-60%)",
+            zIndex: 2,
+            width: "40px",
+            height: "40px",
+            borderRadius: "50%",
+            border: "1px solid #ddd",
+            backgroundColor: "#fff",
+            cursor: "pointer",
+            fontSize: "18px",
+            color: "#555",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 2px 6px rgba(0,0,0,0.10)",
+          }}
+        >
+          ›
+        </button>
       </div>
+
+      <p style={{ textAlign: "center", fontSize: "14px", color: "#999", marginTop: "16px" }}>
+        ← スワイプで見る →
+      </p>
     </section>
   );
 }
