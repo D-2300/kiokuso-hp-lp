@@ -252,6 +252,7 @@ export default function ComingSoon({
                   borderRadius: "4px",
                   flexShrink: 0,
                   scrollSnapAlign: "center",
+                  filter: "grayscale(100%)",
                 }}
               />
             ))}

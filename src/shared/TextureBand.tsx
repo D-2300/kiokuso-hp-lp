@@ -12,6 +12,7 @@ export default function TextureBand({ src, height = 180 }: TextureBandProps) {
           backgroundImage: `url('${src}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          filter: "grayscale(100%)",
         }}
       />
     </div>
