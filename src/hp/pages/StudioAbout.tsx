@@ -30,7 +30,7 @@ export default function StudioAbout() {
       <StudioNav />
 
       {/* SmallHero */}
-      <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "45vh", minHeight: "320px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#D8D3CE" }}>
           <img
             src="/assets/textures/shikkui-plaster-wide.webp"

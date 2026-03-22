@@ -54,7 +54,7 @@ export default function StudioWorks() {
       <StudioNav />
 
       {/* SmallHero */}
-      <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "45vh", minHeight: "320px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#CFC7BD" }}>
           <img
             src="/assets/textures/oak-hardwood-floor.webp"

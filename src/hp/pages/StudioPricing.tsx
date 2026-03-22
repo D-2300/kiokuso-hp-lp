@@ -45,7 +45,7 @@ export default function StudioPricing() {
       <StudioNav />
 
       {/* SmallHero */}
-      <section style={{ position: "relative", height: "280px", overflow: "hidden" }}>
+      <section style={{ position: "relative", height: "45vh", minHeight: "320px", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%" }}>
           <img src="/assets/textures/earthen-wall-layers.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }} />
           <div

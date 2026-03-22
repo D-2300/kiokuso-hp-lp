@@ -22,6 +22,7 @@ interface ComingSoonProps {
   carouselImages: string[];
   carouselCaption: string;
   logoEntity?: "group" | "studio" | "koumuten" | "reform" | "fudousan";
+  logoTo?: string;
 }
 
 export default function ComingSoon({
@@ -42,6 +43,7 @@ export default function ComingSoon({
   carouselImages,
   carouselCaption,
   logoEntity = "group",
+  logoTo,
 }: ComingSoonProps) {
   const conceptLines = concept.split("\n");
 
@@ -71,6 +73,7 @@ export default function ComingSoon({
         themeBg={themeBg}
         title={name}
         logoEntity={logoEntity}
+        logoTo={logoTo}
       />
 
       {/* Hero */}

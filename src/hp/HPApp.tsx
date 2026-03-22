@@ -46,6 +46,7 @@ export default function HPApp() {
             ]}
             carouselCaption="素材の記憶を、読み解く。"
             logoEntity="koumuten"
+            logoTo="/koumuten"
           />
         }
       />
@@ -78,6 +79,7 @@ export default function HPApp() {
             ]}
             carouselCaption="毎日触れる素材を、丁寧に選ぶ。"
             logoEntity="reform"
+            logoTo="/reform"
           />
         }
       />
@@ -109,6 +111,7 @@ export default function HPApp() {
             ]}
             carouselCaption="場所の可能性を、見つけ出す。"
             logoEntity="fudousan"
+            logoTo="/fudousan"
           />
         }
       />

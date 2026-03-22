@@ -14,6 +14,7 @@ interface EntityNavProps {
   themeBg: string;
   title: string;
   logoEntity?: LogoEntity;
+  logoTo?: string;
   links?: NavLink[];
 }
 
@@ -39,6 +40,7 @@ export default function EntityNav({
   themeColor,
   themeLight,
   logoEntity = "group",
+  logoTo,
   links = [],
 }: EntityNavProps) {
   const [scrolled, setScrolled] = useState(false);
@@ -86,13 +88,23 @@ export default function EntityNav({
           transition: "background-color 0.3s ease",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <img
-            src={logoSrc}
-            alt={logoEntity}
-            style={{ height: "36px", width: "auto", transition: "opacity 0.3s ease" }}
-          />
-        </div>
+        {logoTo ? (
+          <Link to={logoTo} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
+            <img
+              src={logoSrc}
+              alt={logoEntity}
+              style={{ height: "36px", width: "auto", transition: "opacity 0.3s ease" }}
+            />
+          </Link>
+        ) : (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={logoSrc}
+              alt={logoEntity}
+              style={{ height: "36px", width: "auto", transition: "opacity 0.3s ease" }}
+            />
+          </div>
+        )}
 
         {/* PC nav */}
         <div
