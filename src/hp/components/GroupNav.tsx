@@ -144,16 +144,20 @@ export default function GroupNav() {
         }}>
           Services
         </p>
-        <Link to="/studio" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none" }}>
+        <Link to="/studio" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none", display: "flex", alignItems: "center", gap: "12px" }}>
+          <img src="/assets/logos/logo-studio-gold.webp" alt="" style={{ height: "22px", width: "auto", filter: "brightness(10)" }} />
           Studio
         </Link>
-        <Link to="/koumuten" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none" }}>
+        <Link to="/koumuten" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none", display: "flex", alignItems: "center", gap: "12px" }}>
+          <img src="/assets/logos/logo-koumuten-gold.webp" alt="" style={{ height: "20px", width: "auto", filter: "brightness(10)" }} />
           Build
         </Link>
-        <Link to="/reform" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none" }}>
+        <Link to="/reform" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none", display: "flex", alignItems: "center", gap: "12px" }}>
+          <img src="/assets/logos/logo-reform-gold.webp" alt="" style={{ height: "20px", width: "auto", filter: "brightness(10)" }} />
           Reform
         </Link>
-        <Link to="/fudousan" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none" }}>
+        <Link to="/fudousan" style={{ ...font, color: "#fff", fontSize: "18px", letterSpacing: "0.15em", textDecoration: "none", display: "flex", alignItems: "center", gap: "12px" }}>
+          <img src="/assets/logos/logo-fudousan-gold.webp" alt="" style={{ height: "18px", width: "auto", filter: "brightness(10)" }} />
           Estate
         </Link>
       </div>
