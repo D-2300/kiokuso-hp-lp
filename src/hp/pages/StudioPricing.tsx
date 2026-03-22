@@ -1,6 +1,5 @@
 import { useState } from "react";
 import StudioNav from "../components/StudioNav";
-import StudioCTA from "../components/StudioCTA";
 import StudioFooter from "../components/StudioFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import GoldDivider from "../../shared/GoldDivider";
@@ -321,23 +320,7 @@ export default function StudioPricing() {
         </section>
       </ScrollFadeIn>
 
-      <StudioCTA />
-
-      {/* 対応エリア */}
-      <section style={{ padding: "48px 20px", backgroundColor: "#F8F5F0" }}>
-        <div style={{ maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-          <p style={{ fontFamily: "'Anton', sans-serif", fontSize: "14px", letterSpacing: "4px", color: "#999", marginBottom: "24px" }}>
-            SERVICE AREA
-          </p>
-          <p style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "15px", fontWeight: 400, color: "#666", lineHeight: 2.0, margin: 0 }}>
-            仙台市・宮城県を中心に、東北全域で対応しています。
-            <br />
-            ご希望があれば関東エリアなど東北以外も対応可能な場合がありますので、気軽にご相談ください。
-          </p>
-        </div>
-      </section>
-
-      <StudioFooter />
+      <StudioFooter showServiceArea />
     </div>
   );
 }

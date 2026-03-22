@@ -1,5 +1,4 @@
 import StudioNav from "../components/StudioNav";
-import StudioCTA from "../components/StudioCTA";
 import StudioFooter from "../components/StudioFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import GoldDivider from "../../shared/GoldDivider";
@@ -358,7 +357,6 @@ export default function StudioAbout() {
         </section>
       </ScrollFadeIn>
 
-      <StudioCTA />
       <StudioFooter />
     </div>
   );

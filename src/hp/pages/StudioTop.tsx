@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import StudioNav from "../components/StudioNav";
-import StudioCTA from "../components/StudioCTA";
 import StudioFooter from "../components/StudioFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 import TextureBand from "../../shared/TextureBand";
@@ -209,7 +208,6 @@ export default function StudioTop() {
         </section>
       </ScrollFadeIn>
 
-      <StudioCTA />
       <StudioFooter />
     </div>
   );
