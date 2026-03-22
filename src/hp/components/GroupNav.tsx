@@ -51,15 +51,39 @@ export default function GroupNav() {
           <img src="/assets/logos/logo-group-h-gold.webp" alt="記憶荘" style={{ height: "36px", width: "auto" }} />
         </Link>
 
-        <div style={{ marginLeft: "auto", display: "flex", gap: "32px", alignItems: "center" }} className="gnav-pc">
-          {navLinks.map((l) => (
-            <Link key={l.to} to={l.to} style={{
-              ...font, color: location.pathname === l.to ? "#fff" : "rgba(255,255,255,0.7)",
-              textDecoration: "none",
-            }}>
-              {l.label}
-            </Link>
-          ))}
+        {/* PC nav */}
+        <div
+          style={{ marginLeft: "auto", display: "flex", gap: "28px", alignItems: "center" }}
+          className="gnav-pc"
+        >
+          {/* グループ本体 */}
+          <Link to="/" style={{ ...font, color: location.pathname === "/" ? "#fff" : "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+            Top
+          </Link>
+          <Link to="/about" style={{ ...font, color: location.pathname === "/about" ? "#fff" : "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+            About
+          </Link>
+
+          {/* 区切り線（縦線） */}
+          <div style={{
+            width: "1px",
+            height: "16px",
+            backgroundColor: "rgba(255,255,255,0.25)",
+          }} />
+
+          {/* 事業体 */}
+          <Link to="/studio" style={{ ...font, color: location.pathname === "/studio" ? "#fff" : "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+            Studio
+          </Link>
+          <Link to="/koumuten" style={{ ...font, color: location.pathname === "/koumuten" ? "#fff" : "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+            Build
+          </Link>
+          <Link to="/reform" style={{ ...font, color: location.pathname === "/reform" ? "#fff" : "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+            Reform
+          </Link>
+          <Link to="/fudousan" style={{ ...font, color: location.pathname === "/fudousan" ? "#fff" : "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+            Estate
+          </Link>
         </div>
 
         <button onClick={() => setOpen(v => !v)} className="gnav-ham" aria-label="メニュー" style={{
