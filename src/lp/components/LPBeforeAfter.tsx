@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 
 const cases = [
   {
@@ -39,56 +39,86 @@ const cases = [
   },
 ];
 
+const extended = [cases[cases.length - 1], ...cases, cases[0]];
+
 export default function LPBeforeAfter() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const [index, setIndex] = useState(1);
+  const [transitioning, setTransitioning] = useState(false);
+  const isAnimating = useRef(false);
 
-  const scroll = (dir: "prev" | "next") => {
+  const getCardWidth = useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return 300;
+    const card = el.children[0] as HTMLElement | undefined;
+    return card ? card.offsetWidth + 16 : 300;
+  }, []);
+
+  const jumpTo = useCallback((i: number, animated: boolean) => {
     const el = trackRef.current;
     if (!el) return;
-    const cardWidth = el.firstElementChild
-      ? (el.firstElementChild as HTMLElement).offsetWidth + 16
-      : 300;
-    el.scrollBy({ left: dir === "next" ? cardWidth : -cardWidth, behavior: "smooth" });
+    const cardWidth = getCardWidth();
+    const padding = window.innerWidth * 0.05;
+    el.style.transition = animated ? "transform 0.4s ease" : "none";
+    el.style.transform = `translateX(calc(${padding}px - ${i * cardWidth}px))`;
+  }, [getCardWidth]);
+
+  useEffect(() => {
+    jumpTo(1, false);
+  }, [jumpTo]);
+
+  const navigate = (dir: "prev" | "next") => {
+    if (isAnimating.current) return;
+    isAnimating.current = true;
+    setTransitioning(true);
+    const next = dir === "next" ? index + 1 : index - 1;
+    setIndex(next);
+    jumpTo(next, true);
+
+    setTimeout(() => {
+      if (next === 0) {
+        jumpTo(cases.length, false);
+        setIndex(cases.length);
+      } else if (next === extended.length - 1) {
+        jumpTo(1, false);
+        setIndex(1);
+      }
+      setTransitioning(false);
+      isAnimating.current = false;
+    }, 420);
   };
 
   return (
     <section style={{ padding: "48px 0", backgroundColor: "#fff", overflow: "hidden" }}>
       <style>{`
-        .ba-track::-webkit-scrollbar { display: none; }
-        .ba-track { scrollbar-width: none; }
         @media (max-width: 767px) {
           .ba-card { min-width: 85vw !important; }
         }
       `}</style>
 
-      {/* Full-bleed carousel breakout */}
       <div
         style={{
           position: "relative",
           width: "100vw",
           marginLeft: "calc(-50vw + 50%)",
+          overflow: "hidden",
         }}
       >
         <div
           ref={trackRef}
-          className="ba-track"
           style={{
             display: "flex",
             gap: "16px",
-            overflowX: "auto",
-            scrollSnapType: "x mandatory",
-            WebkitOverflowScrolling: "touch",
-            padding: "0 5vw",
+            willChange: "transform",
           }}
         >
-          {cases.map((c) => (
+          {extended.map((c, i) => (
             <div
-              key={c.type}
+              key={`${c.type}-${i}`}
               className="ba-card"
               style={{
                 flexShrink: 0,
                 minWidth: "70vw",
-                scrollSnapAlign: "start",
                 backgroundColor: "#fff",
                 border: "1px solid #eee",
                 borderRadius: "10px",
@@ -144,7 +174,6 @@ export default function LPBeforeAfter() {
         </div>
       </div>
 
-      {/* Arrow buttons — centred within normal flow */}
       <div
         style={{
           display: "flex",
@@ -154,8 +183,9 @@ export default function LPBeforeAfter() {
         }}
       >
         <button
-          onClick={() => scroll("prev")}
+          onClick={() => navigate("prev")}
           aria-label="前へ"
+          disabled={transitioning}
           style={{
             width: "40px",
             height: "40px",
@@ -174,8 +204,9 @@ export default function LPBeforeAfter() {
           ‹
         </button>
         <button
-          onClick={() => scroll("next")}
+          onClick={() => navigate("next")}
           aria-label="次へ"
+          disabled={transitioning}
           style={{
             width: "40px",
             height: "40px",

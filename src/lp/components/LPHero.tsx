@@ -24,6 +24,13 @@ export default function LPHero() {
       />
       <div
         style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0,0,0,0.35)",
+        }}
+      />
+      <div
+        style={{
           position: "relative",
           zIndex: 1,
           minHeight: "100vh",
@@ -81,63 +88,6 @@ export default function LPHero() {
         </div>
 
         <div style={{ marginTop: "auto" }}>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "10px",
-              marginBottom: "0",
-              maxWidth: "480px",
-              margin: "0 auto",
-            }}
-          >
-            {[
-              { label: "居抜き", range: "100〜200万円", img: "/images/pricing-inuki.webp" },
-              { label: "スケルトン", range: "200〜350万円", img: "/images/pricing-skeleton.webp" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.92)",
-                  borderRadius: "8px",
-                  overflow: "hidden",
-                }}
-              >
-                <div style={{ height: "clamp(90px, 12vw, 120px)", overflow: "hidden" }}>
-                  <img
-                    src={item.img}
-                    alt={item.label}
-                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  />
-                </div>
-                <div style={{ padding: "12px 14px" }}>
-                  <p style={{ margin: 0, fontSize: "clamp(11px, 1.8vw, 13px)", fontWeight: 500, color: "#666" }}>
-                    {item.label}
-                  </p>
-                  <p
-                    style={{
-                      margin: "4px 0 0",
-                      fontSize: "clamp(15px, 2.5vw, 18px)",
-                      fontWeight: 700,
-                      color: "#222",
-                    }}
-                  >
-                    {item.range}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p style={{
-            margin: "8px 0 0",
-            fontSize: "11px",
-            color: "rgba(255,255,255,0.5)",
-            textAlign: "center",
-            lineHeight: 1.6,
-          }}>
-            ※ カフェ15坪想定。業態・坪数・設備状況により変動します
-          </p>
-
           <div style={{ padding: "14px 0", textAlign: "center" }}>
             <a
               href={LINE_URL}
