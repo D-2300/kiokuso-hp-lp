@@ -197,7 +197,7 @@ export default function LPSolutionPoints() {
               },
               {
                 title: "施主支給",
-                img: "/images/solution-yahoo-floor.webp",
+                img: "/images/solution-yahoo-floor-new.webp",
                 desc: "家具・照明・資材をご自身で購入いただけます。ネットで見つけた照明や、思い入れのある椅子も歓迎します。",
                 tag: "仕入れコスト削減",
               },
