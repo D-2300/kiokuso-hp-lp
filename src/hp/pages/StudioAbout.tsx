@@ -97,6 +97,75 @@ export default function StudioAbout() {
         </section>
       </ScrollFadeIn>
 
+      {/* Business Types */}
+      <ScrollFadeIn>
+        <section style={{ padding: "80px 24px 40px", maxWidth: "900px", margin: "0 auto" }}>
+          <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#C9A84C", fontWeight: 500, margin: "0 0 16px", textTransform: "uppercase" }}>
+            Business Types
+          </p>
+          <h3 style={{ fontSize: "20px", fontWeight: 500, color: colors.text, fontFamily: "'Noto Serif JP', serif", margin: "0 0 32px", lineHeight: 1.6 }}>
+            ── こんなお店を、つくれます。
+          </h3>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
+            gap: "16px",
+          }}>
+            {[
+              { src: "/images/showcase-cafe.webp", label: "カフェ" },
+              { src: "/images/showcase-izakaya.webp", label: "居酒屋・バー" },
+              { src: "/images/showcase-salon.webp", label: "美容室" },
+              { src: "/images/showcase-gym.webp", label: "ジム" },
+              { src: "/images/showcase-takeout.webp", label: "テイクアウト" },
+              { src: "/images/showcase-shop.webp", label: "物販" },
+              { src: "/images/showcase-nail.webp", label: "ネイルサロン" },
+              { src: "/images/showcase-ramen.webp", label: "ラーメン店" },
+              { src: "/images/showcase-clinic.webp", label: "整体・治療院" },
+              { src: "/images/showcase-office.webp", label: "事務所" },
+              { src: "/images/showcase-bakery.webp", label: "ベーカリー" },
+              { src: "/images/showcase-flower.webp", label: "花屋" },
+            ].map((item) => (
+              <div key={item.label} style={{ textAlign: "center" }}>
+                <div style={{ borderRadius: "8px", overflow: "hidden", marginBottom: "8px" }}>
+                  <img src={item.src} alt={item.label} style={{ width: "100%", height: "120px", objectFit: "cover", display: "block" }} />
+                </div>
+                <p style={{ margin: 0, fontSize: "13px", color: "#555" }}>{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </ScrollFadeIn>
+
+      {/* Voice */}
+      <ScrollFadeIn>
+        <section style={{ padding: "40px 24px 80px", maxWidth: "640px", margin: "0 auto" }}>
+          <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#C9A84C", fontWeight: 500, margin: "0 0 16px", textTransform: "uppercase" }}>
+            Voice
+          </p>
+          <h3 style={{ fontSize: "20px", fontWeight: 500, color: colors.text, fontFamily: "'Noto Serif JP', serif", margin: "0 0 32px", lineHeight: 1.6 }}>
+            ── ご利用いただいた方の声。
+          </h3>
+          <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+            {[
+              { text: "見積もりの内訳がここまで細かいのは初めてでした。何にいくらかかるか全部わかるので安心です。", author: "カフェオーナー", detail: "仙台市青葉区・12坪" },
+              { text: "物件が決まる前から相談できたのが大きかったです。おかげで融資の準備もスムーズに進みました。", author: "居酒屋オーナー", detail: "仙台市宮城野区・18坪" },
+              { text: "3社比較した中で、見積もりの内訳が一番細かかったです。融資の書類にもそのまま使えて助かりました。", author: "カフェオーナー", detail: "仙台市青葉区・12坪" },
+              { text: "居抜きを活かすことで、思っていたよりずっと抑えられました。最初の概算と最終金額がほとんど変わらなかったのも安心でした。", author: "ラーメン店オーナー", detail: "仙台市太白区・15坪" },
+              { text: "Step 0で概算を出してもらった時点で、予算的に厳しいとわかったんです。でも「今は見送りましょう」と正直に言ってくれて、無理に進めなかった。半年後に改めて相談して、今の店ができました。", author: "焼鳥店オーナー", detail: "仙台市泉区・14坪" },
+            ].map((v, i) => (
+              <div key={i} style={{ borderLeft: "3px solid #C9A84C", paddingLeft: "20px" }}>
+                <p style={{ margin: "0 0 8px", fontSize: "15px", color: "#444", lineHeight: 1.8 }}>
+                  「{v.text}」
+                </p>
+                <p style={{ margin: 0, fontSize: "12px", color: "#999" }}>
+                  {v.author}・{v.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </ScrollFadeIn>
+
       {/* ABOUT KEN */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 24px", backgroundColor: "rgba(46,66,41,0.03)" }}>

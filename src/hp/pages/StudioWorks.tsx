@@ -162,6 +162,48 @@ export default function StudioWorks() {
         </div>
       </section>
 
+      {/* Before/After ギャラリー */}
+      <ScrollFadeIn>
+        <section style={{ padding: "60px 0 40px" }}>
+          <div style={{ padding: "0 24px", marginBottom: "20px" }}>
+            <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#C9A84C", fontWeight: 500, margin: "0 0 8px", textTransform: "uppercase" }}>
+              Before → After
+            </p>
+            <p style={{ margin: 0, fontSize: "13px", color: "#999" }}>スワイプで他の事例を見る →</p>
+          </div>
+          <div style={{
+            display: "flex",
+            gap: "16px",
+            overflowX: "auto",
+            padding: "0 24px 16px",
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
+          }}>
+            {[
+              { type: "カフェ", cost: "120万円", tsubo: "12坪", period: "6週間", before: "/images/crossover-before-01.webp", after: "/images/crossover-after-01.webp" },
+              { type: "居酒屋", cost: "180万円", tsubo: "18坪", period: "8週間", before: "/images/crossover-before-02.webp", after: "/images/crossover-after-02.webp" },
+              { type: "美容室", cost: "150万円", tsubo: "15坪", period: "7週間", before: "/images/salon-before-01.webp", after: "/images/salon-after-01.webp" },
+              { type: "テイクアウト", cost: "90万円", tsubo: "8坪", period: "4週間", before: "/images/owl-before-01.webp", after: "/images/owl-after-01.webp" },
+            ].map((c) => (
+              <div key={c.type} style={{ flex: "0 0 280px", scrollSnapAlign: "start", borderRadius: "12px", overflow: "hidden", background: "#fff", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+                  <img src={c.before} alt={`${c.type} Before`} style={{ width: "100%", height: "100px", objectFit: "cover" }} />
+                  <img src={c.after} alt={`${c.type} After`} style={{ width: "100%", height: "100px", objectFit: "cover" }} />
+                </div>
+                <div style={{ padding: "12px 16px" }}>
+                  <div style={{ display: "flex", gap: "6px", marginBottom: "4px" }}>
+                    <span style={{ fontSize: "12px", fontWeight: 600, color: "#4A6741" }}>{c.type}</span>
+                    <span style={{ fontSize: "11px", color: "#999" }}>{c.tsubo}</span>
+                    <span style={{ fontSize: "11px", color: "#999" }}>{c.period}</span>
+                  </div>
+                  <p style={{ margin: 0, fontSize: "14px", fontWeight: 700, color: "#333" }}>{c.cost}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </ScrollFadeIn>
+
       <div style={{ paddingTop: "16px" }}>
         {works.map((work, i) => (
           <div key={work.name}>
