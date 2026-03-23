@@ -1,10 +1,25 @@
+import { useState, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import StudioNav from "../components/StudioNav";
 import StudioFooter from "../components/StudioFooter";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
-import TextureBand from "../../shared/TextureBand";
 import { colors } from "../../shared/design-tokens";
 
-const works = [
+interface Work {
+  name: string;
+  location: string;
+  type: string;
+  kind: string;
+  cost: string;
+  period: string;
+  tsubo: string;
+  story: string;
+  tags: string[];
+  after: string;
+  before: string;
+}
+
+const works: Work[] = [
   {
     name: "バスケットボール Cafe&Bar CROSSOVER",
     location: "仙台市",
@@ -16,50 +31,8 @@ const works = [
     story:
       "バスケットボール好きにはたまらない空間を、極限までコストを削りながら実現しました。壁面にモルタルを施工して無骨な質感を出し、ブルーLEDが光るバーカウンターへ仕上げています。中古設備を最大限に活用しDIYを組み合わせることで、スケルトンから約90万円・10日間という驚異的なコストパフォーマンスを実現した事例です。",
     tags: ["DIY施工", "モルタル壁", "中古設備多用", "スケルトンから10日"],
-    main: "/images/crossover-after-01.webp",
-    subs: ["/images/crossover-after-02.webp", "/images/crossover-after-03.webp", "/images/crossover-after-04.webp", "/images/crossover-before-01.webp"],
-  },
-  {
-    name: "テイクアウトカフェ OWL",
-    location: "仙台市",
-    type: "テイクアウトカフェ",
-    kind: "居抜き",
-    cost: "¥800,000",
-    period: "約22日",
-    tsubo: "10坪",
-    story:
-      "居抜き物件のインフラをそのまま活かし、最小限の手数で新しいお店に生まれ変わらせた事例です。既存カウンターはそのまま残し、壁の塗装はオーナー自身がDIYで施工。厨房機器はメルカリ・ヤフオクで調達し、設置のみ記憶荘が担当しました。",
-    tags: ["居抜き活用", "DIY塗装", "中古厨房機器", "施主支給"],
-    main: "/images/owl-after-01.webp",
-    subs: ["/images/owl-before-01.webp"],
-  },
-  {
-    name: "パーソナルジム B-POINT",
-    location: "仙台市",
-    type: "パーソナルジム",
-    kind: "スケルトン",
-    cost: "¥1,400,000",
-    period: "約30日",
-    tsubo: "20坪",
-    story:
-      "スケルトン状態から防音工事・ミラー設置・床仕上げまで一気通貫で対応した事例です。トレーニングマシンはオーナーが直接調達し、記憶荘は搬入・設置を担当。公庫融資の見積書作成から保健所対応まで、開業に必要な手続きもすべてサポートしました。",
-    tags: ["スケルトン施工", "防音工事", "施主支給マシン", "融資対応"],
-    main: "/images/bpoint-after-01.webp",
-    subs: ["/images/bpoint-before-01.webp"],
-  },
-  {
-    name: "ネイル・アイラッシュサロン",
-    location: "仙台市",
-    type: "ネイル・アイラッシュサロン",
-    kind: "居抜き",
-    cost: "¥900,000",
-    period: "約18日",
-    tsubo: "15坪",
-    story:
-      "居抜き物件をフル活用し、床・壁・棚の仕上げをオーナー自身がすべてDIYで施工した事例です。記憶荘が担当したのは電気・給排水などのインフラ工事のみ。みやぎ中小企業チャレンジ応援基金も活用し、約90万円で開業を実現しています。",
-    tags: ["居抜き活用", "DIY全面施工", "施主支給什器", "補助金活用"],
-    main: "/images/salon-after-01.webp",
-    subs: ["/images/salon-before-01.webp"],
+    after: "/images/crossover-after-01.webp",
+    before: "/images/crossover-before-01.webp",
   },
   {
     name: "ANVIL",
@@ -72,8 +45,8 @@ const works = [
     story:
       "前のお店が残していったピンクの椅子と、大理石模様のカウンター。同じ空間を、まったく違う場所に変えたかった。\n\nカウンターの正面にトタン板を張った。棚をスチールに替え、裸電球を吊るした。テーブルは古材と鉄脚で、一つひとつ作った。\n\n前の店の骨格を活かしながら、新しいオーナーの世界を載せる。それが居抜きの醍醐味だと思っている。",
     tags: ["居抜き活用", "トタン壁", "スチール什器", "古材テーブル", "オリジナル家具"],
-    main: "/images/anvil-after.webp",
-    subs: ["/images/anvil-before.webp"],
+    after: "/images/anvil-after.webp",
+    before: "/images/anvil-before.webp",
   },
   {
     name: "藍",
@@ -86,8 +59,8 @@ const works = [
     story:
       "無垢材のカウンターと木の棚。前の店が長く使い込んだものだった。状態が良かったから、壊さずに使うことにした。\n\n変えたのは壁と床だけ。藍色の壁紙を全面に張った。それだけで、空間はまったく別の場所になった。\n\n残すものと変えるものを見極める。居抜きの本質は、そこにあると思う。",
     tags: ["居抜き活用", "壁紙全面施工", "既存カウンター活用", "和モダン", "フローリング張替"],
-    main: "/images/case6-after.webp",
-    subs: ["/images/case6-before.webp"],
+    after: "/images/case6-after.webp",
+    before: "/images/case6-before.webp",
   },
   {
     name: "焼肉店",
@@ -100,8 +73,8 @@ const works = [
     story:
       "ロースター、テーブル、革張りのベンチ、木のルーバー。前の店が残したものは、どれも状態が良かった。\n\n変えたのは壁と天井だけ。石壁を赤に、コンクリートの天井を黒に。\n\n同じ空間が、まったく違う温度を持った。壊さずに変える。40坪でも、やり方は同じだった。",
     tags: ["居抜き活用", "壁紙全面施工", "天井塗装", "既存設備フル活用", "大型物件", "ロースター継続使用"],
-    main: "/images/yakiniku-after.webp",
-    subs: ["/images/yakiniku-before.webp"],
+    after: "/images/yakiniku-after.webp",
+    before: "/images/yakiniku-before.webp",
   },
   {
     name: "ラーメン店",
@@ -114,147 +87,330 @@ const works = [
     story:
       "L字型のオープンキッチン。カウンター、ダクト、照明レール。前の店のインフラは、全部使えた。\n\n壁と天井とカウンターを、黒く塗った。カウンターの下にLEDを仕込んだ。\n\nそれだけで、町のラーメン屋が、わざわざ来たくなる場所に変わった。",
     tags: ["居抜き活用", "全面黒塗装", "間接照明", "オープンキッチン", "モルタル床", "既存設備フル活用"],
-    main: "/images/ramen-after.webp",
-    subs: ["/images/ramen-before.webp"],
+    after: "/images/ramen-after.webp",
+    before: "/images/ramen-before.webp",
+  },
+  {
+    name: "テイクアウトカフェ OWL",
+    location: "仙台市",
+    type: "テイクアウトカフェ",
+    kind: "居抜き",
+    cost: "¥800,000",
+    period: "約22日",
+    tsubo: "10坪",
+    story:
+      "居抜き物件のインフラをそのまま活かし、最小限の手数で新しいお店に生まれ変わらせた事例です。既存カウンターはそのまま残し、壁の塗装はオーナー自身がDIYで施工。厨房機器はメルカリ・ヤフオクで調達し、設置のみ記憶荘が担当しました。",
+    tags: ["居抜き活用", "DIY塗装", "中古厨房機器", "施主支給"],
+    after: "/images/owl-after-01.webp",
+    before: "/images/owl-before-01.webp",
+  },
+  {
+    name: "ネイル・アイラッシュサロン",
+    location: "仙台市",
+    type: "ネイル・アイラッシュサロン",
+    kind: "居抜き",
+    cost: "¥900,000",
+    period: "約18日",
+    tsubo: "15坪",
+    story:
+      "居抜き物件をフル活用し、床・壁・棚の仕上げをオーナー自身がすべてDIYで施工した事例です。記憶荘が担当したのは電気・給排水などのインフラ工事のみ。みやぎ中小企業チャレンジ応援基金も活用し、約90万円で開業を実現しています。",
+    tags: ["居抜き活用", "DIY全面施工", "施主支給什器", "補助金活用"],
+    after: "/images/salon-after-01.webp",
+    before: "/images/salon-before-01.webp",
+  },
+  {
+    name: "パーソナルジム B-POINT",
+    location: "仙台市",
+    type: "パーソナルジム",
+    kind: "スケルトン",
+    cost: "¥1,400,000",
+    period: "約30日",
+    tsubo: "20坪",
+    story:
+      "スケルトン状態から防音工事・ミラー設置・床仕上げまで一気通貫で対応した事例です。トレーニングマシンはオーナーが直接調達し、記憶荘は搬入・設置を担当。公庫融資の見積書作成から保健所対応まで、開業に必要な手続きもすべてサポートしました。",
+    tags: ["スケルトン施工", "防音工事", "施主支給マシン", "融資対応"],
+    after: "/images/bpoint-after-01.webp",
+    before: "/images/bpoint-before-01.webp",
   },
 ];
 
-const textureSrcs = [
-  "/assets/textures/oak-hardwood-floor.webp",
-  "/assets/textures/rusted-steel-plates.webp",
-  "/assets/textures/shikkui-plaster-closeup.webp",
-  null,
-  "/assets/textures/earthen-wall-layers.webp",
-  null,
-  "/assets/textures/yakisugi-charred-wood.webp",
-  null,
+const genres = [
+  { label: "BAR & IZAKAYA", labelJa: "バー・居酒屋", keys: ["バスケットボール Cafe&Bar CROSSOVER", "ANVIL", "藍"] },
+  { label: "RESTAURANT", labelJa: "飲食店", keys: ["焼肉店", "ラーメン店"] },
+  { label: "CAFE & TAKEOUT", labelJa: "カフェ・テイクアウト", keys: ["テイクアウトカフェ OWL"] },
+  { label: "BEAUTY & FITNESS", labelJa: "美容・ジム", keys: ["ネイル・アイラッシュサロン", "パーソナルジム B-POINT"] },
 ];
+
+const worksByName = Object.fromEntries(works.map((w) => [w.name, w]));
+
+function WorkCard({ work }: { work: Work }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div
+      style={{
+        flex: "0 0 280px",
+        width: "280px",
+        background: "#fff",
+        borderRadius: "12px",
+        overflow: "hidden",
+        boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+        cursor: "pointer",
+        transition: "box-shadow 0.2s",
+      }}
+      onClick={() => setExpanded((v) => !v)}
+    >
+      <div style={{ position: "relative" }}>
+        <img
+          src={work.after}
+          alt={`${work.name} after`}
+          style={{ width: "100%", height: "220px", objectFit: "cover", display: "block" }}
+        />
+        <span
+          style={{
+            position: "absolute",
+            top: "10px",
+            left: "10px",
+            background: "rgba(0,0,0,0.55)",
+            color: "#fff",
+            fontSize: "10px",
+            fontFamily: "'Anton', sans-serif",
+            letterSpacing: "0.08em",
+            padding: "3px 8px",
+            borderRadius: "4px",
+          }}
+        >
+          AFTER
+        </span>
+      </div>
+
+      <div style={{ padding: "16px" }}>
+        <p style={{ margin: "0 0 10px", fontSize: "14px", fontWeight: 700, color: colors.text, lineHeight: 1.4 }}>
+          {work.name}
+        </p>
+
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "4px" }}>
+          {[
+            { label: "費用", value: work.cost },
+            { label: "工期", value: work.period },
+            { label: "物件", value: work.kind },
+            { label: "坪数", value: work.tsubo },
+          ].map((spec) => (
+            <div
+              key={spec.label}
+              style={{
+                border: "1px solid rgba(201,168,76,0.3)",
+                borderRadius: "5px",
+                padding: "4px 8px",
+                textAlign: "center",
+              }}
+            >
+              <p style={{ margin: 0, fontSize: "9px", color: colors.mute, fontWeight: 500 }}>{spec.label}</p>
+              <p style={{ margin: "1px 0 0", fontSize: "11px", fontWeight: 700, color: colors.text, whiteSpace: "nowrap" }}>
+                {spec.value}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div
+          style={{
+            fontSize: "11px",
+            color: "#C9A84C",
+            fontWeight: 600,
+            marginTop: "10px",
+            letterSpacing: "0.04em",
+          }}
+        >
+          {expanded ? "▲ 閉じる" : "▼ 詳細を見る"}
+        </div>
+      </div>
+
+      {expanded && (
+        <div
+          style={{ padding: "0 16px 16px", borderTop: "1px solid rgba(0,0,0,0.06)" }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", margin: "14px 0" }}>
+            <div>
+              <p style={{ margin: "0 0 4px", fontSize: "10px", color: "#888", fontWeight: 500, letterSpacing: "0.08em" }}>BEFORE</p>
+              <img
+                src={work.before}
+                alt={`${work.name} before`}
+                style={{ width: "100%", height: "110px", objectFit: "cover", borderRadius: "6px", display: "block" }}
+              />
+            </div>
+            <div>
+              <p style={{ margin: "0 0 4px", fontSize: "10px", color: "#888", fontWeight: 500, letterSpacing: "0.08em" }}>AFTER</p>
+              <img
+                src={work.after}
+                alt={`${work.name} after`}
+                style={{ width: "100%", height: "110px", objectFit: "cover", borderRadius: "6px", display: "block" }}
+              />
+            </div>
+          </div>
+
+          <p style={{ fontSize: "13px", color: colors.sub, lineHeight: 2.0, margin: "0 0 12px", whiteSpace: "pre-line" }}>
+            {work.story}
+          </p>
+
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+            {work.tags.map((tag) => (
+              <span key={tag} style={{ fontSize: "11px", color: "#888" }}>
+                #{tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function GenreCarousel({ label, labelJa, works: genreWorks }: { label: string; labelJa: string; works: Work[] }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    scrollRef.current.scrollBy({ left: dir === "right" ? 300 : -300, behavior: "smooth" });
+  };
+
+  return (
+    <div style={{ marginTop: "48px" }}>
+      <div style={{ padding: "0 24px 16px", borderBottom: "1px solid #E0E0E0", marginBottom: "20px" }}>
+        <span
+          style={{
+            fontFamily: "'Anton', sans-serif",
+            fontSize: "16px",
+            color: "#888",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+          }}
+        >
+          {label}
+        </span>
+        <span style={{ marginLeft: "12px", fontSize: "12px", color: "#AAA" }}>{labelJa}</span>
+      </div>
+
+      <div style={{ position: "relative" }}>
+        {genreWorks.length > 1 && (
+          <>
+            <button
+              onClick={() => scroll("left")}
+              style={{
+                position: "absolute",
+                left: "4px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 2,
+                background: "rgba(255,255,255,0.92)",
+                border: "1px solid #E0E0E0",
+                borderRadius: "50%",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+              }}
+            >
+              <ChevronLeft size={18} color="#555" />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              style={{
+                position: "absolute",
+                right: "4px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 2,
+                background: "rgba(255,255,255,0.92)",
+                border: "1px solid #E0E0E0",
+                borderRadius: "50%",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+              }}
+            >
+              <ChevronRight size={18} color="#555" />
+            </button>
+          </>
+        )}
+
+        <div
+          ref={scrollRef}
+          style={{
+            display: "flex",
+            gap: "16px",
+            overflowX: "auto",
+            padding: "4px 24px 16px",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          {genreWorks.map((work) => (
+            <WorkCard key={work.name} work={work} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function StudioWorks() {
   return (
-    <div style={{ backgroundColor: '#2E4229' }}>
-    <div style={{ paddingTop: 0, backgroundColor: colors.beige }}>
-      <StudioNav />
+    <div style={{ backgroundColor: "#2E4229" }}>
+      <div style={{ paddingTop: 0, backgroundColor: colors.beige }}>
+        <StudioNav />
 
-      <section style={{ position: "relative", height: "50vh", minHeight: "320px", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#CFC7BD" }}>
-          <img
-            src="/assets/textures/oak-hardwood-floor.webp"
-            alt=""
-            style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
-          />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)" }} />
-        </div>
-        <div
-          style={{
-            position: "relative",
-            zIndex: 1,
-            height: "100%",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "10px",
-          }}
-        >
-          <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em", textTransform: "uppercase" }}>Works</p>
-          <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>施工事例</p>
-        </div>
-      </section>
-
-      <div style={{ paddingTop: "40px" }}>
-        {works.map((work, i) => (
-          <div key={work.name}>
-            <ScrollFadeIn>
-              <div style={{ paddingBottom: "64px" }}>
-                <div
-                  style={{
-                    maxWidth: "560px",
-                    margin: "0 auto",
-                    display: "grid",
-                    gridTemplateColumns: work.subs.length > 0 ? "1fr 1fr" : "1fr",
-                    gap: "8px",
-                    padding: "0 24px",
-                  }}
-                >
-                  {work.subs.length > 0 && (
-                    <div>
-                      <p style={{ margin: "0 0 4px", fontSize: "11px", color: "#888", fontWeight: 500, letterSpacing: "0.08em" }}>BEFORE</p>
-                      <img
-                        src={work.subs[0]}
-                        alt={`${work.name} before`}
-                        style={{ width: "100%", height: "clamp(160px, 30vw, 250px)", objectFit: "cover", borderRadius: "8px", display: "block" }}
-                      />
-                    </div>
-                  )}
-                  <div>
-                    <p style={{ margin: "0 0 4px", fontSize: "11px", color: "#888", fontWeight: 500, letterSpacing: "0.08em" }}>AFTER</p>
-                    <img
-                      src={work.main}
-                      alt={`${work.name} after`}
-                      style={{ width: "100%", height: "clamp(160px, 30vw, 250px)", objectFit: "cover", borderRadius: "8px", display: "block" }}
-                    />
-                  </div>
-                </div>
-
-                <div style={{ maxWidth: "560px", margin: "0 auto", padding: "24px 24px 0" }}>
-                  <p style={{ fontSize: "18px", fontWeight: 700, color: colors.text, margin: "0 0 18px" }}>
-                    {work.name}
-                  </p>
-
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "20px", paddingBottom: "20px", borderBottom: `1px solid rgba(0,0,0,0.08)` }}>
-                    {[
-                      { label: "概算費用", value: work.cost },
-                      { label: "工期", value: work.period },
-                      { label: "物件", value: work.kind },
-                      { label: "坪数", value: work.tsubo },
-                    ].map((spec) => (
-                      <div
-                        key={spec.label}
-                        style={{
-                          border: "1px solid rgba(201,168,76,0.3)",
-                          borderRadius: "6px",
-                          padding: "6px 12px",
-                          textAlign: "center",
-                        }}
-                      >
-                        <p style={{ margin: 0, fontSize: "10px", color: colors.mute, fontWeight: 500 }}>{spec.label}</p>
-                        <p style={{ margin: "2px 0 0", fontSize: "13px", fontWeight: 700, color: colors.text, whiteSpace: "nowrap" }}>
-                          {spec.value}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <p style={{ fontSize: "14px", color: colors.sub, lineHeight: 2.0, margin: "0 0 16px", whiteSpace: "pre-line" }}>
-                    {work.story}
-                  </p>
-
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
-                    {work.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        style={{
-                          fontSize: "12px",
-                          color: "#888",
-                          borderRadius: "4px",
-                          padding: "2px 0",
-                        }}
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </ScrollFadeIn>
-            {textureSrcs[i] && <TextureBand src={textureSrcs[i] as string} height={180} />}
+        <section style={{ position: "relative", height: "50vh", minHeight: "320px", overflow: "hidden" }}>
+          <div style={{ position: "absolute", inset: 0, height: "100%", backgroundColor: "#CFC7BD" }}>
+            <img
+              src="/assets/textures/oak-hardwood-floor.webp"
+              alt=""
+              style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }}
+            />
+            <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.45)" }} />
           </div>
-        ))}
-      </div>
+          <div
+            style={{
+              position: "relative",
+              zIndex: 1,
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "10px",
+            }}
+          >
+            <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em", textTransform: "uppercase" }}>Works</p>
+            <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>施工事例</p>
+          </div>
+        </section>
 
-    </div>
-    <StudioFooter />
+        <div style={{ paddingBottom: "80px" }}>
+          <ScrollFadeIn>
+            {genres.map((genre) => {
+              const genreWorks = genre.keys.map((k) => worksByName[k]).filter(Boolean);
+              return (
+                <GenreCarousel
+                  key={genre.label}
+                  label={genre.label}
+                  labelJa={genre.labelJa}
+                  works={genreWorks}
+                />
+              );
+            })}
+          </ScrollFadeIn>
+        </div>
+      </div>
+      <StudioFooter />
     </div>
   );
 }
