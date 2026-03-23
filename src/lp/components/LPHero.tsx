@@ -16,12 +16,12 @@ export default function LPHero() {
           .lp-hero { min-height: 90vh !important; }
           .lp-hero-inner { min-height: 90vh !important; }
           .ba-card-img { height: 130px !important; }
-          .hero-catch-line1 { font-size: 26px !important; }
+          .hero-catch-line1 { font-size: 28px !important; }
           .hero-catch-line2 { font-size: 20px !important; }
         }
         @media (min-width: 768px) {
           .ba-card-img { height: 180px !important; }
-          .hero-catch-line1 { font-size: 34px !important; }
+          .hero-catch-line1 { font-size: 40px !important; }
           .hero-catch-line2 { font-size: 26px !important; }
         }
       `}</style>
@@ -42,6 +42,13 @@ export default function LPHero() {
           position: "absolute",
           inset: 0,
           backgroundColor: "rgba(0,0,0,0.35)",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 70%)",
         }}
       />
       <div
@@ -94,24 +101,24 @@ export default function LPHero() {
               className="hero-catch-line1"
               style={{
                 display: "block",
-                fontWeight: 800,
+                fontWeight: 700,
                 color: "#fff",
-                lineHeight: 1.35,
+                lineHeight: 1.4,
                 letterSpacing: "-0.01em",
-                textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+                textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)",
               }}
             >
-              予算100万円以下でも、
+              予算<span style={{ color: "#C9A84C" }}>100万円以下</span>でも、
             </span>
             <span
               className="hero-catch-line1"
               style={{
                 display: "block",
-                fontWeight: 800,
+                fontWeight: 700,
                 color: "#fff",
-                lineHeight: 1.35,
+                lineHeight: 1.4,
                 letterSpacing: "-0.01em",
-                textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+                textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 1px 4px rgba(0,0,0,0.5)",
               }}
             >
               あなたの店はつくれます。
@@ -147,8 +154,8 @@ export default function LPHero() {
         <div style={{ marginTop: "auto" }}>
           <div style={{ maxWidth: "560px", margin: "0 auto", display: "flex", gap: "8px", marginBottom: "14px" }}>
             {[
-              { src: "/images/pricing-inuki.webp", alt: "居抜き施工例", label: "居抜き", price: "50" },
-              { src: "/images/pricing-skeleton.webp", alt: "スケルトン施工例", label: "スケルトン", price: "150" },
+              { src: "/images/pricing-inuki.webp", alt: "居抜き施工例", label: "居抜き状態", price: "60万円台" },
+              { src: "/images/pricing-skeleton.webp", alt: "スケルトン施工例", label: "スケルトン仕様", price: "120万円台" },
             ].map((card) => (
               <div
                 key={card.label}
@@ -183,7 +190,7 @@ export default function LPHero() {
                     {card.label}
                   </p>
                   <p style={{ margin: 0, fontSize: "20px", fontWeight: 700, color: "#fff", lineHeight: 1.2 }}>
-                    {card.price}<span style={{ fontSize: "12px", fontWeight: 400 }}>万円〜</span>
+                    {card.price}<span style={{ fontSize: "12px", fontWeight: 400 }}>〜</span>
                   </p>
                 </div>
               </div>
