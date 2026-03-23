@@ -66,7 +66,13 @@ export default function StudioNav() {
                 ? (location.pathname === l.to ? "#fff" : "rgba(255,255,255,0.7)")
                 : (location.pathname === l.to ? "#fff" : "rgba(255,255,255,0.75)"),
               textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: l.to === "/studio" ? "5px" : undefined,
             }}>
+              {l.to === "/studio" && (
+                <img src="/assets/logos/logo-studio-gold.webp" alt="" style={{ height: "14px", width: "auto" }} />
+              )}
               {l.label}
             </Link>
           ))}
