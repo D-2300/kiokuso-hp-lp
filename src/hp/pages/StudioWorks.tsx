@@ -162,82 +162,42 @@ export default function StudioWorks() {
         </div>
       </section>
 
-      {/* Before/After ギャラリー */}
-      <ScrollFadeIn>
-        <section style={{ padding: "60px 0 40px" }}>
-          <div style={{ padding: "0 24px", marginBottom: "20px" }}>
-            <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#C9A84C", fontWeight: 500, margin: "0 0 8px", textTransform: "uppercase" }}>
-              Before → After
-            </p>
-            <p style={{ margin: 0, fontSize: "13px", color: "#999" }}>スワイプで他の事例を見る →</p>
-          </div>
-          <div style={{
-            display: "flex",
-            gap: "16px",
-            overflowX: "auto",
-            padding: "0 24px 16px",
-            scrollSnapType: "x mandatory",
-            WebkitOverflowScrolling: "touch",
-          }}>
-            {[
-              { type: "カフェ", cost: "120万円", tsubo: "12坪", period: "6週間", before: "/images/crossover-before-01.webp", after: "/images/crossover-after-01.webp" },
-              { type: "居酒屋", cost: "180万円", tsubo: "18坪", period: "8週間", before: "/images/crossover-before-02.webp", after: "/images/crossover-after-02.webp" },
-              { type: "美容室", cost: "150万円", tsubo: "15坪", period: "7週間", before: "/images/salon-before-01.webp", after: "/images/salon-after-01.webp" },
-              { type: "テイクアウト", cost: "90万円", tsubo: "8坪", period: "4週間", before: "/images/owl-before-01.webp", after: "/images/owl-after-01.webp" },
-            ].map((c) => (
-              <div key={c.type} style={{ flex: "0 0 280px", scrollSnapAlign: "start", borderRadius: "12px", overflow: "hidden", background: "#fff", boxShadow: "0 2px 12px rgba(0,0,0,0.06)" }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
-                  <img src={c.before} alt={`${c.type} Before`} style={{ width: "100%", height: "100px", objectFit: "cover" }} />
-                  <img src={c.after} alt={`${c.type} After`} style={{ width: "100%", height: "100px", objectFit: "cover" }} />
-                </div>
-                <div style={{ padding: "12px 16px" }}>
-                  <div style={{ display: "flex", gap: "6px", marginBottom: "4px" }}>
-                    <span style={{ fontSize: "12px", fontWeight: 600, color: "#4A6741" }}>{c.type}</span>
-                    <span style={{ fontSize: "11px", color: "#999" }}>{c.tsubo}</span>
-                    <span style={{ fontSize: "11px", color: "#999" }}>{c.period}</span>
-                  </div>
-                  <p style={{ margin: 0, fontSize: "14px", fontWeight: 700, color: "#333" }}>{c.cost}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </ScrollFadeIn>
-
-      <div style={{ paddingTop: "16px" }}>
+      <div style={{ paddingTop: "40px" }}>
         {works.map((work, i) => (
           <div key={work.name}>
             <ScrollFadeIn>
               <div style={{ paddingBottom: "64px" }}>
-                <img
-                  src={work.main}
-                  alt={work.name}
-                  style={{ maxWidth: "560px", width: "100%", aspectRatio: "3/2", objectFit: "cover", borderRadius: "4px", display: "block", margin: "0 auto" }}
-                />
-
-                {work.subs.length > 0 && (
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: `repeat(${work.subs.length}, 1fr)`,
-                      gap: "6px",
-                      maxWidth: "560px",
-                      margin: "6px auto 0",
-                      padding: "0 0",
-                    }}
-                  >
-                    {work.subs.map((src, j) => (
+                <div
+                  style={{
+                    maxWidth: "560px",
+                    margin: "0 auto",
+                    display: "grid",
+                    gridTemplateColumns: work.subs.length > 0 ? "1fr 1fr" : "1fr",
+                    gap: "8px",
+                    padding: "0 24px",
+                  }}
+                >
+                  {work.subs.length > 0 && (
+                    <div>
+                      <p style={{ margin: "0 0 4px", fontSize: "11px", color: "#888", fontWeight: 500, letterSpacing: "0.08em" }}>BEFORE</p>
                       <img
-                        key={j}
-                        src={src}
-                        alt=""
-                        style={{ aspectRatio: "3/2", objectFit: "cover", width: "100%", borderRadius: "4px" }}
+                        src={work.subs[0]}
+                        alt={`${work.name} before`}
+                        style={{ width: "100%", height: "clamp(160px, 30vw, 250px)", objectFit: "cover", borderRadius: "8px", display: "block" }}
                       />
-                    ))}
+                    </div>
+                  )}
+                  <div>
+                    <p style={{ margin: "0 0 4px", fontSize: "11px", color: "#888", fontWeight: 500, letterSpacing: "0.08em" }}>AFTER</p>
+                    <img
+                      src={work.main}
+                      alt={`${work.name} after`}
+                      style={{ width: "100%", height: "clamp(160px, 30vw, 250px)", objectFit: "cover", borderRadius: "8px", display: "block" }}
+                    />
                   </div>
-                )}
+                </div>
 
-                <div style={{ maxWidth: "560px", margin: "0 auto", padding: "28px 24px 0" }}>
+                <div style={{ maxWidth: "560px", margin: "0 auto", padding: "24px 24px 0" }}>
                   <p style={{ fontSize: "18px", fontWeight: 700, color: colors.text, margin: "0 0 18px" }}>
                     {work.name}
                   </p>
