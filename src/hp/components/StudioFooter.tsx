@@ -15,7 +15,7 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
       style={{
         backgroundColor: BG,
         textAlign: "center",
-        padding: "0 32px",
+        padding: "80px 32px 0",
       }}
     >
       <ScrollFadeIn>
@@ -25,7 +25,7 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
             fontSize: "22px",
             fontWeight: 500,
             letterSpacing: "0.08em",
-            marginTop: "80px",
+            marginTop: 0,
             marginBottom: 0,
           }}
         >
