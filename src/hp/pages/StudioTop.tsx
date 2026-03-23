@@ -8,19 +8,19 @@ import { colors } from "../../shared/design-tokens";
 
 const worksPreview = [
   {
-    img: "/images/crossover-after-01.webp",
-    type: "スポーツバー",
-    cost: "¥90万",
+    img: "/images/yakiniku-after.webp",
+    type: "焼肉店",
+    cost: "¥360万",
   },
   {
-    img: "/images/owl-after-01.webp",
-    type: "テイクアウトカフェ",
-    cost: "¥80万",
+    img: "/images/ramen-after.webp",
+    type: "ラーメン店",
+    cost: "¥280万",
   },
   {
-    img: "/images/salon-after-01.webp",
-    type: "ネイルサロン",
-    cost: "¥90万",
+    img: "/images/case6-after.webp",
+    type: "バー/割烹",
+    cost: "¥120万",
   },
 ];
 

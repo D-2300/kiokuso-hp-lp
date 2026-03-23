@@ -61,6 +61,22 @@ const cases = [
     before: "/images/case6-before.webp",
     after: "/images/case6-after.webp",
   },
+  {
+    type: "焼肉店",
+    cost: "360万円",
+    tsubo: "40坪",
+    period: "3週間",
+    before: "/images/yakiniku-before.webp",
+    after: "/images/yakiniku-after.webp",
+  },
+  {
+    type: "ラーメン店",
+    cost: "280万円",
+    tsubo: "12坪",
+    period: "3週間",
+    before: "/images/ramen-before.webp",
+    after: "/images/ramen-after.webp",
+  },
 ];
 
 const extended = [cases[cases.length - 1], ...cases, cases[0]];

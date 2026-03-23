@@ -1,8 +1,11 @@
 const items = [
   { name: "飲食店", price: "100〜350万円", image: "/images/crossover-after-01.webp" },
+  { name: "バー", price: "90〜200万円", image: "/images/anvil-after.webp" },
   { name: "美容室", price: "80〜180万円", image: "/images/salon-after-01.webp" },
   { name: "テイクアウト", price: "50〜120万円", image: "/images/owl-after-01.webp" },
   { name: "ジム", price: "150〜350万円", image: "/images/bpoint-after-01.webp" },
+  { name: "焼肉", price: "200〜500万円", image: "/images/yakiniku-after.webp" },
+  { name: "ラーメン", price: "150〜400万円", image: "/images/ramen-after.webp" },
   { name: "物販", price: "80〜200万円", image: "/images/diag-retail.webp" },
 ];
 

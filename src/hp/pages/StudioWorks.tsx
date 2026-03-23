@@ -89,6 +89,34 @@ const works = [
     main: "/images/case6-after.webp",
     subs: ["/images/case6-before.webp"],
   },
+  {
+    name: "焼肉店",
+    location: "仙台市",
+    type: "焼肉店",
+    kind: "居抜き",
+    cost: "¥3,600,000",
+    period: "約3週間",
+    tsubo: "40坪",
+    story:
+      "ロースター、テーブル、革張りのベンチ、木のルーバー。前の店が残したものは、どれも状態が良かった。\n\n変えたのは壁と天井だけ。石壁を赤に、コンクリートの天井を黒に。\n\n同じ空間が、まったく違う温度を持った。壊さずに変える。40坪でも、やり方は同じだった。",
+    tags: ["居抜き活用", "壁紙全面施工", "天井塗装", "既存設備フル活用", "大型物件", "ロースター継続使用"],
+    main: "/images/yakiniku-after.webp",
+    subs: ["/images/yakiniku-before.webp"],
+  },
+  {
+    name: "ラーメン店",
+    location: "仙台市",
+    type: "ラーメン店",
+    kind: "居抜き",
+    cost: "¥2,800,000",
+    period: "約3週間",
+    tsubo: "12坪",
+    story:
+      "L字型のオープンキッチン。カウンター、ダクト、照明レール。前の店のインフラは、全部使えた。\n\n壁と天井とカウンターを、黒く塗った。カウンターの下にLEDを仕込んだ。\n\nそれだけで、町のラーメン屋が、わざわざ来たくなる場所に変わった。",
+    tags: ["居抜き活用", "全面黒塗装", "間接照明", "オープンキッチン", "モルタル床", "既存設備フル活用"],
+    main: "/images/ramen-after.webp",
+    subs: ["/images/ramen-before.webp"],
+  },
 ];
 
 const textureSrcs = [
@@ -97,6 +125,8 @@ const textureSrcs = [
   "/assets/textures/shikkui-plaster-closeup.webp",
   null,
   "/assets/textures/earthen-wall-layers.webp",
+  null,
+  "/assets/textures/yakisugi-charred-wood.webp",
   null,
 ];
 
