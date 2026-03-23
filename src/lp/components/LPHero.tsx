@@ -117,8 +117,8 @@ export default function LPHero() {
         <div style={{ marginTop: "auto" }}>
           <div style={{ maxWidth: "560px", margin: "0 auto", display: "flex", gap: "8px", marginBottom: "14px" }}>
             {[
-              { src: "/images/crossover-after-01.webp", alt: "居抜き施工例", label: "居抜き", price: "50" },
-              { src: "/images/crossover-after-03.webp", alt: "スケルトン施工例", label: "スケルトン", price: "150" },
+              { src: "/images/pricing-inuki.webp", alt: "居抜き施工例", label: "居抜き", price: "50" },
+              { src: "/images/pricing-skeleton.webp", alt: "スケルトン施工例", label: "スケルトン", price: "150" },
             ].map((card) => (
               <div
                 key={card.label}
