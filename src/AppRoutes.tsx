@@ -9,7 +9,9 @@ function BodyBackground() {
   const isLP = location.pathname.startsWith("/lp");
 
   useEffect(() => {
-    document.body.style.backgroundColor = isLP ? "#FFFFFF" : "#F8F5F0";
+    if (typeof document !== "undefined") {
+      document.body.style.backgroundColor = isLP ? "#FFFFFF" : "#F8F5F0";
+    }
   }, [isLP]);
 
   return null;
