@@ -322,7 +322,7 @@ export default function StudioPricing() {
       </ScrollFadeIn>
 
     </div>
-    <StudioFooter showServiceArea />
+    <StudioFooter />
     </div>
   );
 }

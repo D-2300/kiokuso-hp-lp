@@ -3,13 +3,9 @@ import Logo from "../../shared/Logo";
 import LineCTAButton from "../../shared/LineCTAButton";
 import ScrollFadeIn from "../../shared/ScrollFadeIn";
 
-interface StudioFooterProps {
-  showServiceArea?: boolean;
-}
-
 const BG = "#2E4229";
 
-export default function StudioFooter({ showServiceArea = false }: StudioFooterProps) {
+export default function StudioFooter() {
   return (
     <footer
       style={{
@@ -47,8 +43,7 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
         </div>
       </ScrollFadeIn>
 
-      {showServiceArea && (
-        <div style={{ maxWidth: "640px", margin: "56px auto 0", textAlign: "center" }}>
+      <div style={{ maxWidth: "640px", margin: "56px auto 0", textAlign: "center" }}>
           <p
             style={{
               fontFamily: "'Anton', sans-serif",
@@ -75,7 +70,6 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
             ご希望があれば関東エリアなど東北以外も対応可能な場合がありますので、気軽にご相談ください。
           </p>
         </div>
-      )}
 
       <hr
         style={{
