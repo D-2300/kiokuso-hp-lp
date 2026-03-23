@@ -15,6 +15,12 @@ export default function LPHero() {
         @media (max-width: 767px) {
           .lp-hero { min-height: 90vh !important; }
           .lp-hero-inner { min-height: 90vh !important; }
+          .ba-card-img { height: 80px !important; }
+          .hero-catch { font-size: 28px !important; }
+        }
+        @media (min-width: 768px) {
+          .ba-card-img { height: 120px !important; }
+          .hero-catch { font-size: 36px !important; }
         }
       `}</style>
       <img
@@ -68,47 +74,94 @@ export default function LPHero() {
           >
             仙台・宮城限定
           </div>
-          <h1
+
+          <p
             style={{
-              fontSize: "clamp(26px, 5.5vw, 48px)",
-              fontWeight: 700,
-              color: "#fff",
-              lineHeight: 1.6,
-              margin: "0 0 16px",
-              textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+              margin: "0 0 6px",
+              fontSize: "13px",
+              fontWeight: 400,
+              letterSpacing: "3px",
+              color: "rgba(255,255,255,0.8)",
             }}
           >
-            設計から施工まで、一社で完結。
-            <br />
-            居抜き活用で、費用を抑える。
+            店舗内装
+          </p>
+
+          <h1
+            className="hero-catch"
+            style={{
+              fontWeight: 700,
+              color: "#fff",
+              lineHeight: 1.4,
+              margin: "0 0 10px",
+              textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            設計から施工まで、一社完結。
           </h1>
+
           <p
             style={{
               margin: 0,
-              fontSize: "clamp(13px, 2.5vw, 17px)",
-              color: "rgba(255,255,255,0.82)",
+              fontSize: "13px",
+              color: "rgba(255,255,255,0.65)",
               lineHeight: 1.7,
               textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
-            見積もり内訳100%公開。物件未定でも相談できます。
-          </p>
-          <p
-            style={{
-              marginTop: "16px",
-              marginBottom: 0,
-              fontSize: "14px",
-              fontWeight: 400,
-              color: "rgba(255,255,255,0.8)",
-              letterSpacing: "0.05em",
-            }}
-          >
-            居抜き 100万円台〜 ／ スケルトン 200万円台〜
+            見積もり内訳 100%公開。物件未定でも相談OK。
           </p>
         </div>
 
         <div style={{ marginTop: "auto" }}>
-          <div style={{ padding: "14px 0", textAlign: "center" }}>
+          <div style={{ display: "flex", gap: "8px", marginBottom: "14px" }}>
+            <div
+              style={{
+                flex: 1,
+                backgroundColor: "rgba(255,255,255,0.93)",
+                borderRadius: "8px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="/images/crossover-after-01.webp"
+                alt="居抜き施工例"
+                className="ba-card-img"
+                style={{ width: "100%", objectFit: "cover", display: "block" }}
+              />
+              <div style={{ padding: "8px 12px" }}>
+                <p style={{ margin: 0, fontSize: "11px", color: "#888" }}>居抜き</p>
+                <p style={{ margin: "2px 0 0", fontSize: "20px", fontWeight: 700, color: "#333", lineHeight: 1.2 }}>
+                  50<span style={{ fontSize: "12px", fontWeight: 400 }}>万円〜</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              style={{
+                flex: 1,
+                backgroundColor: "rgba(255,255,255,0.93)",
+                borderRadius: "8px",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src="/images/crossover-after-03.webp"
+                alt="スケルトン施工例"
+                className="ba-card-img"
+                style={{ width: "100%", objectFit: "cover", display: "block" }}
+              />
+              <div style={{ padding: "8px 12px" }}>
+                <p style={{ margin: 0, fontSize: "11px", color: "#888" }}>スケルトン</p>
+                <p style={{ margin: "2px 0 0", fontSize: "20px", fontWeight: 700, color: "#333", lineHeight: 1.2 }}>
+                  150<span style={{ fontSize: "12px", fontWeight: 400 }}>万円〜</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ padding: "0 0 14px", textAlign: "center" }}>
             <a
               href={LINE_URL}
               target="_blank"
