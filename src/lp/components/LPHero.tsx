@@ -16,11 +16,13 @@ export default function LPHero() {
           .lp-hero { min-height: 90vh !important; }
           .lp-hero-inner { min-height: 90vh !important; }
           .ba-card-img { height: 80px !important; }
-          .hero-catch { font-size: 28px !important; }
+          .hero-catch-line1 { font-size: 26px !important; }
+          .hero-catch-line2 { font-size: 20px !important; }
         }
         @media (min-width: 768px) {
           .ba-card-img { height: 120px !important; }
-          .hero-catch { font-size: 36px !important; }
+          .hero-catch-line1 { font-size: 34px !important; }
+          .hero-catch-line2 { font-size: 26px !important; }
         }
       `}</style>
       <img
@@ -87,18 +89,34 @@ export default function LPHero() {
             店舗内装
           </p>
 
-          <h1
-            className="hero-catch"
-            style={{
-              fontWeight: 700,
-              color: "#fff",
-              lineHeight: 1.4,
-              margin: "0 0 10px",
-              textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            設計から施工まで、一社完結。
+          <h1 style={{ margin: 0, padding: 0 }}>
+            <span
+              className="hero-catch-line1"
+              style={{
+                display: "block",
+                fontWeight: 700,
+                color: "#fff",
+                lineHeight: 1.4,
+                textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+                whiteSpace: "nowrap",
+              }}
+            >
+              はじめてのお店、一緒につくる。
+            </span>
+            <span
+              className="hero-catch-line2"
+              style={{
+                display: "block",
+                fontWeight: 500,
+                color: "rgba(255,255,255,0.85)",
+                lineHeight: 1.4,
+                textShadow: "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+                whiteSpace: "nowrap",
+                marginBottom: "12px",
+              }}
+            >
+              設計も施工も、ぜんぶ一社で。
+            </span>
           </h1>
 
           <p
