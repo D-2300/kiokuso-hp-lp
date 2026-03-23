@@ -97,6 +97,50 @@ export default function StudioTop() {
         </div>
       </section>
 
+      {/* What We Do */}
+      <ScrollFadeIn>
+        <section style={{ padding: "80px 20px", textAlign: "center", backgroundColor: colors.beige }}>
+          <div style={{ maxWidth: "480px", margin: "0 auto" }}>
+            <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#C9A84C", fontWeight: 500, margin: "0 0 20px", textTransform: "uppercase" }}>
+              What We Do
+            </p>
+            <p style={{ fontSize: "24px", fontWeight: 500, color: colors.text, fontFamily: "'Noto Serif JP', serif", margin: "0 0 24px", lineHeight: 1.5 }}>
+              仙台・宮城の店舗内装
+            </p>
+            <p style={{ fontSize: "15px", lineHeight: 1.8, color: "#555", margin: "0 0 32px" }}>
+              設計・施工・届出まで、一社で完結する店舗内装スタジオです。<br />
+              居抜き活用・DIY・施主支給を組み合わせて、<br />
+              はじめてのお店づくりを、予算の中で最善に。
+            </p>
+            <div style={{ display: "flex", justifyContent: "center", gap: "12px", marginBottom: "32px", flexWrap: "wrap" }}>
+              {[{ label: "居抜き", value: "50万円〜" }, { label: "スケルトン", value: "150万円〜" }].map((badge) => (
+                <div
+                  key={badge.label}
+                  style={{
+                    border: "1px solid rgba(201,168,76,0.3)",
+                    borderRadius: "6px",
+                    padding: "8px 16px",
+                    fontSize: "14px",
+                    color: colors.text,
+                  }}
+                >
+                  <span style={{ color: colors.mute, fontSize: "12px", marginRight: "6px" }}>{badge.label}</span>
+                  {badge.value}
+                </div>
+              ))}
+            </div>
+            <a
+              href="https://lin.ee/example"
+              style={{ fontSize: "14px", color: colors.fukamidori.main, textDecoration: "none", letterSpacing: "0.05em" }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.7")}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+            >
+              LINEで相談する →
+            </a>
+          </div>
+        </section>
+      </ScrollFadeIn>
+
       {/* Voice */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 24px", textAlign: "center", backgroundColor: colors.beige }}>

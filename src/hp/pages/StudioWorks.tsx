@@ -17,7 +17,7 @@ const works = [
       "バスケットボール好きにはたまらない空間を、極限までコストを削りながら実現しました。壁面にモルタルを施工して無骨な質感を出し、ブルーLEDが光るバーカウンターへ仕上げています。中古設備を最大限に活用しDIYを組み合わせることで、スケルトンから約90万円・10日間という驚異的なコストパフォーマンスを実現した事例です。",
     tags: ["DIY施工", "モルタル壁", "中古設備多用", "スケルトンから10日"],
     main: "/images/crossover-after-01.webp",
-    subs: ["/images/crossover-after-02.webp", "/images/crossover-after-03.webp", "/images/crossover-after-04.webp"],
+    subs: ["/images/crossover-after-02.webp", "/images/crossover-after-03.webp", "/images/crossover-after-04.webp", "/images/crossover-before-01.webp"],
   },
   {
     name: "テイクアウトカフェ OWL",
@@ -28,10 +28,10 @@ const works = [
     period: "約22日",
     tsubo: "10坪",
     story:
-      "居抜き物件のインフラをそのまま活かし、最小限の手数で新しいお店に生まれ変わらせた事例です。既存カウンターはそのまま残し、壁の塗装はオーナー自身がDIYで施工。厨房機器はメルカリ・ヤフオクで調達し、設置のみ記憶荘が担当しました。「使えるものは使う」を徹底して、約80万円に収めています。",
+      "居抜き物件のインフラをそのまま活かし、最小限の手数で新しいお店に生まれ変わらせた事例です。既存カウンターはそのまま残し、壁の塗装はオーナー自身がDIYで施工。厨房機器はメルカリ・ヤフオクで調達し、設置のみ記憶荘が担当しました。",
     tags: ["居抜き活用", "DIY塗装", "中古厨房機器", "施主支給"],
     main: "/images/owl-after-01.webp",
-    subs: [],
+    subs: ["/images/owl-before-01.webp"],
   },
   {
     name: "パーソナルジム B-POINT",
@@ -42,10 +42,10 @@ const works = [
     period: "約30日",
     tsubo: "20坪",
     story:
-      "スケルトン状態から防音工事・ミラー設置・床仕上げまで一気通貫で対応した事例です。トレーニングマシンはオーナーが直接調達し、記憶荘は搬入・設置を担当。公庫融資の見積書作成から保健所対応まで、開業に必要な手続きもすべてサポートしました。施主支給とDIY仕上げを組み合わせ、スケルトンで約140万円に抑えています。",
+      "スケルトン状態から防音工事・ミラー設置・床仕上げまで一気通貫で対応した事例です。トレーニングマシンはオーナーが直接調達し、記憶荘は搬入・設置を担当。公庫融資の見積書作成から保健所対応まで、開業に必要な手続きもすべてサポートしました。",
     tags: ["スケルトン施工", "防音工事", "施主支給マシン", "融資対応"],
     main: "/images/bpoint-after-01.webp",
-    subs: [],
+    subs: ["/images/bpoint-before-01.webp"],
   },
   {
     name: "ネイル・アイラッシュサロン",
@@ -56,10 +56,10 @@ const works = [
     period: "約18日",
     tsubo: "15坪",
     story:
-      "居抜き物件をフル活用し、床・壁・棚の仕上げをオーナー自身がすべてDIYで施工した事例です。記憶荘が担当したのは電気・給排水などのインフラ工事のみ。什器もオーナーが自分で選んで購入し、コストを最大限に圧縮しました。みやぎ中小企業チャレンジ応援基金も活用し、約90万円で開業を実現しています。",
+      "居抜き物件をフル活用し、床・壁・棚の仕上げをオーナー自身がすべてDIYで施工した事例です。記憶荘が担当したのは電気・給排水などのインフラ工事のみ。みやぎ中小企業チャレンジ応援基金も活用し、約90万円で開業を実現しています。",
     tags: ["居抜き活用", "DIY全面施工", "施主支給什器", "補助金活用"],
     main: "/images/salon-after-01.webp",
-    subs: [],
+    subs: ["/images/salon-before-01.webp"],
   },
 ];
 
@@ -150,7 +150,7 @@ export default function StudioWorks() {
                       <div
                         key={spec.label}
                         style={{
-                          backgroundColor: "rgba(0,0,0,0.04)",
+                          border: "1px solid rgba(201,168,76,0.3)",
                           borderRadius: "6px",
                           padding: "6px 12px",
                           textAlign: "center",
@@ -173,12 +173,10 @@ export default function StudioWorks() {
                       <span
                         key={tag}
                         style={{
-                          fontSize: "11px",
-                          color: "#4A6741",
-                          backgroundColor: "rgba(74,103,65,0.1)",
+                          fontSize: "12px",
+                          color: "#888",
                           borderRadius: "4px",
-                          padding: "3px 8px",
-                          fontWeight: 500,
+                          padding: "2px 0",
                         }}
                       >
                         #{tag}
