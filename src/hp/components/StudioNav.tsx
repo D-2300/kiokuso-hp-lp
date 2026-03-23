@@ -70,7 +70,9 @@ export default function StudioNav() {
             borderLeft: "1px solid rgba(255,255,255,0.2)",
             color: "rgba(255,255,255,0.5)",
             textDecoration: "none",
+            display: "inline-flex", alignItems: "center", gap: "6px",
           }}>
+            <img src="/assets/logos/logo-group-gold.webp" alt="" style={{ height: "14px", width: "auto", filter: "brightness(10)", opacity: 0.5 }} />
             ← Group
           </Link>
         </div>
@@ -136,8 +138,9 @@ export default function StudioNav() {
           textDecoration: "none",
           display: "flex",
           alignItems: "center",
-          gap: "6px",
+          gap: "8px",
         }}>
+          <img src="/assets/logos/logo-group-gold.webp" alt="" style={{ height: "14px", width: "auto", filter: "brightness(10)", opacity: 0.5 }} />
           記憶荘グループ TOP
         </Link>
       </div>

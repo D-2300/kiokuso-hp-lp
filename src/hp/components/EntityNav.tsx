@@ -74,7 +74,9 @@ export default function EntityNav({ themeColor, logoEntity = "group", logoTo, li
             paddingLeft: links.length > 0 ? "8px" : "0",
             borderLeft: links.length > 0 ? "1px solid rgba(255,255,255,0.2)" : "none",
             textDecoration: "none",
+            display: "inline-flex", alignItems: "center", gap: "6px",
           }}>
+            <img src="/assets/logos/logo-group-gold.webp" alt="" style={{ height: "14px", width: "auto", filter: "brightness(10)", opacity: 0.6 }} />
             ← Group Top
           </Link>
         </div>
