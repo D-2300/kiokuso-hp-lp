@@ -9,7 +9,14 @@ export default function LPHero() {
         overflow: "hidden",
         backgroundColor: "#e8e4de",
       }}
+      className="lp-hero"
     >
+      <style>{`
+        @media (max-width: 767px) {
+          .lp-hero { min-height: 90vh !important; }
+          .lp-hero-inner { min-height: 90vh !important; }
+        }
+      `}</style>
       <img
         src="/images/lp-hero.webp"
         alt=""
@@ -30,6 +37,7 @@ export default function LPHero() {
         }}
       />
       <div
+        className="lp-hero-inner"
         style={{
           position: "relative",
           zIndex: 1,
@@ -55,11 +63,22 @@ export default function LPHero() {
               fontSize: "clamp(14px, 2vw, 16px)",
               fontWeight: 500,
               color: "#333",
-              marginBottom: "16px",
+              marginBottom: "12px",
             }}
           >
             仙台・宮城限定
           </div>
+          <p
+            style={{
+              margin: "0 0 12px",
+              fontSize: "13px",
+              fontWeight: 300,
+              color: "rgba(255,255,255,0.6)",
+              letterSpacing: "0.15em",
+            }}
+          >
+            店舗の内装工事
+          </p>
           <h1
             style={{
               fontSize: "clamp(26px, 5.5vw, 48px)",
@@ -84,6 +103,18 @@ export default function LPHero() {
             }}
           >
             写真1枚で概算をお伝えします。物件が決まっていなくてもOK。
+          </p>
+          <p
+            style={{
+              marginTop: "16px",
+              marginBottom: 0,
+              fontSize: "14px",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.8)",
+              letterSpacing: "0.05em",
+            }}
+          >
+            居抜き 100万円台〜 ／ スケルトン 200万円台〜
           </p>
         </div>
 
