@@ -146,12 +146,20 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
         ))}
       </nav>
 
+      <div style={{ marginTop: "24px", marginBottom: "8px" }}>
+        <Link
+          to="/privacy"
+          style={{ color: "rgba(255,255,255,0.3)", fontSize: "12px", textDecoration: "none" }}
+        >
+          プライバシーポリシー
+        </Link>
+      </div>
       <p
         style={{
           color: "rgba(255,255,255,0.3)",
           fontSize: "13px",
           letterSpacing: "0.05em",
-          marginTop: "24px",
+          marginTop: 0,
           marginBottom: "48px",
         }}
       >

@@ -119,6 +119,14 @@ export default function EntityFooter({
         </nav>
       )}
 
+      <div style={{ marginBottom: "8px" }}>
+        <Link
+          to="/privacy"
+          style={{ color: "rgba(255,255,255,0.3)", fontSize: "12px", textDecoration: "none" }}
+        >
+          プライバシーポリシー
+        </Link>
+      </div>
       <p
         style={{
           color: themeMid,

@@ -6,6 +6,7 @@ import StudioAbout from "./pages/StudioAbout";
 import StudioWorks from "./pages/StudioWorks";
 import StudioPricing from "./pages/StudioPricing";
 import ComingSoon from "./pages/ComingSoon";
+import Privacy from "./pages/Privacy";
 import { colors } from "../shared/design-tokens";
 
 export default function HPApp() {
@@ -17,6 +18,7 @@ export default function HPApp() {
       <Route path="/studio/about" element={<StudioAbout />} />
       <Route path="/studio/works" element={<StudioWorks />} />
       <Route path="/studio/pricing" element={<StudioPricing />} />
+      <Route path="/privacy" element={<Privacy />} />
       <Route
         path="/koumuten"
         element={
