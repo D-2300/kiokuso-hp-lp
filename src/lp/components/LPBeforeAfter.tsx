@@ -155,19 +155,12 @@ export default function LPBeforeAfter() {
                   </div>
                 ))}
               </div>
-              <div style={{ padding: "14px 16px" }}>
-                <p style={{ margin: 0, fontSize: "clamp(13px, 2vw, 15px)", fontWeight: 500, color: "#555" }}>
-                  {c.type}
-                </p>
-                <p style={{ margin: "4px 0 0", fontSize: "clamp(17px, 3vw, 20px)", fontWeight: 700, color: "#222" }}>
-                  {c.cost}
-                </p>
-                <p style={{ margin: "4px 0 0", fontSize: "clamp(12px, 2vw, 13px)", color: "#999" }}>
-                  {c.tsubo} ／ {c.period}
-                </p>
-                <p style={{ margin: "6px 0 0", fontSize: "clamp(12px, 2vw, 13px)", color: "#777", lineHeight: 1.7 }}>
-                  {c.desc}
-                </p>
+              <div style={{ padding: "10px 14px", display: "flex", alignItems: "baseline", justifyContent: "space-between" }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: "8px" }}>
+                  <span style={{ fontSize: "12px", color: "#888" }}>{c.type}</span>
+                  <span style={{ fontSize: "20px", fontWeight: 700, color: "#222" }}>{c.cost}</span>
+                </div>
+                <span style={{ fontSize: "11px", color: "#888" }}>{c.tsubo} ／ {c.period}</span>
               </div>
             </div>
           ))}
@@ -178,9 +171,9 @@ export default function LPBeforeAfter() {
         style={{
           display: "flex",
           justifyContent: "center",
-          gap: "16px",
-          marginTop: "20px",
-          marginBottom: "8px",
+          gap: "12px",
+          marginTop: "10px",
+          marginBottom: "4px",
         }}
       >
         <button
@@ -188,13 +181,13 @@ export default function LPBeforeAfter() {
           aria-label="前へ"
           disabled={transitioning}
           style={{
-            width: "40px",
-            height: "40px",
+            width: "32px",
+            height: "32px",
             borderRadius: "50%",
             border: "1px solid #ddd",
             backgroundColor: "#fff",
             cursor: "pointer",
-            fontSize: "18px",
+            fontSize: "14px",
             color: "#555",
             display: "flex",
             alignItems: "center",
@@ -209,13 +202,13 @@ export default function LPBeforeAfter() {
           aria-label="次へ"
           disabled={transitioning}
           style={{
-            width: "40px",
-            height: "40px",
+            width: "32px",
+            height: "32px",
             borderRadius: "50%",
             border: "1px solid #ddd",
             backgroundColor: "#fff",
             cursor: "pointer",
-            fontSize: "18px",
+            fontSize: "14px",
             color: "#555",
             display: "flex",
             alignItems: "center",
@@ -227,7 +220,7 @@ export default function LPBeforeAfter() {
         </button>
       </div>
 
-      <p style={{ textAlign: "center", fontSize: "14px", color: "#999", marginTop: "0", marginBottom: "8px" }}>
+      <p style={{ textAlign: "center", fontSize: "9px", color: "rgba(153,153,153,0.4)", marginTop: "0", marginBottom: "4px" }}>
         ← スワイプで見る →
       </p>
     </section>
