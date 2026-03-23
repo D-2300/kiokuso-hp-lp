@@ -15,7 +15,7 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
       style={{
         backgroundColor: BG,
         textAlign: "center",
-        padding: "80px 32px 0",
+        padding: "80px 32px 48px",
       }}
     >
       <ScrollFadeIn>
@@ -170,7 +170,7 @@ export default function StudioFooter({ showServiceArea = false }: StudioFooterPr
           fontSize: "13px",
           letterSpacing: "0.05em",
           marginTop: 0,
-          marginBottom: "48px",
+          marginBottom: 0,
         }}
       >
         © 2026 記憶荘 Studio
