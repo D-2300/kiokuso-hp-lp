@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import StudioNav from "../components/StudioNav";
 import StudioFooter from "../components/StudioFooter";
@@ -143,19 +143,24 @@ const genres = [
 
 const worksByName = Object.fromEntries(works.map((w) => [w.name, w]));
 
-function WorkCard({ work }: { work: Work }) {
+const CARD_GAP = 16;
+const CARD_WIDTH_PC = 380;
+
+function WorkCard({ work, cardWidth }: { work: Work; cardWidth: number }) {
   return (
     <div
       style={{
-        flex: "0 0 300px",
-        width: "300px",
+        width: `${cardWidth}px`,
+        flexShrink: 0,
         background: "#fff",
         borderRadius: "12px",
         overflow: "hidden",
         boxShadow: "0 2px 12px rgba(0,0,0,0.08)",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", flexShrink: 0 }}>
         {[
           { src: work.before, label: "BEFORE" },
           { src: work.after, label: "AFTER" },
@@ -186,12 +191,12 @@ function WorkCard({ work }: { work: Work }) {
         ))}
       </div>
 
-      <div style={{ padding: "16px" }}>
+      <div style={{ padding: "16px", display: "flex", flexDirection: "column", flex: 1 }}>
         <p style={{ margin: "0 0 12px", fontSize: "14px", fontWeight: 700, color: colors.text, lineHeight: 1.4 }}>
           {work.name}
         </p>
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "14px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "14px", flexShrink: 0 }}>
           {[
             { label: "費用", value: work.cost },
             { label: "工期", value: work.period },
@@ -215,11 +220,11 @@ function WorkCard({ work }: { work: Work }) {
           ))}
         </div>
 
-        <p style={{ fontSize: "13px", color: colors.sub, lineHeight: 2.0, margin: "0 0 12px", whiteSpace: "pre-line" }}>
+        <p style={{ fontSize: "13px", color: colors.sub, lineHeight: 2.0, margin: "0 0 12px", whiteSpace: "pre-line", flex: 1 }}>
           {work.story}
         </p>
 
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", flexShrink: 0 }}>
           {work.tags.map((tag) => (
             <span key={tag} style={{ fontSize: "11px", color: "#888" }}>
               #{tag}
@@ -232,12 +237,104 @@ function WorkCard({ work }: { work: Work }) {
 }
 
 function GenreCarousel({ label, labelJa, works: genreWorks }: { label: string; labelJa: string; works: Work[] }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(CARD_WIDTH_PC);
+  const [currentIndex, setCurrentIndex] = useState(genreWorks.length);
+  const isTransitioning = useRef(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (dir: "left" | "right") => {
-    if (!scrollRef.current) return;
-    scrollRef.current.scrollBy({ left: dir === "right" ? 316 : -316, behavior: "smooth" });
+  const count = genreWorks.length;
+  const cloned = [...genreWorks, ...genreWorks, ...genreWorks];
+
+  const getOffset = useCallback((index: number) => {
+    const peekPx = typeof window !== "undefined" ? Math.min(window.innerWidth * 0.22, 80) : 80;
+    const startPad = 24;
+    return startPad + index * (cardWidth + CARD_GAP) - peekPx * 0;
+  }, [cardWidth]);
+
+  useEffect(() => {
+    const updateCardWidth = () => {
+      if (containerRef.current) {
+        const containerW = containerRef.current.offsetWidth;
+        const isMobile = containerW < 640;
+        setCardWidth(isMobile ? containerW * 0.85 : CARD_WIDTH_PC);
+      }
+    };
+    updateCardWidth();
+    window.addEventListener("resize", updateCardWidth);
+    return () => window.removeEventListener("resize", updateCardWidth);
+  }, []);
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const offset = getOffset(currentIndex);
+    el.style.transition = "none";
+    el.style.transform = `translateX(-${offset}px)`;
+  }, [cardWidth, getOffset, currentIndex]);
+
+  const moveTo = useCallback((index: number, animated: boolean) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const offset = getOffset(index);
+    el.style.transition = animated ? "transform 0.42s cubic-bezier(0.25,0.46,0.45,0.94)" : "none";
+    el.style.transform = `translateX(-${offset}px)`;
+  }, [getOffset]);
+
+  const handleTransitionEnd = useCallback(() => {
+    isTransitioning.current = false;
+    const el = trackRef.current;
+    if (!el) return;
+    let next = currentIndex;
+    if (currentIndex < count) {
+      next = currentIndex + count;
+    } else if (currentIndex >= count * 2) {
+      next = currentIndex - count;
+    }
+    if (next !== currentIndex) {
+      el.style.transition = "none";
+      el.style.transform = `translateX(-${getOffset(next)}px)`;
+      setCurrentIndex(next);
+    }
+  }, [currentIndex, count, getOffset]);
+
+  const goNext = () => {
+    if (isTransitioning.current) return;
+    isTransitioning.current = true;
+    const next = currentIndex + 1;
+    setCurrentIndex(next);
+    moveTo(next, true);
   };
+
+  const goPrev = () => {
+    if (isTransitioning.current) return;
+    isTransitioning.current = true;
+    const next = currentIndex - 1;
+    setCurrentIndex(next);
+    moveTo(next, true);
+  };
+
+  const touchStartX = useRef(0);
+  const touchStartIndex = useRef(0);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartIndex.current = currentIndex;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(dx) < 30) return;
+    if (dx < 0) {
+      goNext();
+    } else {
+      goPrev();
+    }
+  };
+
+  if (count === 0) return null;
+
+  const showArrows = count > 1;
 
   return (
     <div style={{ marginTop: "48px" }}>
@@ -256,72 +353,94 @@ function GenreCarousel({ label, labelJa, works: genreWorks }: { label: string; l
         <span style={{ marginLeft: "12px", fontSize: "12px", color: "#AAA" }}>{labelJa}</span>
       </div>
 
-      <div style={{ position: "relative" }}>
-        <button
-          onClick={() => scroll("left")}
-          style={{
-            position: "absolute",
-            left: "4px",
-            top: "80px",
-            transform: "translateY(-50%)",
-            zIndex: 2,
-            background: "rgba(255,255,255,0.92)",
-            border: "1px solid #E0E0E0",
-            borderRadius: "50%",
-            width: "36px",
-            height: "36px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
-          }}
-        >
-          <ChevronLeft size={18} color="#555" />
-        </button>
-        <button
-          onClick={() => scroll("right")}
-          style={{
-            position: "absolute",
-            right: "4px",
-            top: "80px",
-            transform: "translateY(-50%)",
-            zIndex: 2,
-            background: "rgba(255,255,255,0.92)",
-            border: "1px solid #E0E0E0",
-            borderRadius: "50%",
-            width: "36px",
-            height: "36px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
-          }}
-        >
-          <ChevronRight size={18} color="#555" />
-        </button>
+      <div ref={containerRef} style={{ position: "relative", overflow: "hidden" }}>
+        {showArrows && (
+          <>
+            <button
+              onClick={goPrev}
+              style={{
+                position: "absolute",
+                left: "8px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 2,
+                background: "rgba(255,255,255,0.92)",
+                border: "1px solid #E0E0E0",
+                borderRadius: "50%",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+              }}
+            >
+              <ChevronLeft size={18} color="#555" />
+            </button>
+            <button
+              onClick={goNext}
+              style={{
+                position: "absolute",
+                right: "8px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 2,
+                background: "rgba(255,255,255,0.92)",
+                border: "1px solid #E0E0E0",
+                borderRadius: "50%",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+              }}
+            >
+              <ChevronRight size={18} color="#555" />
+            </button>
+          </>
+        )}
 
         <div
-          ref={scrollRef}
+          ref={trackRef}
+          onTransitionEnd={handleTransitionEnd}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
           style={{
             display: "flex",
-            gap: "16px",
-            overflowX: "auto",
-            padding: "4px 24px 16px",
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            scrollSnapType: "x mandatory",
+            gap: `${CARD_GAP}px`,
+            padding: "4px 0 16px 24px",
+            willChange: "transform",
           }}
         >
-          {genreWorks.map((work) => (
-            <div key={work.name} style={{ scrollSnapAlign: "start", flex: "0 0 auto" }}>
-              <WorkCard work={work} />
-            </div>
+          {cloned.map((work, i) => (
+            <WorkCard key={`${work.name}-${i}`} work={work} cardWidth={cardWidth} />
           ))}
-          <div style={{ flex: "0 0 1px", minWidth: "1px" }} />
+          <div style={{ flexShrink: 0, width: "24px" }} />
         </div>
       </div>
+
+      {count > 1 && (
+        <div style={{ display: "flex", justifyContent: "center", gap: "6px", marginTop: "8px" }}>
+          {genreWorks.map((_, i) => {
+            const active = ((currentIndex % count) + count) % count === i;
+            return (
+              <div
+                key={i}
+                style={{
+                  width: active ? "20px" : "6px",
+                  height: "6px",
+                  borderRadius: "3px",
+                  background: active ? colors.gold ?? "#C9A84C" : "#D0D0D0",
+                  transition: "all 0.3s ease",
+                }}
+              />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
