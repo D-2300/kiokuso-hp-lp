@@ -15,12 +15,12 @@ export default function LPHero() {
         @media (max-width: 767px) {
           .lp-hero { min-height: 90vh !important; }
           .lp-hero-inner { min-height: 90vh !important; }
-          .ba-card-img { height: 80px !important; }
+          .ba-card-img { height: 130px !important; }
           .hero-catch-line1 { font-size: 26px !important; }
           .hero-catch-line2 { font-size: 20px !important; }
         }
         @media (min-width: 768px) {
-          .ba-card-img { height: 120px !important; }
+          .ba-card-img { height: 180px !important; }
           .hero-catch-line1 { font-size: 34px !important; }
           .hero-catch-line2 { font-size: 26px !important; }
         }
@@ -94,6 +94,7 @@ export default function LPHero() {
               className="hero-catch-line1"
               style={{
                 display: "block",
+                fontFamily: "'Noto Serif JP', serif",
                 fontWeight: 700,
                 color: "#fff",
                 lineHeight: 1.4,
@@ -107,6 +108,7 @@ export default function LPHero() {
               className="hero-catch-line2"
               style={{
                 display: "block",
+                fontFamily: "'Noto Serif JP', serif",
                 fontWeight: 500,
                 color: "rgba(255,255,255,0.85)",
                 lineHeight: 1.4,
