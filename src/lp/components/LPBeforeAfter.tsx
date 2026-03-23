@@ -135,6 +135,9 @@ export default function LPBeforeAfter() {
         @media (max-width: 767px) {
           .ba-card { min-width: 85vw !important; }
         }
+        @media (min-width: 769px) {
+          .ba-img-wrap { height: 320px !important; }
+        }
       `}</style>
 
       <div
@@ -170,7 +173,7 @@ export default function LPBeforeAfter() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}>
                 {(["Before", "After"] as const).map((label) => (
                   <div key={label} style={{ position: "relative" }}>
-                    <div style={{ height: "clamp(144px, 20vw, 240px)", overflow: "hidden" }}>
+                    <div className="ba-img-wrap" style={{ height: "clamp(144px, 20vw, 240px)", overflow: "hidden" }}>
                       <img
                         src={label === "Before" ? c.before : c.after}
                         alt={`${c.type} ${label}`}
