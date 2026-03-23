@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export const cases = [
   {
     name: "バスケットボール Cafe&Bar CROSSOVER",
@@ -62,6 +64,8 @@ export const cases = [
 ];
 
 export default function LPCaseDetail() {
+  const [hintVisible, setHintVisible] = useState(true);
+
   return (
     <section style={{ backgroundColor: "#fff", padding: "32px 0 48px" }}>
       <div
@@ -165,9 +169,26 @@ export default function LPCaseDetail() {
           </div>
         ))}
       </div>
-      <p style={{ textAlign: "center", fontSize: "12px", color: "#bbb", marginTop: "14px", padding: "0 20px" }}>
-        ← スワイプで他の事例を見る →
-      </p>
+      {hintVisible && (
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "8px", marginBottom: "4px" }}>
+          <span style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)" }}>スワイプで見る</span>
+          <button
+            onClick={() => setHintVisible(false)}
+            aria-label="案内を閉じる"
+            style={{
+              fontSize: "10px",
+              color: "rgba(0,0,0,0.25)",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: "0 0 0 8px",
+              lineHeight: 1,
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </section>
   );
 }

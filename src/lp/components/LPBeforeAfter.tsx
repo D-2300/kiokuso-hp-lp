@@ -1,5 +1,17 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 
+const swipeHintStyle: React.CSSProperties = {
+  fontSize: "10px",
+  color: "rgba(0,0,0,0.25)",
+  textAlign: "center",
+  marginTop: "8px",
+  marginBottom: "4px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "0",
+};
+
 const cases = [
   {
     type: "スポーツバー",
@@ -41,6 +53,7 @@ export default function LPBeforeAfter() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(1);
   const [transitioning, setTransitioning] = useState(false);
+  const [hintVisible, setHintVisible] = useState(true);
   const isAnimating = useRef(false);
 
   const getCardWidth = useCallback(() => {
@@ -177,18 +190,18 @@ export default function LPBeforeAfter() {
           aria-label="前へ"
           disabled={transitioning}
           style={{
-            width: "32px",
-            height: "32px",
+            width: "28px",
+            height: "28px",
             borderRadius: "50%",
-            border: "1px solid #ddd",
+            border: "1px solid rgba(0,0,0,0.12)",
             backgroundColor: "#fff",
             cursor: "pointer",
-            fontSize: "14px",
-            color: "#555",
+            fontSize: "12px",
+            color: "rgba(0,0,0,0.35)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.10)",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
           }}
         >
           ‹
@@ -198,27 +211,44 @@ export default function LPBeforeAfter() {
           aria-label="次へ"
           disabled={transitioning}
           style={{
-            width: "32px",
-            height: "32px",
+            width: "28px",
+            height: "28px",
             borderRadius: "50%",
-            border: "1px solid #ddd",
+            border: "1px solid rgba(0,0,0,0.12)",
             backgroundColor: "#fff",
             cursor: "pointer",
-            fontSize: "14px",
-            color: "#555",
+            fontSize: "12px",
+            color: "rgba(0,0,0,0.35)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.10)",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
           }}
         >
           ›
         </button>
       </div>
 
-      <p style={{ textAlign: "center", fontSize: "9px", color: "rgba(153,153,153,0.4)", marginTop: "0", marginBottom: "4px" }}>
-        ← スワイプで見る →
-      </p>
+      {hintVisible && (
+        <div style={swipeHintStyle}>
+          <span>スワイプで見る</span>
+          <button
+            onClick={() => setHintVisible(false)}
+            aria-label="案内を閉じる"
+            style={{
+              fontSize: "10px",
+              color: "rgba(0,0,0,0.25)",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: "0 0 0 8px",
+              lineHeight: 1,
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </section>
   );
 }

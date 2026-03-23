@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 export default function LPSolutionPoints() {
+  const [hint1, setHint1] = useState(true);
+  const [hint2, setHint2] = useState(true);
+  const [hint3, setHint3] = useState(true);
+
   return (
     <section style={{ backgroundColor: "#fff", padding: "48px 20px" }}>
       <div style={{ maxWidth: "960px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "48px" }}>
@@ -76,7 +82,12 @@ export default function LPSolutionPoints() {
               </div>
             ))}
           </div>
-          <p style={{ margin: "8px 0 0", fontSize: "11px", color: "#aaa", textAlign: "center" }}>← スワイプで見る →</p>
+          {hint1 && (
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "8px", marginBottom: "4px" }}>
+              <span style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)" }}>スワイプで見る</span>
+              <button onClick={() => setHint1(false)} aria-label="案内を閉じる" style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)", background: "none", border: "none", cursor: "pointer", padding: "0 0 0 8px", lineHeight: 1 }}>×</button>
+            </div>
+          )}
         </div>
 
         {/* Point 2 — 横スクロールカルーセル */}
@@ -146,7 +157,12 @@ export default function LPSolutionPoints() {
               </div>
             ))}
           </div>
-          <p style={{ margin: "8px 0 0", fontSize: "11px", color: "#aaa", textAlign: "center" }}>← スワイプで見る →</p>
+          {hint2 && (
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "8px", marginBottom: "4px" }}>
+              <span style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)" }}>スワイプで見る</span>
+              <button onClick={() => setHint2(false)} aria-label="案内を閉じる" style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)", background: "none", border: "none", cursor: "pointer", padding: "0 0 0 8px", lineHeight: 1 }}>×</button>
+            </div>
+          )}
         </div>
 
         {/* Point 3 — 横スクロールカルーセル */}
@@ -257,16 +273,12 @@ export default function LPSolutionPoints() {
             ))}
           </div>
 
-          {/* スクロールヒント（モバイル向け） */}
-          <p style={{
-            margin: "8px 0 0",
-            fontSize: "11px",
-            color: "#aaa",
-            textAlign: "center",
-            letterSpacing: "0.04em",
-          }}>
-            ← スワイプで見る →
-          </p>
+          {hint3 && (
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "8px", marginBottom: "4px" }}>
+              <span style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)" }}>スワイプで見る</span>
+              <button onClick={() => setHint3(false)} aria-label="案内を閉じる" style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)", background: "none", border: "none", cursor: "pointer", padding: "0 0 0 8px", lineHeight: 1 }}>×</button>
+            </div>
+          )}
         </div>
 
       </div>

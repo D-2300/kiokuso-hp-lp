@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function LPShowcase() {
+  const [hintVisible, setHintVisible] = useState(true);
   const items = [
     { src: "/images/showcase-cafe.webp", label: "カフェ" },
     { src: "/images/showcase-izakaya.webp", label: "居酒屋・バー" },
@@ -76,14 +79,26 @@ export default function LPShowcase() {
         ))}
       </div>
 
-      <p style={{
-        fontSize: "11px",
-        color: "#bbb",
-        textAlign: "center",
-        margin: "4px 0 0",
-      }}>
-        ← スワイプで見る →
-      </p>
+      {hintVisible && (
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "8px", marginBottom: "4px" }}>
+          <span style={{ fontSize: "10px", color: "rgba(0,0,0,0.25)" }}>スワイプで見る</span>
+          <button
+            onClick={() => setHintVisible(false)}
+            aria-label="案内を閉じる"
+            style={{
+              fontSize: "10px",
+              color: "rgba(0,0,0,0.25)",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: "0 0 0 8px",
+              lineHeight: 1,
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
     </section>
   );
 }
