@@ -3,7 +3,7 @@ import { useRef, useState, useCallback, useEffect } from "react";
 const cases = [
   {
     type: "スポーツバー",
-    cost: "165万円",
+    cost: "90万円",
     tsubo: "15坪",
     period: "5週間",
     before: "/images/crossover-before-01.webp",
