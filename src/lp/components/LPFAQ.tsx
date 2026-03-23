@@ -127,7 +127,7 @@ export default function LPFAQ() {
             />
           ))}
 
-          <div style={{ borderTop: "1px solid #eee", padding: "24px 0" }} className="faq-grid-last-border faq-last-item">
+          <div style={{ borderTop: "1px solid #eee", padding: "24px 0", textAlign: "center" }} className="faq-grid-last-border faq-last-item">
             <p style={{ margin: "0 0 6px", fontSize: "13px", color: "#777", lineHeight: 1.7 }}>
               他にご不明な点があればお気軽にどうぞ。<br />LINEで気軽にご質問いただけます。
             </p>
