@@ -23,7 +23,7 @@ const pains = [
 
 export default function LPPainPoints() {
   return (
-    <section style={{ backgroundColor: "#fff", padding: "48px 20px" }}>
+    <section style={{ backgroundColor: "#fff", padding: "32px 20px" }}>
       <div style={{ maxWidth: "960px", margin: "0 auto" }}>
         <p
           style={{

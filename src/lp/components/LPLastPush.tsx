@@ -2,7 +2,7 @@ import LPBenefitCTA from "./LPBenefitCTA";
 
 export default function LPLastPush() {
   return (
-    <section style={{ backgroundColor: "#EAF0E8", padding: "48px 20px" }}>
+    <section style={{ backgroundColor: "#EAF0E8", padding: "32px 20px" }}>
       <div style={{ maxWidth: "720px", margin: "0 auto" }}>
 
         <p style={{

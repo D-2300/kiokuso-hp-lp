@@ -27,12 +27,12 @@ export default function LPContactForm() {
       id="contact-form"
       style={{
         backgroundColor: "#FAFAF8",
-        padding: "48px 20px",
+        padding: "32px 20px",
       }}
     >
       <style>{`
         @media (max-width: 640px) {
-          .lp-contact-section { padding-top: 48px !important; padding-bottom: 48px !important; }
+          .lp-contact-section { padding-top: 32px !important; padding-bottom: 32px !important; }
         }
         .lp-contact-input:focus {
           outline: none;

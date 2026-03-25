@@ -6,8 +6,8 @@ export default function LPSolutionPoints() {
   const [hint3, setHint3] = useState(true);
 
   return (
-    <section style={{ backgroundColor: "#fff", padding: "48px 20px" }}>
-      <div style={{ maxWidth: "960px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "48px" }}>
+    <section style={{ backgroundColor: "#fff", padding: "32px 20px" }}>
+      <div style={{ maxWidth: "960px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "32px" }}>
 
         <div>
           <p style={{ margin: "0 0 6px", fontSize: "12px", color: "#C9A84C", fontWeight: 700, letterSpacing: "0.12em" }}>SOLUTION</p>

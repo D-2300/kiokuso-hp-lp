@@ -246,10 +246,10 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
 
 export default function LPSupport() {
   return (
-    <section style={{ backgroundColor: "#FAFAF8", paddingTop: 48, paddingBottom: 48 }}>
+    <section style={{ backgroundColor: "#FAFAF8", paddingTop: 32, paddingBottom: 32 }}>
       <style>{`
         @media (max-width: 640px) {
-          .lp-support-section { padding-top: 48px !important; padding-bottom: 48px !important; }
+          .lp-support-section { padding-top: 32px !important; padding-bottom: 32px !important; }
           .photo-row { flex-direction: column !important; align-items: flex-start !important; }
           .photo-row-arrow { display: none !important; }
           .photo-row-img { width: 100% !important; height: 160px !important; border-radius: 8px !important; }
@@ -265,7 +265,7 @@ export default function LPSupport() {
         className="lp-support-section"
         style={{ maxWidth: 640, margin: "0 auto", padding: "0 24px" }}
       >
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
           <p
             style={{
               margin: "0 0 10px",

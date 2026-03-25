@@ -133,7 +133,7 @@ export default function LPBeforeAfterPreview() {
         style={{
           maxWidth: 800,
           margin: "0 auto",
-          padding: "48px 24px",
+          padding: "32px 24px",
         }}
       >
         <div style={{ textAlign: "center", marginBottom: 40 }}>

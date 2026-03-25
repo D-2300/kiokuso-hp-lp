@@ -28,9 +28,9 @@ export default function LPWhyPrice() {
 
       <div
         className="wyp-section"
-        style={{ maxWidth: 640, margin: "0 auto", padding: "48px 24px" }}
+        style={{ maxWidth: 640, margin: "0 auto", padding: "32px 24px" }}
       >
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
           <p
             style={{
               margin: "0 0 10px",
