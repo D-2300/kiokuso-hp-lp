@@ -124,19 +124,32 @@ export default function LPHero() {
               あなたの店はつくれます。
             </span>
           </h1>
-          <p
+          <div
             style={{
-              margin: "8px 0 0",
-              fontSize: "0.875rem",
-              fontWeight: 400,
-              color: "rgba(255,255,255,0.7)",
-              textShadow: "0 1px 6px rgba(0,0,0,0.4)",
+              marginTop: "12px",
+              marginBottom: "20px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              gap: "6px",
             }}
           >
-            ──開業準備、ぜんぶ一緒に。
-          </p>
+            <div style={{ width: "40px", height: "1px", backgroundColor: "#C9A84C" }} />
+            <p
+              style={{
+                margin: 0,
+                fontSize: "18px",
+                fontWeight: 500,
+                color: "#C9A84C",
+                textShadow: "0 1px 6px rgba(0,0,0,0.4)",
+              }}
+            >
+              開業準備、ぜんぶ一緒に。
+            </p>
+            <div style={{ width: "40px", height: "1px", backgroundColor: "#C9A84C" }} />
+          </div>
 
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "16px 0" }}>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "0 0 16px" }}>
             {["見積もり内訳100%公開", "物件未定でもOK", "断りはLINE1本"].map((t) => (
               <span key={t} style={{
                 fontSize: "11px",
