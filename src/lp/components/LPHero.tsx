@@ -126,12 +126,12 @@ export default function LPHero() {
           </h1>
           <div
             style={{
-              marginTop: "12px",
+              marginTop: "16px",
               marginBottom: "20px",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
-              gap: "6px",
+              gap: "8px",
             }}
           >
             <div style={{ width: "40px", height: "1px", backgroundColor: "#C9A84C" }} />
@@ -221,7 +221,7 @@ export default function LPHero() {
             ))}
           </div>
 
-          <div style={{ padding: "0 0 14px", textAlign: "center" }}>
+          <div style={{ padding: "0 0 40px", textAlign: "center" }}>
             <a
               href={LINE_URL}
               target="_blank"

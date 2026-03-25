@@ -120,13 +120,13 @@ export default function LPBeforeAfterPreview() {
     <section
       style={{
         backgroundColor: "#FFFFFF",
-        paddingTop: 64,
+        paddingTop: 80,
         paddingBottom: 64,
       }}
     >
       <style>{`
         @media (max-width: 640px) {
-          .bap-section { padding-top: 48px !important; padding-bottom: 48px !important; }
+          .bap-section { padding-top: 64px !important; padding-bottom: 48px !important; }
           .bap-grid { flex-direction: column !important; }
         }
       `}</style>

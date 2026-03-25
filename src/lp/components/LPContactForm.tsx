@@ -26,8 +26,8 @@ export default function LPContactForm() {
     <section
       id="contact-form"
       style={{
-        backgroundColor: "#fff",
-        padding: "64px 20px",
+        backgroundColor: "#FAFAF8",
+        padding: "48px 20px 64px",
       }}
     >
       <style>{`

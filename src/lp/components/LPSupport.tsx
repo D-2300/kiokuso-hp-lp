@@ -167,6 +167,7 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
 
         {step.detail && (
           <div
+            className="photo-row"
             style={{
               display: "flex",
               alignItems: "center",
@@ -175,6 +176,7 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
             }}
           >
             <p
+              className="photo-row-text"
               style={{
                 flex: 1,
                 margin: 0,
@@ -187,6 +189,7 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
             </p>
 
             <div
+              className="photo-row-arrow"
               style={{
                 flexShrink: 0,
                 display: "flex",
@@ -214,6 +217,7 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
             </div>
 
             <div
+              className="photo-row-img"
               style={{
                 flexShrink: 0,
                 width: 140,
@@ -246,7 +250,14 @@ export default function LPSupport() {
       <style>{`
         @media (max-width: 640px) {
           .lp-support-section { padding-top: 48px !important; padding-bottom: 48px !important; }
-          .lp-support-photo { width: 120px !important; height: 88px !important; }
+          .photo-row { flex-direction: column !important; align-items: flex-start !important; }
+          .photo-row-arrow { display: none !important; }
+          .photo-row-img { width: 100% !important; height: 160px !important; border-radius: 8px !important; }
+        }
+        @media (min-width: 641px) {
+          .photo-row { flex-direction: row !important; }
+          .photo-row-arrow { display: flex !important; }
+          .photo-row-img { width: 140px !important; height: 100px !important; }
         }
       `}</style>
 
