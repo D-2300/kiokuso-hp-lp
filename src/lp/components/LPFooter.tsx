@@ -19,7 +19,15 @@ export default function LPFooter() {
             </span>
           </div>
         </Link>
-        <p style={{ margin: "0 0 8px", fontSize: "12px", color: "rgba(255,255,255,0.6)" }}>仙台・宮城の店舗内装</p>
+        <p style={{ margin: "0 0 16px", fontSize: "12px", color: "rgba(255,255,255,0.6)" }}>仙台・宮城の店舗内装</p>
+        <div style={{ marginBottom: "16px" }}>
+          <p style={{ margin: "0 0 4px", fontSize: "14px", color: "rgba(255,255,255,0.7)" }}>
+            <a href="tel:08069003314" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>080-6900-3314</a>
+          </p>
+          <p style={{ margin: "4px 0 0", fontSize: "14px", color: "rgba(255,255,255,0.7)" }}>
+            <a href="mailto:studio@kiokuso.jp" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>studio@kiokuso.jp</a>
+          </p>
+        </div>
         <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.35)" }}>© 2026 記憶荘 Studio</p>
       </div>
     </footer>
