@@ -1,5 +1,11 @@
 import { LINE_URL } from "../../shared/design-tokens";
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
 export default function LPFinalCTA() {
   return (
     <section data-section="final-cta" style={{ backgroundColor: "#fff", padding: "32px 20px", textAlign: "center" }}>
@@ -78,6 +84,7 @@ export default function LPFinalCTA() {
       <div style={{ marginTop: 12, display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
         <a
           href="tel:08069003314"
+          onClick={() => { window.dataLayer?.push({ event: "phone_cta_click", button_location: "final_cta" }); }}
           style={{
             fontSize: 14,
             color: "#1A1A1A",

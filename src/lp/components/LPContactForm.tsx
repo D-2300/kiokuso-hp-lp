@@ -1,5 +1,11 @@
 import { useState } from "react";
 
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+  }
+}
+
 export default function LPContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -16,6 +22,7 @@ export default function LPContactForm() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
       });
+      window.dataLayer?.push({ event: "form_submit_contact" });
       setSubmitted(true);
     } catch {
       setSubmitting(false);
