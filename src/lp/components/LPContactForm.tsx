@@ -22,7 +22,8 @@ export default function LPContactForm() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data as unknown as Record<string, string>).toString(),
       });
-      window.dataLayer?.push({ event: "form_submit_contact" });
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "form_submit_contact" });
       setSubmitted(true);
     } catch {
       setSubmitting(false);
