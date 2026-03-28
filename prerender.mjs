@@ -16,6 +16,7 @@ const ROUTES = [
   "/koumuten",
   "/reform",
   "/fudousan",
+  "/manshitsu",
 ];
 
 async function prerender() {

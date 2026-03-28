@@ -2,11 +2,12 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import HPApp from "./hp/HPApp";
 import LPPage from "./lp/LPPage";
+import ManshitsuPage from "./manshitsu/ManshitsuPage";
 import ScrollToTop from "./shared/ScrollToTop";
 
 function BodyBackground() {
   const location = useLocation();
-  const isLP = location.pathname.startsWith("/lp");
+  const isLP = location.pathname.startsWith("/lp") || location.pathname.startsWith("/manshitsu");
 
   useEffect(() => {
     if (typeof document !== "undefined") {
@@ -24,6 +25,7 @@ export default function AppRoutes() {
       <ScrollToTop />
       <Routes>
         <Route path="/lp" element={<LPPage />} />
+        <Route path="/manshitsu" element={<ManshitsuPage />} />
         <Route path="/*" element={<HPApp />} />
       </Routes>
     </>
