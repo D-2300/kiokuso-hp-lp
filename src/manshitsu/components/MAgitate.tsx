@@ -79,10 +79,10 @@ export default function MAgitate() {
           </div>
 
           <p style={{ margin: "0 0 10px", fontSize: "12px", fontWeight: 500, color: M.main, letterSpacing: "0.05em" }}>
-            満室デザイン工房に直接のルート
+            満室デザインLABOに直接のルート
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "6px", flexWrap: "wrap" }}>
-            {["オーナー様", "満室デザイン工房（自社施工）"].map((node, i, arr) => (
+            {["オーナー様", "満室デザインLABO（自社施工）"].map((node, i, arr) => (
               <div key={i} style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <div
                   style={{
@@ -117,7 +117,7 @@ export default function MAgitate() {
                   管理会社経由
                 </th>
                 <th style={{ padding: "10px 12px", textAlign: "right", borderBottom: `2px solid ${M.main}`, backgroundColor: "rgba(107,64,102,0.03)", color: M.dark, fontWeight: 600, fontSize: "11px" }}>
-                  満室デザイン工房
+                  満室デザインLABO
                 </th>
               </tr>
             </thead>

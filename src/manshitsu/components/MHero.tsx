@@ -34,8 +34,8 @@ export default function MHero() {
       <div style={{ maxWidth: "720px", margin: "0 auto", position: "relative" }}>
         <div style={{ marginBottom: "20px" }}>
           <img
-            src="/assets/logos/logo-manshitsu-h-gold.png"
-            alt="記憶荘 満室デザイン工房"
+            src="/images/logo-manshitsu-h-gold.png"
+            alt="記憶荘 満室デザインLABO"
             style={{ height: "40px", objectFit: "contain" }}
           />
         </div>

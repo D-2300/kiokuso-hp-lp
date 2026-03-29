@@ -20,13 +20,13 @@ export default function MProfile() {
           }}
         >
           <img
-            src="/assets/logos/logo-manshitsu-mark-dark.png"
-            alt="記憶荘 満室デザイン工房 ロゴ"
+            src="/images/logo-manshitsu-mark-gold.png"
+            alt="記憶荘 満室デザインLABO ロゴ"
             style={{ width: "80px", height: "80px", objectFit: "contain", flexShrink: 0 }}
           />
           <div style={{ flex: 1, minWidth: "200px" }}>
             <p style={{ margin: "0 0 2px", fontSize: "11px", letterSpacing: "0.08em", color: M.main, fontWeight: 500 }}>
-              記憶荘｜満室デザイン工房
+              記憶荘｜満室デザインLABO
             </p>
             <p style={{ margin: "0 0 12px", fontSize: "clamp(15px, 3.5vw, 17px)", fontWeight: 600, color: C.textDark }}>
               代表 ◯◯
