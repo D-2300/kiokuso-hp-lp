@@ -27,6 +27,7 @@ export default function LPHero() {
       `}</style>
       <img
         src="/images/lp-hero.webp"
+          srcSet="/images/lp-hero-sm.webp 480w, /images/lp-hero.webp 1200w"
         alt=""
         width="1200"
         height="800"
@@ -207,6 +208,7 @@ export default function LPHero() {
               >
                 <img
                   src={card.src}
+                    srcSet={`${card.src.replace('.webp', '-sm.webp')} 480w, ${card.src} 1200w`}
                   alt={card.alt}
                   className="ba-card-img"
                   width="320"

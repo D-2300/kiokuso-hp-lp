@@ -174,6 +174,7 @@ export default function LPCaseDetail() {
                   <div style={{ borderRadius: "8px", overflow: "hidden", height: "clamp(180px, 22vw, 280px)" }}>
                     <img
                       src={src}
+                      srcSet={`${src.replace('.webp', '-sm.webp')} 480w, ${src} 1200w`}
                       alt={`${c.type} 内装${label === "BEFORE" ? "施工前" : "施工後"}`}
                       width="400"
                       height="280"

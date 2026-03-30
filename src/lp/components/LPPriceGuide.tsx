@@ -55,6 +55,7 @@ export default function LPPriceGuide() {
           }}>
             <img
               src={item.image}
+                  srcSet={`${item.image.replace('.webp', '-sm.webp')} 480w, ${item.image} 1200w`}
               alt={item.name}
               width="100"
               height="100"

@@ -106,7 +106,7 @@ export default function LPSolutionPoints() {
                 backgroundColor: "#fff",
               }}>
                 <div style={{ position: "relative", width: "100%", height: "180px", overflow: "hidden" }}>
-                  <img src={card.img} alt={card.title} width="320" height="180" loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <img src={card.img} srcSet={`${card.img.replace('.webp', '-sm.webp')} 480w, ${card.img} 1200w`} alt={card.title} width="320" height="180" loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   <span style={{
                     position: "absolute", bottom: "10px", left: "10px",
                     backgroundColor: "rgba(74,103,65,0.9)", color: "#fff",
@@ -181,7 +181,7 @@ export default function LPSolutionPoints() {
                 backgroundColor: "#fff",
               }}>
                 <div style={{ position: "relative", width: "100%", height: "180px", overflow: "hidden" }}>
-                  <img src={card.img} alt={card.title} width="320" height="180" loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  <img src={card.img} srcSet={`${card.img.replace('.webp', '-sm.webp')} 480w, ${card.img} 1200w`} alt={card.title} width="320" height="180" loading="lazy" sizes="(max-width: 768px) 100vw, 50vw" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
                   <span style={{
                     position: "absolute", bottom: "10px", left: "10px",
                     backgroundColor: "rgba(74,103,65,0.9)", color: "#fff",
@@ -263,6 +263,7 @@ export default function LPSolutionPoints() {
                 <div style={{ position: "relative", width: "100%", height: "180px", overflow: "hidden" }}>
                   <img
                     src={card.img}
+                    srcSet={`${card.img.replace('.webp', '-sm.webp')} 480w, ${card.img} 1200w`}
                     alt={card.title}
                     width="320"
                     height="180"

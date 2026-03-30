@@ -63,6 +63,7 @@ export default function LPBenefitCTA({ showPushText = false }: LPBenefitCTAProps
           }}>
             <img
               src="/images/toranomaki-cover.webp"
+              srcSet="/images/toranomaki-cover-sm.webp 480w, /images/toranomaki-cover.webp 800w"
               alt="内装見積もりの虎の巻"
               width="320"
               height="140"
@@ -89,6 +90,7 @@ export default function LPBenefitCTA({ showPushText = false }: LPBenefitCTAProps
           }}>
             <img
               src="/images/ai-pers-tablet.webp"
+              srcSet="/images/ai-pers-tablet-sm.webp 480w, /images/ai-pers-tablet.webp 800w"
               alt="AIパースで完成イメージも作成"
               width="320"
               height="140"

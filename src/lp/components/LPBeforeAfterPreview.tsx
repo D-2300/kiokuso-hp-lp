@@ -50,6 +50,7 @@ function CaseCard({ before, after, label, cost }: (typeof cases)[number]) {
         <div style={{ flex: 1, position: "relative", aspectRatio: "4/3", minWidth: 0 }}>
           <img
             src={before}
+            srcSet={`${before.replace('.webp', '-sm.webp')} 480w, ${before} 1200w`}
             alt="before"
             width="400"
             height="300"
@@ -84,6 +85,7 @@ function CaseCard({ before, after, label, cost }: (typeof cases)[number]) {
         <div style={{ flex: 1, position: "relative", aspectRatio: "4/3", minWidth: 0 }}>
           <img
             src={after}
+            srcSet={`${after.replace('.webp', '-sm.webp')} 480w, ${after} 1200w`}
             alt="after"
             width="400"
             height="300"

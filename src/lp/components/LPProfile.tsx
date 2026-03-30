@@ -13,6 +13,7 @@ export default function LPProfile() {
       >
         <img
           src="/images/about-dai.webp"
+          srcSet="/images/about-dai-sm.webp 480w, /images/about-dai.webp 754w"
           alt="KEN"
           width="200"
           height="248"

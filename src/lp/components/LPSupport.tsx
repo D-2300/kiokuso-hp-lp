@@ -228,6 +228,7 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
             >
               <img
                 src={step.detail.photo}
+                    srcSet={`${step.detail.photo.replace('.webp', '-sm.webp')} 480w, ${step.detail.photo} 1200w`}
                 alt={step.detail.photoAlt}
                 width="140"
                 height="100"

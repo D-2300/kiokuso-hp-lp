@@ -54,6 +54,7 @@ export default function LPShowcase() {
             }}>
               <img
                 src={item.src}
+                  srcSet={`${item.src.replace('.webp', '-sm.webp')} 480w, ${item.src} 1200w`}
                 alt={item.label}
                 width="220"
                 height="148"

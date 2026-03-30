@@ -176,6 +176,7 @@ export default function LPBeforeAfter() {
                     <div className="ba-img-wrap" style={{ height: "clamp(144px, 20vw, 240px)", overflow: "hidden" }}>
                       <img
                         src={label === "Before" ? c.before : c.after}
+                    srcSet={`${(label === "Before" ? c.before : c.after).replace('.webp', '-sm.webp')} 480w, ${label === "Before" ? c.before : c.after} 1200w`}
                         alt={`${c.type} ${label}`}
                         width="400"
                         height="240"
