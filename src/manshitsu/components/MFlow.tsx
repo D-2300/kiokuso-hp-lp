@@ -8,6 +8,8 @@ const steps = [
     body: "管理会社の見積書の写真、または物件の状況を送るだけでOK。まだ見積もりがなくても大丈夫です。",
     tag: "無料",
     tagColor: C.accentGreen,
+    tag2: null as string | null,
+    tag2Color: "",
   },
   {
     n: "2",
@@ -15,6 +17,8 @@ const steps = [
     body: "退去当日の現場確認も可能。当日中に写真付きの明細見積書をLINEでお送りします。",
     tag: "最短当日",
     tagColor: M.main,
+    tag2: "無料",
+    tag2Color: C.accentGreen,
   },
   {
     n: "3",
@@ -22,6 +26,8 @@ const steps = [
     body: "店舗施工で鍛えた段取りで、スピーディーに仕上げます。空室期間を1日でも短くします。",
     tag: "最短3日〜",
     tagColor: M.mid,
+    tag2: null as string | null,
+    tag2Color: "",
   },
   {
     n: "4",
@@ -29,6 +35,8 @@ const steps = [
     body: "写真付き完了報告書をLINEでお送り。物件ポータルの掲載写真としてもそのままご利用いただけます。",
     tag: null,
     tagColor: "",
+    tag2: null as string | null,
+    tag2Color: "",
   },
 ];
 
@@ -94,6 +102,21 @@ export default function MFlow() {
                         }}
                       >
                         {step.tag}
+                      </span>
+                    )}
+                    {step.tag2 && (
+                      <span
+                        style={{
+                          fontSize: "11px",
+                          fontWeight: 600,
+                          color: C.white,
+                          backgroundColor: step.tag2Color,
+                          borderRadius: "2px",
+                          padding: "2px 7px",
+                          letterSpacing: "0.03em",
+                        }}
+                      >
+                        {step.tag2}
                       </span>
                     )}
                   </div>

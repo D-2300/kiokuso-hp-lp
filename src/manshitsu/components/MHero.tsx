@@ -29,7 +29,7 @@ export default function MHero() {
       <div
         style={{
           position: "relative",
-          minHeight: "420px",
+          minHeight: "60vh",
           overflow: "hidden",
         }}
       >
@@ -183,7 +183,10 @@ export default function MHero() {
       <div
         style={{
           background: `linear-gradient(160deg, ${M.main} 0%, ${M.dark} 100%)`,
-          padding: "32px 20px 48px",
+          minHeight: "40vh",
+          display: "flex",
+          alignItems: "center",
+          padding: "28px 20px 36px",
         }}
       >
         <div style={{ maxWidth: "720px", margin: "0 auto" }}>
@@ -192,7 +195,7 @@ export default function MHero() {
             style={{
               border: `1px solid ${C.gold}`,
               borderRadius: "4px",
-              padding: "16px 20px",
+              padding: "12px 16px",
               marginBottom: "24px",
               backgroundColor: "rgba(201,168,76,0.06)",
               textAlign: "center",
@@ -202,8 +205,8 @@ export default function MHero() {
               クロス張替え
             </p>
             <p style={{ margin: 0, fontFamily: "'Noto Serif JP', serif" }}>
-              <span style={{ fontSize: "clamp(26px, 6vw, 34px)", color: C.gold, fontWeight: 600 }}>900</span>
-              <span style={{ fontSize: "14px", color: C.goldLight }}> 円/㎡〜（税別）</span>
+              <span style={{ fontSize: "clamp(22px, 5vw, 28px)", color: C.gold, fontWeight: 600 }}>900</span>
+              <span style={{ fontSize: "13px", color: C.goldLight }}> 円/㎡〜（税別）</span>
             </p>
             <p style={{ margin: "4px 0 0", fontSize: "11px", color: "rgba(255,255,255,0.45)" }}>
               めくり・下地処理・廃材処分込み

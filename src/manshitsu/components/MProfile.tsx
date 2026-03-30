@@ -17,53 +17,45 @@ export default function MProfile() {
           />
         </div>
 
-        {/* Description */}
+        {/* CSO KEN + Description (speech bubble style) */}
         <div
           style={{
+            display: "flex",
+            gap: "16px",
+            alignItems: "flex-start",
             padding: "24px",
             border: `1px solid rgba(107,64,102,0.1)`,
             borderRadius: "4px",
             backgroundColor: M.bg,
           }}
         >
-          <p style={{ margin: 0, fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.9 }}>
-            仙台で店舗内装の設計・施工を手がけています。カフェ、バー、美容室など、「人が集まる空間」をつくる仕事をしてきました。その技術を、賃貸物件の空室対策に活かせないかと考え、オーナー様向けのサービスを始めました。
-          </p>
-        </div>
-
-        {/* CSO KEN profile */}
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            alignItems: "center",
-            padding: "20px 24px",
-            marginTop: "12px",
-            borderRadius: "4px",
-            border: `1px solid rgba(107,64,102,0.08)`,
-            backgroundColor: "#FAFAF9",
-          }}
-        >
-          <img
-            src="/images/about-dai-sm.webp"
-            alt="KEN"
-            width="64"
-            height="64"
-            loading="lazy"
-            style={{
-              width: "64px",
-              height: "64px",
-              borderRadius: "50%",
-              objectFit: "cover",
-              flexShrink: 0,
-            }}
-          />
-          <div>
-            <p style={{ margin: "0 0 2px", fontSize: "11px", letterSpacing: "0.08em", color: M.mid, fontWeight: 500 }}>
+          {/* KEN avatar */}
+          <div style={{ flexShrink: 0, textAlign: "center" }}>
+            <img
+              src="/images/about-dai-sm.webp"
+              alt="KEN"
+              width="56"
+              height="56"
+              loading="lazy"
+              style={{
+                width: "56px",
+                height: "56px",
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
+            />
+            <p style={{ margin: "6px 0 0", fontSize: "11px", letterSpacing: "0.06em", color: M.mid, fontWeight: 500 }}>
               CSO
             </p>
-            <p style={{ margin: 0, fontSize: "clamp(16px, 3.8vw, 18px)", fontWeight: 600, color: C.textDark, letterSpacing: "0.02em" }}>
+            <p style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: C.textDark }}>
               KEN
+            </p>
+          </div>
+
+          {/* Comment text */}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <p style={{ margin: 0, fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.9 }}>
+              カフェやバー、美容室など年間50件以上の店舗内装を手がけてきた経験から、「空間の印象が人の行動を変える」と確信しています。その知見を賃貸の原状回復に応用し、"ただ戻す"のではなく"選ばれる部屋"をつくるのが私たちの仕事です。
             </p>
           </div>
         </div>

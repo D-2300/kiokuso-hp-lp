@@ -8,7 +8,7 @@ export default function MFooter() {
         <img
           src="/images/logo-manshitsu-mark-white.webp"
           alt="満室デザインLABO"
-          style={{ height: "44px", objectFit: "contain", marginBottom: "12px", opacity: 0.85 }}
+          style={{ height: "44px", objectFit: "contain", marginBottom: "12px", opacity: 0.85, display: "block", marginLeft: "auto", marginRight: "auto" }}
         />
         <p style={{ margin: "0 0 10px", fontSize: "13px", color: C.gold, fontWeight: 500, letterSpacing: "0.06em" }}>
           記憶荘｜満室デザインLABO
