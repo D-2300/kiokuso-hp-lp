@@ -39,9 +39,9 @@ export default function StudioTop() {
         .hero-anton {
           font-family: 'Noto Sans JP', sans-serif;
           font-weight: 900;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.02em;
           text-transform: uppercase;
-          font-size: 72px;
+          font-size: 88px;
           color: #fff;
           width: 100%;
           text-align: center;
@@ -50,7 +50,7 @@ export default function StudioTop() {
           box-sizing: border-box;
         }
         @media (max-width: 768px) {
-          .hero-anton { font-size: 48px; }
+          .hero-anton { font-size: 56px; }
         }
         .works-preview-grid {
           display: grid;
@@ -106,10 +106,10 @@ export default function StudioTop() {
             <p className="hero-anton" style={{ lineHeight: 1.1, margin: 0 }}>KIOKUSO</p>
             <p className="hero-anton" style={{ lineHeight: 1.1, margin: 0 }}>STUDIO</p>
           </div>
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "15px", fontWeight: 400, letterSpacing: "0.1em" }}>
+          <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "18px", fontWeight: 700, letterSpacing: "0.14em" }}>
             記憶荘 店舗内装スタジオ
           </p>
-          <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "12px", fontWeight: 300, letterSpacing: "0.15em" }}>
+          <p style={{ color: "rgba(255,255,255,0.6)", fontSize: "14px", fontWeight: 500, letterSpacing: "0.18em" }}>
             仙台・宮城
           </p>
         </div>

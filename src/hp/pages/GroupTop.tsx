@@ -77,9 +77,9 @@ export default function GroupTop() {
         .hero-anton {
           font-family: 'Noto Sans JP', sans-serif;
           font-weight: 900;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.02em;
           text-transform: uppercase;
-          font-size: 72px;
+          font-size: 88px;
           color: #fff;
           width: 100%;
           text-align: center;
@@ -88,7 +88,7 @@ export default function GroupTop() {
           box-sizing: border-box;
         }
         @media (max-width: 768px) {
-          .hero-anton { font-size: 48px; }
+          .hero-anton { font-size: 56px; }
         }
       `}</style>
 
@@ -127,10 +127,10 @@ export default function GroupTop() {
           <p className="hero-anton">
             KIOKUSO
           </p>
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "18px", fontWeight: 400, letterSpacing: "0.15em" }}>
+          <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "22px", fontWeight: 700, letterSpacing: "0.18em" }}>
             記憶荘
           </p>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "15px", fontWeight: 300, letterSpacing: "0.12em", marginTop: "8px" }}>
+          <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "17px", fontWeight: 500, letterSpacing: "0.14em", marginTop: "8px" }}>
             想いが残る場所を、つくる。
           </p>
         </div>

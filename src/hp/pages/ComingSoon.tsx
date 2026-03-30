@@ -64,9 +64,9 @@ export default function ComingSoon({
         .hero-anton {
           font-family: 'Noto Sans JP', sans-serif;
           font-weight: 900;
-          letter-spacing: 0.12em;
+          letter-spacing: 0.02em;
           text-transform: uppercase;
-          font-size: 72px;
+          font-size: 88px;
           color: #fff;
           width: 100%;
           text-align: center;
@@ -75,7 +75,7 @@ export default function ComingSoon({
           box-sizing: border-box;
         }
         @media (max-width: 768px) {
-          .hero-anton { font-size: 48px; }
+          .hero-anton { font-size: 56px; }
         }
       `}</style>
       <EntityNav
@@ -147,12 +147,13 @@ export default function ComingSoon({
           ) : (
             <p className="hero-anton">{name}</p>
           )}
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "16px" }}>{nameJa}</p>
+          <p style={{ color: "rgba(255,255,255,0.9)", fontSize: "20px", fontWeight: 700, letterSpacing: "0.14em" }}>{nameJa}</p>
           <p
             style={{
-              color: "rgba(255,255,255,0.55)",
-              fontSize: "12px",
-              letterSpacing: "0.12em",
+              color: "rgba(255,255,255,0.7)",
+              fontSize: "14px",
+              fontWeight: 500,
+              letterSpacing: "0.14em",
             }}
           >
             {subtitle}
