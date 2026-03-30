@@ -62,9 +62,9 @@ export default function ComingSoon({
     <div style={{ backgroundColor: "#F8F5F0", minHeight: "100vh" }}>
       <style>{`
         .hero-anton {
-          font-family: 'Anton', sans-serif;
-          font-weight: 400;
-          letter-spacing: 0.05em;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 900;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           font-size: 72px;
           color: #fff;
@@ -165,8 +165,9 @@ export default function ComingSoon({
             left: 0,
             right: 0,
             textAlign: "center",
-            fontFamily: "'Anton', sans-serif",
+            fontFamily: "'Noto Sans JP', sans-serif",
             fontSize: "24px",
+            fontWeight: 700,
             letterSpacing: "6px",
             color: "rgba(255,255,255,0.5)",
             zIndex: 2,
@@ -243,8 +244,9 @@ export default function ComingSoon({
           <div style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
             <p
               style={{
-                fontFamily: "'Anton', sans-serif",
+                fontFamily: "'Noto Sans JP', sans-serif",
                 fontSize: "14px",
+                fontWeight: 700,
                 letterSpacing: "4px",
                 color: "#999",
                 marginBottom: "40px",

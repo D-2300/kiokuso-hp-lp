@@ -41,9 +41,9 @@ export default function GroupFooter() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            fontFamily: "'Anton', sans-serif",
+            fontFamily: "'Noto Sans JP', sans-serif",
             fontSize: "14px",
-            fontWeight: 400,
+            fontWeight: 700,
             letterSpacing: "0.1em",
             color: "#D4A0A0",
             textTransform: "uppercase",
@@ -71,9 +71,9 @@ export default function GroupFooter() {
             to={link.to}
             style={{
               color: "#D4A0A0",
-              fontFamily: "'Anton', sans-serif",
+              fontFamily: "'Noto Sans JP', sans-serif",
               fontSize: "14px",
-              fontWeight: 400,
+              fontWeight: 700,
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               textDecoration: "none",

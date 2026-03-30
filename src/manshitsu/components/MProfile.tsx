@@ -20,9 +20,9 @@ export default function MProfile() {
           }}
         >
           <img
-            src="/images/logo-manshitsu-mark-gold.png"
+            src="/images/logo-manshitsu-h-gold.png"
             alt="記憶荘 満室デザインLABO ロゴ"
-            style={{ width: "80px", height: "80px", objectFit: "contain", flexShrink: 0 }}
+            style={{ width: "120px", height: "60px", objectFit: "contain", flexShrink: 0 }}
           />
           <div style={{ flex: 1, minWidth: "200px" }}>
             <p style={{ margin: "0 0 2px", fontSize: "11px", letterSpacing: "0.08em", color: M.main, fontWeight: 500 }}>

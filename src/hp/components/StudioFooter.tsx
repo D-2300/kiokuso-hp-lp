@@ -46,8 +46,9 @@ export default function StudioFooter() {
       <div style={{ maxWidth: "640px", margin: "56px auto 0", textAlign: "center" }}>
           <p
             style={{
-              fontFamily: "'Anton', sans-serif",
+              fontFamily: "'Noto Sans JP', sans-serif",
               fontSize: "13px",
+              fontWeight: 700,
               letterSpacing: "4px",
               color: "rgba(255,255,255,0.35)",
               marginBottom: "16px",
@@ -99,9 +100,9 @@ export default function StudioFooter() {
             background: "none",
             border: "none",
             cursor: "pointer",
-            fontFamily: "'Anton', sans-serif",
+            fontFamily: "'Noto Sans JP', sans-serif",
             fontSize: "13px",
-            fontWeight: 400,
+            fontWeight: 700,
             letterSpacing: "3px",
             color: "rgba(255,255,255,0.5)",
             textTransform: "uppercase",
@@ -128,9 +129,9 @@ export default function StudioFooter() {
             to={link.to}
             style={{
               color: "rgba(255,255,255,0.5)",
-              fontFamily: "'Anton', sans-serif",
+              fontFamily: "'Noto Sans JP', sans-serif",
               fontSize: "13px",
-              fontWeight: 400,
+              fontWeight: 700,
               letterSpacing: "3px",
               textTransform: "uppercase",
               textDecoration: "none",

@@ -161,7 +161,7 @@ export default function StudioPricing() {
             gap: "10px",
           }}
         >
-          <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em", textTransform: "uppercase" }}>Pricing</p>
+          <p style={{ color: "#fff", fontFamily: "'Noto Sans JP', sans-serif", fontSize: "48px", fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>Pricing</p>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>料金の考え方</p>
         </div>
       </section>
@@ -269,7 +269,7 @@ export default function StudioPricing() {
       {/* FLOW */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 24px", maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{ fontFamily: "Anton, sans-serif", fontSize: "14px", letterSpacing: "4px", textAlign: "center", color: "#999", marginBottom: "8px" }}>FLOW</p>
+          <p style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "14px", fontWeight: 700, letterSpacing: "4px", textAlign: "center", color: "#999", marginBottom: "8px" }}>FLOW</p>
           <h2 style={{ fontSize: "24px", fontWeight: 500, textAlign: "center", marginBottom: "48px", color: "#333", margin: "0 0 48px" }}>ご相談からお引渡しまで</h2>
           <div>
             {flowSteps.map((step, i) => (
@@ -284,10 +284,10 @@ export default function StudioPricing() {
                 }}
               >
                 <div style={{ minWidth: "32px", textAlign: "center" }}>
-                  <span style={{ fontFamily: "Anton, sans-serif", fontSize: "11px", letterSpacing: "2px", color: "#C9A84C" }}>
+                  <span style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "11px", fontWeight: 700, letterSpacing: "2px", color: "#C9A84C" }}>
                     STEP
                   </span>
-                  <p style={{ fontFamily: "Anton, sans-serif", fontSize: "28px", color: "#C9A84C", margin: "0", lineHeight: 1 }}>
+                  <p style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "28px", fontWeight: 700, color: "#C9A84C", margin: "0", lineHeight: 1 }}>
                     {step.num}
                   </p>
                 </div>
@@ -335,7 +335,7 @@ export default function StudioPricing() {
       {/* FAQ */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 24px", maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{ fontFamily: "Anton, sans-serif", fontSize: "14px", letterSpacing: "4px", textAlign: "center", color: "#999", marginBottom: "8px" }}>FAQ</p>
+          <p style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "14px", fontWeight: 700, letterSpacing: "4px", textAlign: "center", color: "#999", marginBottom: "8px" }}>FAQ</p>
           <h2 style={{ fontSize: "24px", fontWeight: 500, textAlign: "center", margin: "0 0 48px", color: "#333" }}>よくあるご質問</h2>
           <div style={{ borderTop: "1px solid #E5E0D8" }}>
             {faqItems.map((item) => (

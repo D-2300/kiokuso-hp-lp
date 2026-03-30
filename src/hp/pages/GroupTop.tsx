@@ -75,9 +75,9 @@ export default function GroupTop() {
 
       <style>{`
         .hero-anton {
-          font-family: 'Anton', sans-serif;
-          font-weight: 400;
-          letter-spacing: 0.05em;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 900;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           font-size: 72px;
           color: #fff;

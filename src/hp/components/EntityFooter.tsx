@@ -86,9 +86,9 @@ export default function EntityFooter({
                 background: "none",
                 border: "none",
                 cursor: "pointer",
-                fontFamily: "'Anton', sans-serif",
+                fontFamily: "'Noto Sans JP', sans-serif",
                 fontSize: "14px",
-                fontWeight: 400,
+                fontWeight: 700,
                 letterSpacing: "0.1em",
                 color: themeLight,
                 textTransform: "uppercase",
@@ -109,9 +109,9 @@ export default function EntityFooter({
               to={link.to}
               style={{
                 color: themeLight,
-                fontFamily: "'Anton', sans-serif",
+                fontFamily: "'Noto Sans JP', sans-serif",
                 fontSize: "14px",
-                fontWeight: 400,
+                fontWeight: 700,
                 letterSpacing: "0.1em",
                 textTransform: "uppercase",
                 textDecoration: "none",

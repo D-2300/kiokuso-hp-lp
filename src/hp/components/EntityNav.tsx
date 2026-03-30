@@ -19,9 +19,9 @@ function toRgba(hex: string, a: number) {
 }
 
 const font: React.CSSProperties = {
-  fontFamily: "'Anton', sans-serif",
+  fontFamily: "'Noto Sans JP', sans-serif",
   fontSize: "14px",
-  fontWeight: 400,
+  fontWeight: 700,
   letterSpacing: "0.1em",
   textTransform: "uppercase" as const,
   textDecoration: "none",

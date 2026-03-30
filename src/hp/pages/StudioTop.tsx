@@ -37,9 +37,9 @@ export default function StudioTop() {
           animation: scrollBounce 2s ease-in-out infinite;
         }
         .hero-anton {
-          font-family: 'Anton', sans-serif;
-          font-weight: 400;
-          letter-spacing: 0.05em;
+          font-family: 'Noto Sans JP', sans-serif;
+          font-weight: 900;
+          letter-spacing: 0.12em;
           text-transform: uppercase;
           font-size: 72px;
           color: #fff;
@@ -82,7 +82,7 @@ export default function StudioTop() {
       {/* Hero */}
       <section style={{ position: "relative", height: "100vh", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, height: "100%" }}>
-          <img src="/images/hp-cafe-interior-sm.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }} />
+          <img src="/images/hp-cafe-interior.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%)" }} sizes="100vw" fetchPriority="high" />
           <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.4)" }} />
         </div>
 

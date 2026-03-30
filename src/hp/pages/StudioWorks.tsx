@@ -166,7 +166,8 @@ function WorkCard({ work }: { work: Work }) {
                 background: "rgba(0,0,0,0.5)",
                 color: "#fff",
                 fontSize: "11px",
-                fontFamily: "'Anton', sans-serif",
+                fontFamily: "'Noto Sans JP', sans-serif",
+                fontWeight: 700,
                 letterSpacing: "0.08em",
                 padding: "2px 7px",
                 borderRadius: "3px",
@@ -382,7 +383,7 @@ export default function StudioWorks() {
               gap: "10px",
             }}
           >
-            <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em", textTransform: "uppercase" }}>Works</p>
+            <p style={{ color: "#fff", fontFamily: "'Noto Sans JP', sans-serif", fontSize: "48px", fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>Works</p>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>施工事例</p>
           </div>
         </section>

@@ -81,7 +81,7 @@ export default function GroupAbout() {
             gap: "10px",
           }}
         >
-          <p style={{ color: "#fff", fontFamily: "'Anton', sans-serif", fontSize: "48px", fontWeight: 400, letterSpacing: "0.05em", textTransform: "uppercase" }}>ABOUT</p>
+          <p style={{ color: "#fff", fontFamily: "'Noto Sans JP', sans-serif", fontSize: "48px", fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase" }}>ABOUT</p>
           <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "14px" }}>記憶荘について</p>
         </div>
       </section>
@@ -212,7 +212,7 @@ export default function GroupAbout() {
       {/* STEP I：OUR WORK 事業体紹介 */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 24px", maxWidth: "800px", margin: "0 auto" }}>
-          <p style={{ fontFamily: "Anton, sans-serif", fontSize: "14px", letterSpacing: "4px", textAlign: "center", color: "#999", marginBottom: "8px" }}>OUR WORK</p>
+          <p style={{ fontFamily: "'Noto Sans JP', sans-serif", fontSize: "14px", fontWeight: 700, letterSpacing: "4px", textAlign: "center", color: "#999", marginBottom: "8px" }}>OUR WORK</p>
           <h2 style={{ fontSize: "22px", fontWeight: 500, textAlign: "center", margin: "0 0 56px", color: "#333" }}>記憶荘がやっていること</h2>
           <div style={{ borderTop: "1px solid #E5E0D8" }}>
             {ourWork.map((item) => (

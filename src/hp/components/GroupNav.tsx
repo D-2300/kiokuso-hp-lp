@@ -11,9 +11,9 @@ const navLinks = [
 ];
 
 const font: React.CSSProperties = {
-  fontFamily: "'Anton', sans-serif",
+  fontFamily: "'Noto Sans JP', sans-serif",
   fontSize: "14px",
-  fontWeight: 400,
+  fontWeight: 700,
   letterSpacing: "0.1em",
   textTransform: "uppercase" as const,
   textDecoration: "none",
@@ -113,12 +113,12 @@ export default function GroupNav() {
         {/* グループ本体 */}
         <p style={{
           fontSize: "10px",
-          fontWeight: 400,
+          fontWeight: 700,
           letterSpacing: "0.2em",
           textTransform: "uppercase",
           color: "rgba(255,255,255,0.4)",
           margin: 0,
-          fontFamily: "'Anton', sans-serif",
+          fontFamily: "'Noto Sans JP', sans-serif",
         }}>
           Group
         </p>
@@ -140,12 +140,12 @@ export default function GroupNav() {
         {/* 事業体 */}
         <p style={{
           fontSize: "10px",
-          fontWeight: 400,
+          fontWeight: 700,
           letterSpacing: "0.2em",
           textTransform: "uppercase",
           color: "rgba(255,255,255,0.4)",
           margin: 0,
-          fontFamily: "'Anton', sans-serif",
+          fontFamily: "'Noto Sans JP', sans-serif",
         }}>
           Services
         </p>
