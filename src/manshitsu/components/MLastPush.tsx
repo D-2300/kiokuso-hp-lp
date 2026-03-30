@@ -10,7 +10,7 @@ export default function MLastPush() {
           style={{
             margin: "0 0 20px",
             fontFamily: "'Noto Serif JP', serif",
-            fontSize: "clamp(15px, 4vw, 18px)",
+            fontSize: "clamp(17px, 4.2vw, 20px)",
             fontWeight: 400,
             color: C.textDark,
             lineHeight: 2.0,

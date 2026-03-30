@@ -75,7 +75,7 @@ export default function MFAQ() {
               {open === i && (
                 <div style={{ padding: "0 0 18px 26px", display: "flex", gap: "12px" }}>
                   <span style={{ color: M.light, fontWeight: 700, fontSize: "14px", flexShrink: 0, marginTop: "1px" }}>A</span>
-                  <p style={{ margin: 0, fontSize: "clamp(12px, 3vw, 14px)", color: C.textMid, lineHeight: 1.85 }}>
+                  <p style={{ margin: 0, fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.85 }}>
                     {faq.a}
                   </p>
                 </div>

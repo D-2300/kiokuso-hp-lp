@@ -22,7 +22,7 @@ export default function MPrice() {
           style={{
             margin: "0 0 20px",
             textAlign: "center",
-            fontSize: "clamp(13px, 3.5vw, 14px)",
+            fontSize: "clamp(14px, 3.5vw, 15px)",
             color: C.textMid,
             lineHeight: 1.85,
           }}

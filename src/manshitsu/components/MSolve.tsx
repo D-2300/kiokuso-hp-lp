@@ -25,6 +25,28 @@ export default function MSolve() {
       <div style={{ maxWidth: "720px", margin: "0 auto" }}>
         <MSectionHeader label="VALUE" heading={"同じ予算で、部屋が変わる。\nそれが店舗内装の力です。"} />
 
+        {/* Image showcase */}
+        <div
+          style={{
+            borderRadius: "4px",
+            overflow: "hidden",
+            marginBottom: "24px",
+          }}
+        >
+          <img
+            src="/images/m-after-led-sm.webp"
+            alt="店舗品質のデザイン施工例"
+            width="480"
+            height="269"
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+            }}
+          />
+        </div>
+
         <div
           style={{
             display: "flex",
@@ -55,7 +77,7 @@ export default function MSolve() {
               <p
                 style={{
                   margin: 0,
-                  fontSize: "clamp(11px, 2.8vw, 13px)",
+                  fontSize: "clamp(12px, 3vw, 14px)",
                   color: M.main,
                   fontWeight: 500,
                   lineHeight: 1.65,
@@ -88,7 +110,7 @@ export default function MSolve() {
           style={{
             margin: "0 0 28px",
             fontFamily: "'Noto Sans JP', sans-serif",
-            fontSize: "clamp(13px, 3.5vw, 14px)",
+            fontSize: "clamp(14px, 3.5vw, 15px)",
             color: C.textMid,
             lineHeight: 1.85,
             textAlign: "center",
@@ -113,15 +135,15 @@ export default function MSolve() {
             >
               <span
                 style={{
-                  width: "30px",
-                  height: "30px",
+                  width: "32px",
+                  height: "32px",
                   borderRadius: "50%",
                   backgroundColor: M.main,
                   color: C.gold,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "14px",
+                  fontSize: "15px",
                   fontWeight: 700,
                   flexShrink: 0,
                   fontFamily: "'Noto Serif JP', serif",
@@ -130,10 +152,10 @@ export default function MSolve() {
                 {pt.n}
               </span>
               <div>
-                <p style={{ margin: "0 0 6px", fontSize: "clamp(14px, 3.5vw, 15px)", fontWeight: 600, color: C.textDark, letterSpacing: "0.02em" }}>
+                <p style={{ margin: "0 0 6px", fontSize: "clamp(15px, 3.8vw, 17px)", fontWeight: 600, color: C.textDark, letterSpacing: "0.02em" }}>
                   {pt.title}
                 </p>
-                <p style={{ margin: 0, fontSize: "clamp(12px, 3vw, 13px)", color: C.textMid, lineHeight: 1.8 }}>
+                <p style={{ margin: 0, fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.8 }}>
                   {pt.body}
                 </p>
               </div>

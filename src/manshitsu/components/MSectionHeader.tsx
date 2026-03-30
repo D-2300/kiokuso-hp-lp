@@ -15,8 +15,8 @@ export default function MSectionHeader({ label, heading, headingColor = C.textDa
         style={{
           margin: "0 0 10px",
           fontFamily: "'Noto Sans JP', sans-serif",
-          fontSize: "11px",
-          fontWeight: 300,
+          fontSize: "12px",
+          fontWeight: 400,
           letterSpacing: "0.15em",
           textTransform: "uppercase",
           color: labelColor,

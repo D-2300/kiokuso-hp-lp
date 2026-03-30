@@ -13,7 +13,7 @@ export default function MBridge({ text }: { text: string }) {
         style={{
           margin: 0,
           fontFamily: "'Noto Serif JP', serif",
-          fontSize: "clamp(13px, 3vw, 15px)",
+          fontSize: "clamp(14px, 3.2vw, 16px)",
           color: C.warmGray,
           letterSpacing: "0.08em",
           fontWeight: 400,

@@ -20,7 +20,7 @@ export default function MOneStop() {
           style={{
             margin: "0 0 24px",
             textAlign: "center",
-            fontSize: "clamp(13px, 3.5vw, 14px)",
+            fontSize: "clamp(14px, 3.5vw, 15px)",
             color: C.textMid,
             lineHeight: 1.85,
           }}

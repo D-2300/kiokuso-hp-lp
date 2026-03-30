@@ -17,7 +17,7 @@ export default function MAgitate() {
           style={{
             margin: "0 0 28px",
             fontFamily: "'Noto Sans JP', sans-serif",
-            fontSize: "clamp(13px, 3.5vw, 14px)",
+            fontSize: "clamp(14px, 3.5vw, 15px)",
             color: C.textMid,
             lineHeight: 1.85,
             textAlign: "center",

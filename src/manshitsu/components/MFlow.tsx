@@ -97,7 +97,7 @@ export default function MFlow() {
                       </span>
                     )}
                   </div>
-                  <p style={{ margin: 0, fontSize: "clamp(12px, 3vw, 13px)", color: C.textMid, lineHeight: 1.8 }}>
+                  <p style={{ margin: 0, fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.8 }}>
                     {step.body}
                   </p>
                 </div>

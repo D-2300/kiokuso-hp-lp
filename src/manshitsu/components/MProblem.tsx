@@ -42,7 +42,7 @@ export default function MProblem() {
                 style={{
                   margin: 0,
                   fontFamily: "'Noto Sans JP', sans-serif",
-                  fontSize: "clamp(13px, 3.5vw, 15px)",
+                  fontSize: "clamp(14px, 3.5vw, 15px)",
                   color: C.textDark,
                   lineHeight: 1.85,
                 }}
