@@ -7,32 +7,28 @@ export default function MProfile() {
       <div style={{ maxWidth: "720px", margin: "0 auto" }}>
         <MSectionHeader label="ABOUT" heading={"記憶荘について"} />
 
+        {/* Logo below heading */}
+        <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <img
+            src="/images/logo-manshitsu-mark-gold.webp"
+            alt="満室デザインLABO"
+            loading="lazy"
+            style={{ width: "72px", height: "72px", objectFit: "contain" }}
+          />
+        </div>
+
+        {/* Description */}
         <div
           style={{
-            display: "flex",
-            gap: "20px",
-            alignItems: "flex-start",
             padding: "24px",
             border: `1px solid rgba(107,64,102,0.1)`,
             borderRadius: "4px",
             backgroundColor: M.bg,
-            flexWrap: "wrap",
           }}
         >
-          {/* Logo mark only */}
-          <div style={{ flexShrink: 0, textAlign: "center" }}>
-            <img
-              src="/images/logo-manshitsu-mark-gold.webp"
-              alt="満室デザインLABO"
-              style={{ width: "64px", height: "64px", objectFit: "contain" }}
-            />
-          </div>
-
-          <div style={{ flex: 1, minWidth: "200px" }}>
-            <p style={{ margin: "0 0 16px", fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.9 }}>
-              仙台で店舗内装の設計・施工を手がけています。カフェ、バー、美容室など、「人が集まる空間」をつくる仕事をしてきました。その技術を、賃貸物件の空室対策に活かせないかと考え、オーナー様向けのサービスを始めました。
-            </p>
-          </div>
+          <p style={{ margin: 0, fontSize: "clamp(13px, 3.2vw, 14px)", color: C.textMid, lineHeight: 1.9 }}>
+            仙台で店舗内装の設計・施工を手がけています。カフェ、バー、美容室など、「人が集まる空間」をつくる仕事をしてきました。その技術を、賃貸物件の空室対策に活かせないかと考え、オーナー様向けのサービスを始めました。
+          </p>
         </div>
 
         {/* CSO KEN profile */}

@@ -24,6 +24,23 @@ export default function MLastPush() {
           もう一つの選択肢を、知ってください。
         </p>
 
+        {/* Image */}
+        <div style={{ margin: "24px auto 28px", maxWidth: "420px" }}>
+          <img
+            src="/images/m-lastpush-sm.webp"
+            alt="施工イメージ"
+            width="420"
+            height="280"
+            loading="lazy"
+            style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: "4px",
+              objectFit: "cover",
+            }}
+          />
+        </div>
+
         <div style={{ width: "40px", height: "1px", backgroundColor: C.gold, opacity: 0.5, margin: "0 auto 20px" }} />
 
         <p

@@ -18,52 +18,103 @@ export default function MHero() {
         @media (max-width: 767px) {
           .m-hero-h1 { font-size: 26px !important; }
           .m-hero-sub { font-size: 14px !important; }
-          .m-hero-img-wrap { height: 280px !important; }
         }
         @media (min-width: 768px) {
           .m-hero-h1 { font-size: 36px !important; }
           .m-hero-sub { font-size: 16px !important; }
-          .m-hero-img-wrap { height: 360px !important; }
         }
       `}</style>
 
-      {/* ===== IMAGE SECTION (top) ===== */}
+      {/* ===== HERO IMAGE SECTION (full bleed with text overlay) ===== */}
       <div
         style={{
-          backgroundColor: M.dark,
-          padding: "40px 20px 0",
+          position: "relative",
+          minHeight: "420px",
+          overflow: "hidden",
         }}
       >
-        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
-          {/* Logo mark - large */}
-          <div style={{ marginBottom: "20px", textAlign: "center" }}>
+        {/* Background image - COLOR */}
+        <img
+          src="/images/m-hero-color.webp"
+          srcSet="/images/m-hero-color-sm.webp 480w, /images/m-hero-color.webp 720w"
+          alt="施工後の明るいLDK"
+          width="720"
+          height="403"
+          loading="eager"
+          fetchPriority="high"
+          sizes="100vw"
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+
+        {/* Overlay for text readability */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.55) 100%)",
+          }}
+        />
+
+        {/* Content over image */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: "720px",
+            margin: "0 auto",
+            padding: "24px 20px 32px",
+          }}
+        >
+          {/* Header bar: Logo + text */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              marginBottom: "40px",
+            }}
+          >
             <img
               src="/images/logo-manshitsu-mark-gold.webp"
               alt="満室デザインLABO"
-              style={{ height: "56px", objectFit: "contain" }}
+              style={{ height: "40px", objectFit: "contain", flexShrink: 0 }}
             />
+            <div>
+              <p style={{ margin: 0, fontSize: "14px", fontWeight: 600, color: C.white, letterSpacing: "0.04em", lineHeight: 1.3 }}>
+                満室デザインLABO
+              </p>
+              <p style={{ margin: 0, fontSize: "11px", color: "rgba(255,255,255,0.7)", letterSpacing: "0.03em", lineHeight: 1.4 }}>
+                仙台・宮城の原状回復工事なら
+              </p>
+            </div>
           </div>
 
           {/* Badge */}
-          <div style={{ textAlign: "center", marginBottom: "20px" }}>
+          <div style={{ marginBottom: "16px" }}>
             <span
               style={{
                 display: "inline-block",
-                border: `1px solid ${C.gold}`,
-                color: C.gold,
+                backgroundColor: "rgba(255,255,255,0.92)",
+                backdropFilter: "blur(4px)",
+                padding: "5px 14px",
+                borderRadius: "4px",
                 fontSize: "clamp(12px, 2vw, 14px)",
                 fontWeight: 500,
-                letterSpacing: "0.08em",
-                padding: "6px 16px",
-                borderRadius: "2px",
+                color: "#333",
               }}
             >
               仙台・宮城の賃貸オーナー様へ
             </span>
           </div>
 
-          {/* H1 */}
-          <h1 style={{ margin: "0 0 16px", padding: 0, textAlign: "center" }}>
+          {/* H1 - Paragraph 1 */}
+          <h1 style={{ margin: "0 0 12px", padding: 0 }}>
             <span
               className="m-hero-h1"
               style={{
@@ -71,8 +122,9 @@ export default function MHero() {
                 fontFamily: "'Noto Serif JP', serif",
                 fontWeight: 700,
                 color: "#fff",
-                lineHeight: 1.5,
+                lineHeight: 1.45,
                 letterSpacing: "0.01em",
+                textShadow: "0 2px 16px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.4)",
               }}
             >
               退去から<span style={{ color: C.gold }}>2週間</span>で、
@@ -84,24 +136,26 @@ export default function MHero() {
                 fontFamily: "'Noto Serif JP', serif",
                 fontWeight: 700,
                 color: "#fff",
-                lineHeight: 1.5,
+                lineHeight: 1.45,
                 letterSpacing: "0.01em",
+                textShadow: "0 2px 16px rgba(0,0,0,0.6), 0 1px 3px rgba(0,0,0,0.4)",
               }}
             >
               内見が入る部屋にします。
             </span>
           </h1>
 
-          {/* Sub text */}
-          <div style={{ textAlign: "center", marginBottom: "24px" }}>
-            <div style={{ width: "40px", height: "1px", backgroundColor: C.gold, opacity: 0.5, margin: "0 auto 12px" }} />
+          {/* Paragraph 2 - Sub text */}
+          <div style={{ marginBottom: "16px" }}>
+            <div style={{ width: "40px", height: "1px", backgroundColor: C.gold, margin: "0 0 10px" }} />
             <p
               className="m-hero-sub"
               style={{
                 margin: 0,
-                color: "rgba(255,255,255,0.78)",
+                color: "rgba(255,255,255,0.9)",
                 lineHeight: 1.85,
                 letterSpacing: "0.02em",
+                textShadow: "0 1px 8px rgba(0,0,0,0.4)",
               }}
             >
               店舗内装のプロが、中間マージンなしで直接施工。<br />
@@ -109,49 +163,23 @@ export default function MHero() {
             </p>
           </div>
 
-          {/* Hero image - contained rectangle */}
-          <div
-            className="m-hero-img-wrap"
-            style={{
-              borderRadius: "6px 6px 0 0",
-              overflow: "hidden",
-              position: "relative",
-              height: "320px",
-            }}
-          >
-            <img
-              src="/images/m-hero-gray.webp"
-              srcSet="/images/m-hero-gray-sm.webp 480w, /images/m-hero-gray.webp 720w"
-              alt="施工後の明るいLDK"
-              width="720"
-              height="403"
-              loading="eager"
-              fetchPriority="high"
-              sizes="(max-width: 720px) 100vw, 720px"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-                filter: "brightness(0.95) contrast(1.05)",
-              }}
-            />
-            {/* Subtle bottom fade to purple */}
-            <div
-              style={{
-                position: "absolute",
-                bottom: 0,
-                left: 0,
-                right: 0,
-                height: "80px",
-                background: `linear-gradient(to top, ${M.main} 0%, transparent 100%)`,
-              }}
-            />
+          {/* Feature badges */}
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {["中間マージンなし", "自社施工", "退去当日の見積もり可"].map((t) => (
+              <span key={t} style={{
+                fontSize: "11px",
+                color: "rgba(255,255,255,0.85)",
+                background: "rgba(255,255,255,0.12)",
+                borderRadius: "4px",
+                padding: "4px 10px",
+                border: "1px solid rgba(255,255,255,0.2)",
+              }}>{t}</span>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* ===== PURPLE SECTION (bottom) - price + CTA ===== */}
+      {/* ===== PURPLE SECTION (price + CTA) ===== */}
       <div
         style={{
           background: `linear-gradient(160deg, ${M.main} 0%, ${M.dark} 100%)`,
@@ -159,20 +187,6 @@ export default function MHero() {
         }}
       >
         <div style={{ maxWidth: "720px", margin: "0 auto" }}>
-          {/* Feature badges */}
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", marginBottom: "24px" }}>
-            {["中間マージンなし", "自社施工・一括対応", "退去当日の見積もり可", "断りはLINE1本"].map((t) => (
-              <span key={t} style={{
-                fontSize: "12px",
-                color: "rgba(255,255,255,0.85)",
-                background: "rgba(255,255,255,0.1)",
-                borderRadius: "4px",
-                padding: "5px 12px",
-                border: "1px solid rgba(255,255,255,0.15)",
-              }}>{t}</span>
-            ))}
-          </div>
-
           {/* Price box */}
           <div
             style={{
