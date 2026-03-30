@@ -175,6 +175,10 @@ export default function LPCaseDetail() {
                     <img
                       src={src}
                       alt={`${c.type} 内装${label === "BEFORE" ? "施工前" : "施工後"}`}
+                      width="400"
+                      height="280"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                     />
                   </div>

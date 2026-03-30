@@ -229,6 +229,9 @@ function StepRow({ step, isLast }: { step: Step; isLast: boolean }) {
               <img
                 src={step.detail.photo}
                 alt={step.detail.photoAlt}
+                width="140"
+                height="100"
+                loading="lazy"
                 style={{
                   width: "100%",
                   height: "100%",

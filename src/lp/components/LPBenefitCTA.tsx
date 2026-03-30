@@ -64,6 +64,9 @@ export default function LPBenefitCTA({ showPushText = false }: LPBenefitCTAProps
             <img
               src="/images/toranomaki-cover.webp"
               alt="内装見積もりの虎の巻"
+              width="320"
+              height="140"
+              loading="lazy"
               style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }}
             />
             <div style={{ padding: "14px" }}>
@@ -87,6 +90,9 @@ export default function LPBenefitCTA({ showPushText = false }: LPBenefitCTAProps
             <img
               src="/images/ai-pers-tablet.webp"
               alt="AIパースで完成イメージも作成"
+              width="320"
+              height="140"
+              loading="lazy"
               style={{ width: "100%", height: "140px", objectFit: "cover", display: "block" }}
             />
             <div style={{ padding: "14px" }}>

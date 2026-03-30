@@ -34,7 +34,7 @@ export default function LPNav() {
           justifyContent: "flex-start",
         }}
       >
-        <img src="/assets/logos/logo-studio-h-gold.webp" alt="記憶荘 STUDIO" style={{ height: "32px", width: "auto" }} />
+        <img src="/assets/logos/logo-studio-h-gold.webp" alt="記憶荘 STUDIO" width="160" height="32" loading="eager" style={{ height: "32px", width: "auto" }} />
       </div>
     </nav>
   );

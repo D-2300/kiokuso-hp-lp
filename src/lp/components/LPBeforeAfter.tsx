@@ -177,6 +177,10 @@ export default function LPBeforeAfter() {
                       <img
                         src={label === "Before" ? c.before : c.after}
                         alt={`${c.type} ${label}`}
+                        width="400"
+                        height="240"
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         style={{ width: "100%", height: "100%", objectFit: "cover" }}
                       />
                     </div>

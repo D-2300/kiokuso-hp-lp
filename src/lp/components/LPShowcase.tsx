@@ -55,6 +55,10 @@ export default function LPShowcase() {
               <img
                 src={item.src}
                 alt={item.label}
+                width="220"
+                height="148"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{
                   width: "100%",
                   height: "100%",

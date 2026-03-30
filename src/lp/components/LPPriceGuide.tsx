@@ -56,6 +56,10 @@ export default function LPPriceGuide() {
             <img
               src={item.image}
               alt={item.name}
+              width="100"
+              height="100"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
               style={{
                 width: "100px",
                 height: "100px",

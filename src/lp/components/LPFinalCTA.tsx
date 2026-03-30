@@ -44,6 +44,9 @@ export default function LPFinalCTA() {
         <img
           src="/images/line-qr.png"
           alt="LINE QRコード"
+          width="160"
+          height="160"
+          loading="lazy"
           style={{
             width: "160px",
             height: "160px",

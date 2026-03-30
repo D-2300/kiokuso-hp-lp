@@ -51,6 +51,10 @@ function CaseCard({ before, after, label, cost }: (typeof cases)[number]) {
           <img
             src={before}
             alt="before"
+            width="400"
+            height="300"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
           />
           <PhotoLabel text="BEFORE" />
@@ -81,6 +85,10 @@ function CaseCard({ before, after, label, cost }: (typeof cases)[number]) {
           <img
             src={after}
             alt="after"
+            width="400"
+            height="300"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
           />
           <PhotoLabel text="AFTER" />

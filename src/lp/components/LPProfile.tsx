@@ -14,6 +14,9 @@ export default function LPProfile() {
         <img
           src="/images/about-dai.webp"
           alt="KEN"
+          width="200"
+          height="248"
+          loading="lazy"
           style={{
             width: "clamp(160px, 25vw, 200px)",
             height: "clamp(200px, 31vw, 248px)",

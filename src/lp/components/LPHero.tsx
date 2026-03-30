@@ -28,6 +28,10 @@ export default function LPHero() {
       <img
         src="/images/lp-hero.webp"
         alt=""
+        width="1200"
+        height="800"
+        loading="eager"
+        sizes="100vw"
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
       />
       <div
@@ -205,6 +209,9 @@ export default function LPHero() {
                   src={card.src}
                   alt={card.alt}
                   className="ba-card-img"
+                  width="320"
+                  height="180"
+                  loading="lazy"
                   style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                 />
                 <div
