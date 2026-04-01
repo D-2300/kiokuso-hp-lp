@@ -23,13 +23,13 @@ export default function WorksCrossover() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/70" />
           <div className="relative z-10 px-6 md:px-12 pb-16 max-w-[900px]">
-            <div className="text-[13px] tracking-[4px] text-white/60 mb-3 font-semibold">
+            <div className="text-[13px] tracking-[4px] text-white/60 mb-3 font-bold uppercase">
               WORKS — CASE 001
             </div>
-            <h1 className="font-normal text-[clamp(24px,4vw,40px)] text-white leading-relaxed mb-2">
+            <h1 className="font-bold text-[clamp(24px,4vw,40px)] text-white leading-relaxed mb-2">
               バスケットボール Cafe&Bar<br />CROSSOVER
             </h1>
-            <div className="font-light text-[15px] text-white/50 tracking-[2px]">
+            <div className="font-semibold text-[15px] text-white/50 tracking-[2px]">
               Sendai, Wakabayashi — 2026.02
             </div>
           </div>
