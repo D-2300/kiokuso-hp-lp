@@ -166,24 +166,50 @@ export default function StudioAbout() {
         </section>
       </ScrollFadeIn>
 
-      {/* ABOUT KEN */}
+      {/* ABOUT KAI & KEN */}
       <ScrollFadeIn>
         <section style={{ padding: "80px 24px", backgroundColor: "rgba(46,66,41,0.03)" }}>
           <div style={{ maxWidth: "560px", margin: "0 auto" }}>
             <p style={{ fontSize: "11px", letterSpacing: "3px", color: "#C9A84C", fontWeight: 500, margin: "0 0 40px", textTransform: "uppercase" }}>
-              About Ken
+              About KAI &amp; KEN
             </p>
+
+            {/* KAI */}
             <div style={{ textAlign: "center", marginBottom: "36px" }}>
               <img
-                src="/images/about-dai-sm.webp"
-                alt="KEN"
+                src="/images/about-kai-sm.webp"
+                alt="KAI（海）- プランニング・物件サポート"
+                style={{ maxWidth: "320px", width: "100%", borderRadius: "8px", objectFit: "cover", display: "inline-block" }}
+              />
+            </div>
+            <p style={{ fontSize: "22px", fontWeight: 500, color: colors.text, fontFamily: "'Noto Serif JP', serif", margin: "0 0 4px" }}>
+              KAI
+            </p>
+            <p style={{ fontSize: "13px", color: "#888", margin: "0 0 28px" }}>プランニング・物件サポート</p>
+            <p style={{ fontSize: "15px", lineHeight: 2.0, color: "#555", margin: "0 0 20px" }}>
+              元不動産業の経験を活かし、物件探しから内装プランニングまでを担当。
+              不動産会社との人脈が今もあり、ネットに出回る前の物件情報をキャッチできます。
+            </p>
+            <p style={{ fontSize: "15px", lineHeight: 2.0, color: "#555", margin: "0 0 20px" }}>
+              お客様の「こうしたい」を形にする窓口役として、
+              物件の交渉や出店計画の相談にも対応しています。
+            </p>
+
+            {/* Divider */}
+            <div style={{ width: "40px", height: "1px", background: "rgba(201,168,76,0.3)", margin: "48px auto" }} />
+
+            {/* KEN */}
+            <div style={{ textAlign: "center", marginBottom: "36px" }}>
+              <img
+                src="/images/about-ken-sm.webp"
+                alt="KEN（謙）- 大工・施工責任者"
                 style={{ maxWidth: "320px", width: "100%", borderRadius: "8px", objectFit: "cover", display: "inline-block" }}
               />
             </div>
             <p style={{ fontSize: "22px", fontWeight: 500, color: colors.text, fontFamily: "'Noto Serif JP', serif", margin: "0 0 4px" }}>
               KEN
             </p>
-            <p style={{ fontSize: "13px", color: "#888", margin: "0 0 28px" }}>記憶荘 CSO</p>
+            <p style={{ fontSize: "13px", color: "#888", margin: "0 0 28px" }}>大工・施工責任者</p>
             <p style={{ fontSize: "15px", lineHeight: 2.0, color: "#555", margin: "0 0 20px" }}>
               前職では店舗内装の現場監督として、飲食店・美容室・ジム・物販店など
               さまざまな業態の内装を手がけてきました。

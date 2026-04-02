@@ -257,7 +257,7 @@ export default function GroupAbout() {
       <ScrollFadeIn>
         <div style={{ padding: "40px 24px 64px", maxWidth: "500px", margin: "0 auto" }}>
           <div style={{ display: "flex", gap: "24px", alignItems: "flex-start" }}>
-            <img src="/images/about-dai-sm.webp" alt="KEN" style={{ width: "100px", minWidth: "100px", aspectRatio: "1/1", objectFit: "cover" }} />
+            <img src="/images/about-ken-sm.webp" alt="KEN（謙）- 大工・施工責任者" style={{ width: "100px", minWidth: "100px", aspectRatio: "1/1", objectFit: "cover" }} />
             <div>
               <p style={{ fontSize: "18px", fontWeight: 500, color: colors.text, marginBottom: "4px" }}>KEN</p>
               <p style={{ fontSize: "12px", color: colors.mute, marginBottom: "12px" }}>

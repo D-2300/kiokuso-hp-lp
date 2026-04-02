@@ -7,6 +7,7 @@ import TenantProfiles from "./TenantProfiles";
 import TenantFAQ from "./TenantFAQ";
 import TenantBottomCTA from "./TenantBottomCTA";
 import TenantMailForm from "./TenantMailForm";
+import TenantHeroBand from "./TenantHeroBand";
 import TenantFooter from "./TenantFooter";
 
 export default function TenantLPPage() {
@@ -21,6 +22,7 @@ export default function TenantLPPage() {
   return (
     <div style={{ fontFamily: "'Noto Sans JP', sans-serif", color: "#333", background: "#fff" }}>
       <TenantHero />
+      <TenantHeroBand />
       <TenantReasons />
       <TenantMidCTA />
       <TenantComparison />
