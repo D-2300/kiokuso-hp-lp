@@ -17,6 +17,7 @@ const ROUTES = [
   "/reform",
   "/fudousan",
   "/manshitsu",
+  "/lp/tenant",
   "/studio/articles",
   "/studio/articles/crossover",
   "/studio/articles/tsubo-tanka-sendai",
