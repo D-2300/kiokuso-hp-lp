@@ -6,7 +6,30 @@ Claude Code / Claude Cowork間の作業同期用ログ。
 
 ---
 
-## 2026-04-04
+## 2026-04-04（午後）
+### 内装LP 虎の巻中心構成にリニューアル
+- [Code] LPHero: ダーク背景(#1a1f14)の損失回避型に全面書き換え
+  - ヘッドライン「知らないだけで内装費の15〜30%、余計に払っています。」
+  - サブコピー: 中間マージン・不要解体・追加料金の構造
+  - KEN & KAI Duoプロフィール配置（テナントHeroと同構成）
+  - CTA「LINEで無料ガイドを受け取る」
+- [Code] LPGuideSection（新規）: 内装見積もりの虎の巻を主役にしたセクション
+  - 虎の巻カバー画像(toranomaki-cover-sm.webp)配置
+  - 「知らないとこうなります」損失5項目（赤✕+金額）:
+    - 中間マージン15〜25% / 不要な解体費 数十万円 / 什器新品 30万円〜 / 保健所追加工事 20万円〜 / 追加料金 数十万円
+  - ダークCTAボックス「工事してから知らなかったでは、もう取り戻せません」
+- [Code] LPMidCTA（書き換え）: 「無料ガイド+個別アドバイス」LINE CTA
+- [Code] LPBottomCTA（新規）: KAI&KEN写真+「知らないまま工事して、損してからでは遅い」
+- [Code] LPPage構成変更:
+  - 新構成: Hero → GuideSection → BeforeAfterSlider → WhyPrice → SolutionPoints → MidCTA → Flow → FAQ → BottomCTA → ContactForm → Footer
+  - 撤去: PainPoints, CommonIssues, Support, PriceGuide, LastPush, FinalCTA, CaseDetail, Profile
+  - 事例はBeforeAfterSliderのチラ見せ+LINE CTAに統一（詳細はLINEワークスへ誘導）
+- [Code] ページタイトル変更:「仙台の店舗内装工事｜内装費で損しないための無料ガイド」
+- デプロイ済み: commit f24ee68
+
+---
+
+## 2026-04-04（午前）
 ### PDF リードマグネット v4（損失回避リニューアル）
 - [Code] PDF A（内装見積もりの虎の巻）v4: テイザー構造に全面改修
   - P3に損失回避フックページ追加（「15〜30%余計に払っている」）
