@@ -6,6 +6,39 @@ Claude Code / Claude Cowork間の作業同期用ログ。
 
 ---
 
+## 2026-04-04
+### PDF リードマグネット v4（損失回避リニューアル）
+- [Code] PDF A（内装見積もりの虎の巻）v4: テイザー構造に全面改修
+  - P3に損失回避フックページ追加（「15〜30%余計に払っている」）
+  - Ch1-3はフル内容（信頼構築）、Ch4-8はテイザー化（consult_hook/teaser_box で相談誘導）
+  - P13「相談で知れること」7項目（金額ベース）新設、P14 CTA損失回避フレーミング
+  - 全14ページ（旧13ページから増）
+- [Code] PDF B（不動産屋攻略ガイド）: 損失回避フレーミング強化
+  - 表紙・P3・P12・P13 CTA全て「知らないと損する」表現に変更
+  - P12項目を金額ベースに（フリーレント40万円、敷金80万円削減 等）
+- PDF URL: https://kiokuso.jp/images/toranomaki-naiso-cost.pdf / toranomaki-fudousan-guide.pdf
+
+### テナントLP 損失回避リニューアル
+- [Code] TenantHero: ヘッドライン「知らないだけで数十万〜数百万円、損してます。」に変更
+- [Code] TenantGuideSection（新規）: 不動産攻略ガイドPDFを主役にしたセクション
+  - 本の透明背景画像配置、「知らないとこうなります」損失5項目（太字+赤金額表示）
+  - ダークCTAボックス「契約してから知らなかったでは、もう取り戻せません」
+- [Code] TenantBeforeAfterCTA: スライダー+事例のみに簡素化（ガイドCTAは新セクションに移動）
+- [Code] TenantMidCTA / TenantBottomCTA: 「無料ガイド」「損してからでは遅い」表現に統一
+- [Code] ページタイトル変更:「物件契約で損しないための無料ガイド」
+
+### LINEリッチメニュー
+- [Code] リッチメニュー画像生成（2500x1686px、6パネル）: richmenu.png
+  - 構成: チャットで相談 / 内装の虎の巻(緑) / 不動産攻略ガイド(ワイン赤) / 施工事例 / HPを見る / 物件を探す
+  - アクション: B→内装PDF / C→不動産PDF / D→works / E→studio / F→/lp/tenant/
+- リッチメニュー画像URL: https://kiokuso.jp/images/richmenu.png
+
+### その他
+- [Code] 不動産攻略ガイド本の透明背景画像追加（guide-fudousan-book-sm.webp）
+- [Code] PDF生成スクリプト更新: create_pdf_a_v2.py / create_pdf_b.py（kiokusoルート）
+- [Code] リッチメニュー画像生成スクリプト: create_richmenu.py（kiokusoルート）
+- デプロイ済み: commit 8ad8bc2
+
 ## 2026-04-02
 - [Code] 記事システム構築: データ層(src/data/articles.ts)、一覧ページ(/studio/articles)、詳細ページ(/studio/articles/:slug)
 - [Code] ギャラリーカルーセル(GalleryCarousel)・記事カード(ArticleCard)コンポーネント追加
