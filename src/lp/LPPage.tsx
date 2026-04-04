@@ -6,10 +6,8 @@ import LPBeforeAfterSlider from "./components/LPBeforeAfterSlider";
 import LPWhyPrice from "./components/LPWhyPrice";
 import LPSolutionPoints from "./components/LPSolutionPoints";
 import LPMidCTA from "./components/LPMidCTA";
-import LPCaseDetail from "./components/LPCaseDetail";
 import LPFlow from "./components/LPFlow";
 import LPFAQ from "./components/LPFAQ";
-import LPProfile from "./components/LPProfile";
 import LPBottomCTA from "./components/LPBottomCTA";
 import LPContactForm from "./components/LPContactForm";
 import LPFooter from "./components/LPFooter";
@@ -36,10 +34,8 @@ export default function LPPage() {
       <LPWhyPrice />
       <LPSolutionPoints />
       <LPMidCTA />
-      <LPCaseDetail />
       <LPFlow />
       <LPFAQ />
-      <LPProfile />
       <LPBottomCTA />
       <LPContactForm />
       <LPFooter />
