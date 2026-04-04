@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import TenantHero from "./TenantHero";
+import TenantHeroBand from "./TenantHeroBand";
+import TenantBeforeAfterCTA from "./TenantBeforeAfterCTA";
 import TenantReasons from "./TenantReasons";
 import TenantMidCTA from "./TenantMidCTA";
 import TenantComparison from "./TenantComparison";
@@ -7,8 +9,8 @@ import TenantProfiles from "./TenantProfiles";
 import TenantFAQ from "./TenantFAQ";
 import TenantBottomCTA from "./TenantBottomCTA";
 import TenantMailForm from "./TenantMailForm";
-import TenantHeroBand from "./TenantHeroBand";
 import TenantFooter from "./TenantFooter";
+import LPFloatingLine from "../components/LPFloatingLine";
 
 export default function TenantLPPage() {
   useEffect(() => {
@@ -23,6 +25,7 @@ export default function TenantLPPage() {
     <div style={{ fontFamily: "'Noto Sans JP', sans-serif", color: "#333", background: "#fff" }}>
       <TenantHero />
       <TenantHeroBand />
+      <TenantBeforeAfterCTA />
       <TenantReasons />
       <TenantMidCTA />
       <TenantComparison />
@@ -31,6 +34,7 @@ export default function TenantLPPage() {
       <TenantBottomCTA />
       <TenantMailForm />
       <TenantFooter />
+      <LPFloatingLine />
     </div>
   );
 }

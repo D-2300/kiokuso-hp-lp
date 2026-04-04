@@ -1,6 +1,6 @@
 import LPNav from "./components/LPNav";
 import LPHero from "./components/LPHero";
-import LPBeforeAfterPreview from "./components/LPBeforeAfterPreview";
+import LPBeforeAfterSlider from "./components/LPBeforeAfterSlider";
 import LPWhyPrice from "./components/LPWhyPrice";
 import LPPainPoints from "./components/LPPainPoints";
 import LPCommonIssues from "./components/LPCommonIssues";
@@ -22,7 +22,7 @@ export default function LPPage() {
     <div style={{ backgroundColor: "#FFFFFF", minHeight: "100vh" }}>
       <LPNav />
       <LPHero />
-      <LPBeforeAfterPreview />
+      <LPBeforeAfterSlider />
       <LPWhyPrice />
       <LPPainPoints />
       <LPCommonIssues />
