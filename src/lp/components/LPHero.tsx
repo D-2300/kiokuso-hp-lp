@@ -183,6 +183,7 @@ export default function LPHero() {
             <img
               src="/images/about-ken-sm.webp"
               alt="KEN - 現場・施工担当"
+              fetchpriority="high"
               style={{
                 width: "60px",
                 height: "60px",
@@ -240,6 +241,7 @@ export default function LPHero() {
             <img
               src="/images/about-kai-sm.webp"
               alt="KAI - ビジネス・交渉担当"
+              fetchpriority="high"
               style={{
                 width: "60px",
                 height: "60px",

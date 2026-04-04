@@ -1,1 +1,6 @@
+# Trailing slash redirects (canonical URL normalization)
+/lp              /lp/              301
+/lp/tenant       /lp/tenant/       301
+
+# SPA fallback
 /*  /index.html  200
