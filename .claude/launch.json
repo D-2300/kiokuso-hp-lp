@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "dev",
-      "runtimeExecutable": "cmd.exe",
-      "runtimeArgs": ["/c", "npx", "vite", "dev"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--", "--port", "5173"],
       "port": 5173
     }
   ]
